@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { loadSnapshot } from '../api.ts';
 import { data, dataMode, setDataMode, type DataMode } from '../data.ts';
 import { API_BASE_PLACEHOLDER, getApiBase, isAppShell, setApiBase } from '../lib/appConfig.ts';
+import { discoverServer, type DiscoveryProgress } from '../lib/discovery.ts';
 import { clockTime } from '../lib/format.ts';
 import { useI18n } from '../lib/locale.tsx';
 import { Admin } from './Admin.tsx';
@@ -14,6 +15,8 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
   const [snapshotDate, setSnapshotDate] = useState<string | null>(null);
   const [engine, setEngine] = useState(() => data.refreshState());
   const [showDeveloper, setShowDeveloper] = useState(false);
+  const [discovering, setDiscovering] = useState(false);
+  const [discoveryNote, setDiscoveryNote] = useState<string | null>(null);
 
   useEffect(() => {
     void (async () => {
@@ -60,6 +63,29 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
     onChanged();
   };
 
+  const discover = async (): Promise<void> => {
+    setDiscovering(true);
+    setDiscoveryNote(i18n.t('settings.discovering'));
+    try {
+      const found = await discoverServer((progress: DiscoveryProgress) => {
+        if (progress.found) return;
+        setDiscoveryNote(i18n.t('settings.discoverProgress', { done: progress.done, total: progress.total }));
+      });
+      if (found) {
+        setApiBase(found.address);
+        setServerValue(found.address);
+        setMode('remote');
+        setDataMode('remote');
+        setDiscoveryNote(i18n.t('settings.discoverFound', { address: found.address, ms: found.latencyMs }));
+        onChanged();
+      } else {
+        setDiscoveryNote(i18n.t('settings.discoverNotFound'));
+      }
+    } finally {
+      setDiscovering(false);
+    }
+  };
+
   const inside = engine.insideSaudiArabia;
 
   return (
@@ -101,10 +127,15 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
             <div className="button-row">
               <button type="button" onClick={saveServer}>{i18n.t('settings.save')}</button>
               <button type="button" onClick={() => void testServer()}>{i18n.t('settings.test')}</button>
+              <button type="button" disabled={discovering} onClick={() => void discover()}>
+                {discovering ? i18n.t('settings.discovering') : i18n.t('settings.discover')}
+              </button>
               <button type="button" onClick={() => { setApiBase(''); setServerValue(getApiBase()); onChanged(); }}>
                 {i18n.t('settings.reset')}
               </button>
             </div>
+            {discoveryNote && <p className="note">{discoveryNote}</p>}
+            {!isAppShell() && <p className="note">{i18n.t('settings.discoverAppOnly')}</p>}
           </>
         )}
         {message && <p className="note">{message}</p>}

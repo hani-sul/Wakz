@@ -21,9 +21,21 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.InterfaceAddress;
+import java.net.NetworkInterface;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.LinkProperties;
+import android.net.Network;
+import android.net.RouteInfo;
 
 /**
  * Wakz Android shell.
@@ -148,6 +160,57 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public boolean available() {
             return true;
+        }
+
+        /**
+         * Returns the device's own IPv4 addresses (with prefix length) and the default gateway so the
+         * web layer can look for a Wakz server on the local network. No location permission is used.
+         */
+        @JavascriptInterface
+        public String localNetworkInfo() {
+            try {
+                JSONArray interfaces = new JSONArray();
+                List<NetworkInterface> networkInterfaces = Collections.list(NetworkInterface.getNetworkInterfaces());
+                for (NetworkInterface networkInterface : networkInterfaces) {
+                    if (networkInterface.isLoopback() || !networkInterface.isUp()) continue;
+                    for (InterfaceAddress interfaceAddress : networkInterface.getInterfaceAddresses()) {
+                        InetAddress address = interfaceAddress.getAddress();
+                        if (!(address instanceof Inet4Address) || address.isLoopbackAddress() || address.isLinkLocalAddress()) {
+                            continue;
+                        }
+                        JSONObject entry = new JSONObject();
+                        entry.put("name", networkInterface.getName());
+                        entry.put("ip", address.getHostAddress());
+                        entry.put("prefix", interfaceAddress.getNetworkPrefixLength());
+                        interfaces.put(entry);
+                    }
+                }
+
+                String gateway = null;
+                ConnectivityManager manager = (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
+                if (manager != null) {
+                    Network active = manager.getActiveNetwork();
+                    LinkProperties properties = active == null ? null : manager.getLinkProperties(active);
+                    if (properties != null) {
+                        for (RouteInfo route : properties.getRoutes()) {
+                            if (!route.isDefaultRoute()) continue;
+                            InetAddress candidate = route.getGateway();
+                            if (candidate instanceof Inet4Address) {
+                                gateway = candidate.getHostAddress();
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                JSONObject json = new JSONObject();
+                json.put("available", true);
+                json.put("interfaces", interfaces);
+                json.put("gateway", gateway == null ? JSONObject.NULL : gateway);
+                return json.toString();
+            } catch (Exception exception) {
+                return "{\"available\":false,\"error\":\"" + exception.getClass().getSimpleName() + "\"}";
+            }
         }
 
         @JavascriptInterface

@@ -106,6 +106,8 @@ Service status and connectivity information based on available data sources.
 * ثبّت ملف `Wakz-1.4.1-ar.apk` (اسم الملف يتغيّر مع الإصدار)، ثم افتح التطبيق.
 * عند أول تشغيل يتم تحديث كل الخدمات، وبعدها يعمل الكاش 7 دقائق.
 * أداة القياس (DNS/Ping) تعمل من جهازك مباشرة.
+* **وضع الخادم اختياري**: إن أردت ربط التطبيق بخادم خاص، أدخل العنوان يدويًا في الإعدادات أو استخدم
+  زر **«اكتشاف الخادم تلقائيًا»** الذي يبحث عن خادم وكز في شبكتك المحلية (المنفذ 4310) ويتحقق منه.
 
 ملف الـAPK يمكن بناؤه من المصدر بالخطوات التالية، أو تثبيته من قسم **Releases** في المستودع إن
 تم إرفاقه.
@@ -171,13 +173,21 @@ npm run collector   # مجمّع خلفي على خادم خاص (اختياري
 ## المساهمة
 
 * **الاقتراحات والأفكار** تُرسل عبر Issues في المستودع (خدمات جديدة، تحسينات، ميزات).
-* **المساهمة بالكود**: المشروع حاليًا بلا ترخيص مفتوح، لذلك لا تُقبل تعديلات الكود قبل اتفاق مسبق
-  مع المالك.
+* **المساهمة بالكود**: المشروع مُرخَّص للاستخدام الشخصي وغير التجاري فقط، لذلك لا تُقبل تعديلات
+  الكود قبل اتفاق مسبق مع المالك.
 * عند الإبلاغ عن مشكلة: اذكر الخدمة، والمصدر المتوقع، ولقطة شاشة إن أمكن.
 
 ## التوقيع
 
 <a href="https://x.com/Hany_Sul">By Hany_Sul</a>
+
+## الترخيص
+
+المشروع متاح للاستخدام **الشخصي وغير التجاري** بموجب
+[PolyForm Noncommercial License 1.0.0](LICENSE).
+
+**غير مسموح** بالاستخدام التجاري، أو إعادة بيع البرنامج، أو تقديمه كخدمة مدفوعة، دون إذن كتابي
+مسبق من صاحب الحقوق ([Hany_Sul](https://x.com/Hany_Sul)).
 
 ---
 
@@ -281,6 +291,9 @@ official link when possible — that speeds up verifying whether a status source
 * Install `Wakz-1.4.1-ar.apk` (the file name follows the release version) and open the app.
 * The first launch refreshes the whole catalog; afterwards a seven minute cache is used.
 * The measurement tools (DNS/PING) work directly from your device.
+* **Server mode is optional**: to point the app at your own server, type the address in the settings
+  screen or press **"Find my server automatically"**, which scans your local network for a Wakz
+  server on port 4310 and verifies it.
 
 The APK can be built from source with the steps below, or installed from the repository's
 **Releases** section when an artifact is attached.
@@ -347,13 +360,21 @@ This section reflects what the code actually does:
 ## Contributing
 
 * **Suggestions and ideas:** open an issue (new services, improvements, features).
-* **Code contributions:** the project currently has no open-source license, so code changes are not
-  accepted before an explicit agreement with the owner.
+* **Code contributions:** the project is licensed for personal and noncommercial use only, so code
+  changes are not accepted before an explicit agreement with the owner.
 * When reporting a problem, include the service, the expected source and a screenshot if possible.
 
 ## Credits
 
 <a href="https://x.com/Hany_Sul">By Hany_Sul</a>
+
+## License
+
+Wakz is source-available for **personal and other noncommercial use** under the
+[PolyForm Noncommercial License 1.0.0](LICENSE).
+
+**Commercial use, reselling the software, or offering it as a paid service is not permitted**
+without a separate written license from the copyright holder ([Hany_Sul](https://x.com/Hany_Sul)).
 
 ---
 

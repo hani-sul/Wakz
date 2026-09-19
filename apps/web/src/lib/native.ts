@@ -20,6 +20,15 @@ export type NativePingResult = {
 type NativeBridge = {
   available?: () => boolean;
   startPing?: (host: string, count: number, callbackId: string) => void;
+  localNetworkInfo?: () => string;
+};
+
+export type LocalNetworkInterface = { name: string; ip: string; prefix: number };
+export type LocalNetworkInfo = {
+  available: boolean;
+  interfaces: LocalNetworkInterface[];
+  gateway: string | null;
+  error?: string;
 };
 
 declare global {
@@ -49,6 +58,23 @@ export function nativeAvailable(): boolean {
     return typeof window !== 'undefined' && Boolean(window.WakzNative?.startPing);
   } catch {
     return false;
+  }
+}
+
+/**
+ * Device network information used by the server discovery: the device's own IPv4 addresses with
+ * their prefix length plus the default gateway. Returns null in a plain browser.
+ */
+export function localNetworkInfo(): LocalNetworkInfo | null {
+  try {
+    const bridge = window.WakzNative as NativeBridge | undefined;
+    if (!bridge?.localNetworkInfo) return null;
+    const raw = bridge.localNetworkInfo();
+    const parsed = JSON.parse(raw) as LocalNetworkInfo;
+    if (!parsed || parsed.available !== true || !Array.isArray(parsed.interfaces)) return null;
+    return parsed;
+  } catch {
+    return null;
   }
 }
 
