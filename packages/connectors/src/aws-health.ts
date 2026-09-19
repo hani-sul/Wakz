@@ -94,12 +94,17 @@ export const awsHealthConnector: Connector = {
     });
 
     const status = statuses.length > 0 ? worstStatus(statuses) : 'OPERATIONAL';
+    const regionNames = [...new Set(regions.map((region) => region.region))];
+    const affectedRegions = [...new Set(regions.filter((region) => region.status !== 'OPERATIONAL').map((region) => region.region))];
+    const statusRaw = events.length === 0
+      ? 'no events in AWS Health feed'
+      : affectedRegions.length > 0
+        ? `${events.length} event(s) in AWS Health feed — affected regions: ${affectedRegions.join(', ')}`
+        : `${events.length} event(s) in AWS Health feed, all recovered`;
 
     return baseResult(ctx.service, ctx.now(), {
       status,
-      statusRaw: events.length > 0
-        ? `${events.length} event(s) in AWS Health feed`
-        : 'no events in AWS Health feed',
+      statusRaw,
       sourceUrl: String(ctx.service.connectorConfig.pageUrl ?? eventsUrl),
       components,
       incidents,
@@ -107,7 +112,8 @@ export const awsHealthConnector: Connector = {
       metadata: {
         provider: 'aws-health',
         events: events.length,
-        regions: [...new Set(regions.map((region) => region.region))],
+        regions: regionNames,
+        affectedRegions,
         feedEncoding: 'UTF-16',
       },
       notes: ['provider=aws-health', `events=${events.length}`],
