@@ -68,7 +68,8 @@ export const data = {
   search: (query: string) => (remote() ? api.search(query) : local.localSearch(query)),
   health: () => (remote() ? api.health() : Promise.resolve({ ok: true, database: {}, catalog: { services: local.visibleServices().length } })),
 
-  refresh: (options: { force?: boolean; slugs?: string[]; reason?: 'auto' | 'manual' } = {}) => local.runCollection(options),
+  refresh: (options: { force?: boolean; slugs?: string[]; forceSlugs?: string[]; reason?: 'auto' | 'manual' } = {}) =>
+    local.runCollection(options),
   refreshState: () => local.getEngineState(),
   subscribe: (listener: (state: local.EngineState) => void) => local.subscribeEngine(listener),
   manualRefreshAllowed: () => local.manualRefreshAllowed(),
@@ -77,9 +78,9 @@ export const data = {
   visibleCategories: () => local.visibleCategories(),
   location: {
     insideSaudiArabia: () => local.getEngineState().insideSaudiArabia,
-    isManual: () => local.geoIsManual(),
-    setOverride: (value: 'inside' | 'outside' | null) => local.setGeoOverride(value),
-    detect: () => local.detectInsideSaudiArabia(),
+    country: () => local.getEngineState().country,
+    source: () => local.getEngineState().geoSource,
+    detect: () => local.detectLocation(),
   },
   initialise: () => local.initialiseEngine(),
 };

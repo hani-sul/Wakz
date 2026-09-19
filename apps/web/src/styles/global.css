@@ -209,11 +209,17 @@ code {
 
 .topnav {
   display: flex;
-  gap: 16px;
+  gap: 10px;
   color: var(--text-dim);
   font-size: 14px;
   align-items: center;
   margin-inline-start: auto;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.topnav > * {
+  flex: none;
 }
 
 .nav-link {
@@ -889,6 +895,18 @@ main {
 .geo-badge.outside {
   color: var(--text-dim);
   background: rgba(255, 255, 255, 0.04);
+}
+
+.geo-state {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.geo-country {
+  color: var(--text-faint);
+  font-size: 12.5px;
 }
 
 .incident-list {

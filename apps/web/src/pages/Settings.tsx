@@ -115,8 +115,22 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
           <span className={`geo-badge ${inside ? 'inside' : 'outside'}`}>
             {inside ? i18n.t('settings.geoInside') : i18n.t('settings.geoOutside')}
           </span>
+          <span className="geo-country">
+            {engine.country ? `${engine.country} · ${engine.geoSource === 'ip' ? i18n.t('settings.geoFromIp') : i18n.t('settings.geoFromDevice')}` : i18n.t('settings.geoFromDevice')}
+          </span>
         </p>
         <p className="note">{i18n.t('settings.geoMandatory')}</p>
+        <div className="button-row">
+          <button
+            type="button"
+            onClick={async () => {
+              await data.location.detect();
+              onChanged();
+            }}
+          >
+            {i18n.t('settings.geoRecheck')}
+          </button>
+        </div>
       </section>
 
       <section className="panel">

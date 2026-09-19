@@ -42,6 +42,7 @@ export function App(): React.JSX.Element {
   const [cooldown, setCooldown] = useState(0);
   const [notice, setNotice] = useState<string | null>(null);
   const [refreshToken, setRefreshToken] = useState(0);
+  const [busy, setBusy] = useState(false);
   // Search text and status filter live here so they survive opening a service and coming back.
   const [query, setQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState<'all' | string>('all');
@@ -72,7 +73,15 @@ export function App(): React.JSX.Element {
       await data.initialise();
       if (cancelled) return;
       setEngine(data.refreshState());
-      if (data.mode() === 'local') await data.refresh({ reason: 'auto' });
+      setRefreshToken((value) => value + 1);
+      if (data.mode() === 'local') {
+        // On open, always refresh the favorites plus the first services of the catalog so the first
+        // screen is current; the regular cache handles the rest.
+        const priority = [...pins, ...data.visibleServices().slice(0, 12).map((service) => service.slug)];
+        setBusy(true);
+        await data.refresh({ reason: 'auto', forceSlugs: [...new Set(priority)] });
+        setBusy(false);
+      }
       if (cancelled) return;
       setEngine(data.refreshState());
       setRefreshToken((value) => value + 1);
@@ -115,16 +124,22 @@ export function App(): React.JSX.Element {
       setTimeout(() => setNotice(null), 2500);
       return;
     }
-    const allowed = await data.manualRefreshAllowed();
-    if (!allowed.allowed) {
-      setCooldown(allowed.waitSeconds);
-      return;
+    if (data.refreshState().running) return;
+    setBusy(true);
+    try {
+      const allowed = await data.manualRefreshAllowed();
+      if (!allowed.allowed) {
+        setCooldown(allowed.waitSeconds);
+        return;
+      }
+      setCooldown(30);
+      await data.refresh({ force: true, reason: 'manual' });
+      setNotice(i18n.t('actions.refreshDone'));
+      setTimeout(() => setNotice(null), 2500);
+      setRefreshToken((value) => value + 1);
+    } finally {
+      setBusy(false);
     }
-    setNotice(i18n.t('actions.refreshing'));
-    setCooldown(30);
-    await data.refresh({ force: true, reason: 'manual' });
-    setNotice(null);
-    setRefreshToken((value) => value + 1);
   };
 
   const content = useMemo(() => {
@@ -161,8 +176,13 @@ export function App(): React.JSX.Element {
               else navigate(`#/category/${tab.slug}`);
             }}
             onRefreshFavorites={async () => {
-              await data.refresh({ force: true, slugs: pins, reason: 'manual' });
-              setRefreshToken((value) => value + 1);
+              setBusy(true);
+              try {
+                await data.refresh({ force: true, slugs: pins, reason: 'manual' });
+                setRefreshToken((value) => value + 1);
+              } finally {
+                setBusy(false);
+              }
             }}
           />
         );
@@ -183,20 +203,20 @@ export function App(): React.JSX.Element {
         <nav className="topnav">
           <a className={`nav-link${route.name === 'dns' ? ' active' : ''}`} href="#/dns">{i18n.t('nav.dns')}</a>
           <a className={`nav-link${route.name === 'ping' ? ' active' : ''}`} href="#/ping">{i18n.t('nav.ping')}</a>
+          <a className={`nav-link${route.name === 'settings' ? ' active' : ''}`} href="#/settings">{i18n.t('nav.settings')}</a>
+          <button type="button" className="lang-toggle" onClick={i18n.toggleLocale} title={i18n.t('nav.languageHint')}>
+            {i18n.t('nav.language')}
+          </button>
           <button
             type="button"
             className="refresh-button"
             onClick={() => void refresh()}
-            disabled={engine.running || cooldown > 0}
+            disabled={engine.running || busy || cooldown > 0}
             title={i18n.t('actions.refreshLabel')}
             aria-label={i18n.t('actions.refreshLabel')}
           >
-            {engine.running ? <span className="refresh-spinner" aria-hidden="true" /> : <span className="refresh-icon" aria-hidden="true">⟳</span>}
+            {engine.running || busy ? <span className="refresh-spinner" aria-hidden="true" /> : <span className="refresh-icon" aria-hidden="true">⟳</span>}
             {cooldown > 0 && <span className="refresh-cooldown">{cooldown}</span>}
-          </button>
-          <a className={`nav-link${route.name === 'settings' ? ' active' : ''}`} href="#/settings">{i18n.t('nav.settings')}</a>
-          <button type="button" className="lang-toggle" onClick={i18n.toggleLocale} title={i18n.t('nav.languageHint')}>
-            {i18n.t('nav.language')}
           </button>
         </nav>
       </header>
@@ -208,15 +228,19 @@ export function App(): React.JSX.Element {
           <button type="button" onClick={() => void refresh()}>{i18n.t('data.retry')}</button>
         </div>
       )}
-      {engine.running && (
+      {(engine.running || busy) && (
         <div className="data-banner info progress">
           <span>{i18n.t('actions.refreshing')}</span>
-          <span className="progress-count">
-            {engine.collected}/{engine.total}
-          </span>
-          <span className="progress-bar" aria-hidden="true">
-            <span style={{ width: `${engine.total > 0 ? (engine.collected / engine.total) * 100 : 0}%` }} />
-          </span>
+          {engine.total > 0 && (
+            <>
+              <span className="progress-count">
+                {engine.collected}/{engine.total}
+              </span>
+              <span className="progress-bar" aria-hidden="true">
+                <span style={{ width: `${engine.total > 0 ? (engine.collected / engine.total) * 100 : 0}%` }} />
+              </span>
+            </>
+          )}
         </div>
       )}
 

@@ -34,7 +34,8 @@ export type EngineState = {
   total: number;
   lastError: string | null;
   insideSaudiArabia: boolean;
-  geoSource: 'auto' | 'manual';
+  geoSource: 'ip' | 'device';
+  country: string | null;
 };
 
 const listeners = new Set<(state: EngineState) => void>();
@@ -46,7 +47,8 @@ let state: EngineState = {
   total: 0,
   lastError: null,
   insideSaudiArabia: false,
-  geoSource: 'auto',
+  geoSource: 'device',
+  country: null,
 };
 
 function publish(patch: Partial<EngineState>): void {
@@ -64,15 +66,9 @@ export function subscribeEngine(listener: (next: EngineState) => void): () => vo
   return () => listeners.delete(listener);
 }
 
-/**
- * Simple, permission-free location check: the device time zone plus the locale region.
- * Users can override it in the settings screen.
- */
-export function detectInsideSaudiArabia(): boolean {
+/** Offline fallback: the device time zone plus the locale region. */
+export function detectInsideSaudiArabiaFromDevice(): boolean {
   try {
-    const manual = window.localStorage.getItem('wakz.geoOverride');
-    if (manual === 'inside') return true;
-    if (manual === 'outside') return false;
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone ?? '';
     if (SAUDI_TIMEZONES.includes(timeZone)) return true;
     const locales = [navigator.language, ...(navigator.languages ?? [])];
@@ -82,22 +78,46 @@ export function detectInsideSaudiArabia(): boolean {
   }
 }
 
-export function geoIsManual(): boolean {
-  try {
-    return Boolean(window.localStorage.getItem('wakz.geoOverride'));
-  } catch {
-    return false;
-  }
+/**
+ * Location is detected from the public IP address (which follows the network, including a VPN) and
+ * falls back to the device time zone when the lookup is unavailable. It cannot be set manually.
+ */
+export async function detectLocation(): Promise<{ inside: boolean; country: string | null; source: 'ip' | 'device' }> {
+  let country: string | null = null;
+  const lookup = async (): Promise<string | null> => {
+    try {
+      const response = await fetch('https://ipinfo.io/json', { cache: 'no-store', signal: timeout(6000) });
+      if (!response.ok) return null;
+      const body = (await response.json()) as { country?: string };
+      return body.country ? body.country.toUpperCase() : null;
+    } catch {
+      return null;
+    }
+  };
+  const lookupAlt = async (): Promise<string | null> => {
+    try {
+      const response = await fetch('https://ipwho.is/', { cache: 'no-store', signal: timeout(6000) });
+      if (!response.ok) return null;
+      const body = (await response.json()) as { country_code?: string; success?: boolean };
+      return body.country_code ? body.country_code.toUpperCase() : null;
+    } catch {
+      return null;
+    }
+  };
+
+  country = await lookup();
+  if (!country) country = await lookupAlt();
+
+  const inside = country ? country === 'SA' : detectInsideSaudiArabiaFromDevice();
+  publish({ insideSaudiArabia: inside, country, geoSource: country ? 'ip' : 'device' });
+  return { inside, country, source: country ? 'ip' : 'device' };
 }
 
-export function setGeoOverride(value: 'inside' | 'outside' | null): void {
-  try {
-    if (value === null) window.localStorage.removeItem('wakz.geoOverride');
-    else window.localStorage.setItem('wakz.geoOverride', value);
-  } catch {
-    // Ignore storage failures.
-  }
-  publish({ insideSaudiArabia: detectInsideSaudiArabia(), geoSource: geoIsManual() ? 'manual' : 'auto' });
+function timeout(ms: number): AbortSignal {
+  if (typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function') return AbortSignal.timeout(ms);
+  const controller = new AbortController();
+  setTimeout(() => controller.abort(), ms);
+  return controller.signal;
 }
 
 /** Services the current user may see. */
@@ -125,12 +145,18 @@ function isFresh(record: LocalServiceRecord | null): boolean {
 }
 
 export async function initialiseEngine(): Promise<void> {
-  publish({ insideSaudiArabia: detectInsideSaudiArabia(), geoSource: geoIsManual() ? 'manual' : 'auto' });
+  await detectLocation();
   const lastRun = await getMeta<number>('lastRun');
   publish({ lastRun: lastRun ?? null });
 }
 
-export type RunOptions = { force?: boolean; slugs?: string[]; reason?: 'auto' | 'manual' };
+export type RunOptions = {
+  force?: boolean;
+  slugs?: string[];
+  /** Services that are refreshed even when their cached value is still fresh (used on app open). */
+  forceSlugs?: string[];
+  reason?: 'auto' | 'manual';
+};
 
 export async function runCollection(options: RunOptions = {}): Promise<{ collected: number; skipped: number }> {
   if (state.running) return { collected: 0, skipped: 0 };
@@ -139,9 +165,17 @@ export async function runCollection(options: RunOptions = {}): Promise<{ collect
 
   const queue: ServiceDefinition[] = [];
   let skipped = 0;
-  for (const service of filtered) {
+  const ordered = options.forceSlugs && options.forceSlugs.length > 0
+    ? [...filtered].sort((left, right) => {
+      const leftFirst = options.forceSlugs?.includes(left.slug) ? 0 : 1;
+      const rightFirst = options.forceSlugs?.includes(right.slug) ? 0 : 1;
+      return leftFirst - rightFirst;
+    })
+    : filtered;
+  for (const service of ordered) {
     const record = await getServiceRecord(service.slug);
-    if (!options.force && isFresh(record)) {
+    const mustRefresh = Boolean(options.forceSlugs?.includes(service.slug));
+    if (!options.force && !mustRefresh && isFresh(record)) {
       skipped += 1;
       continue;
     }
@@ -149,8 +183,7 @@ export async function runCollection(options: RunOptions = {}): Promise<{ collect
   }
 
   if (queue.length === 0) {
-    publish({ lastRun: Date.now() });
-    await putMeta('lastRun', Date.now());
+    // Nothing was due: keep the last run time untouched so the UI can say "up to date".
     return { collected: 0, skipped };
   }
 
