@@ -5,7 +5,8 @@ import {
   createLogger,
   latencySummary,
 } from '../../../packages/core/src/index.ts';
-import type { AppConfig, ServiceDefinition, UnifiedStatus } from '../../../packages/core/src/index.ts';
+import type { ServiceDefinition, UnifiedStatus } from '../../../packages/core/src/index.ts';
+import type { AppConfig } from '../../../packages/core/src/config.ts';
 import {
   getConnectivityMap,
   getStatusMap,

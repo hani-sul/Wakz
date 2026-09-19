@@ -24,6 +24,7 @@ function migrate(db: DatabaseSync): void {
     { table: 'categories', column: 'name_ar', definition: "TEXT NOT NULL DEFAULT ''" },
     { table: 'categories', column: 'description_ar', definition: "TEXT NOT NULL DEFAULT ''" },
     { table: 'services', column: 'limitation_ar', definition: 'TEXT' },
+    { table: 'incidents', column: 'ends_at', definition: 'TEXT' },
   ];
 
   for (const entry of required) {

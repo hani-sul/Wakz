@@ -45,7 +45,10 @@ export function createApp(options: AppOptions): FastifyInstance {
     reply.header('permissions-policy', 'geolocation=(), microphone=(), camera=()');
     reply.header(
       'content-security-policy',
-      "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'",
+      // connect-src must allow the vendor status sources: in local-first mode the browser talks to
+      // them directly (the Android build runs from file://, where no CSP applies).
+      "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; " +
+        "connect-src 'self' https: http://localhost:* http://127.0.0.1:*; frame-ancestors 'none'",
     );
     reply.header('access-control-allow-origin', options.webOrigin);
     return payload;

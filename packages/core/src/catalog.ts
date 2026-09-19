@@ -1,4 +1,4 @@
-import type { CategoryDefinition, CheckTarget, ServiceDefinition } from './types.ts';
+import type { CategoryDefinition, CategorySlug, CheckTarget, ServiceDefinition } from './types.ts';
 
 export const CATEGORIES: CategoryDefinition[] = [
   {
@@ -41,6 +41,23 @@ export const CATEGORIES: CategoryDefinition[] = [
     descriptionAr: 'خدمات الوسائط والبيانات الوصفية والمتابعة',
     position: 5,
   },
+  {
+    slug: 'business',
+    name: 'Business & Finance',
+    nameAr: 'الأعمال والمالية',
+    description: 'Workspace, design, commerce and payment platforms',
+    descriptionAr: 'منصّات العمل والتصميم والتجارة والمدفوعات',
+    position: 6,
+  },
+  {
+    slug: 'local',
+    name: 'Local services',
+    nameAr: 'خدمات محلية',
+    description: 'Saudi and Gulf platforms — shown only inside Saudi Arabia',
+    descriptionAr: 'منصّات سعودية وخليجية — تظهر داخل السعودية فقط',
+    position: 7,
+    visibility: 'sa',
+  },
 ];
 
 const https = (url: string, label?: string): CheckTarget => ({
@@ -53,6 +70,49 @@ const https = (url: string, label?: string): CheckTarget => ({
 
 const dns = (host: string): CheckTarget => ({ kind: 'dns', target: host });
 const tcp = (host: string, port = 443): CheckTarget => ({ kind: 'tcp', target: host, port });
+
+/**
+ * Most vendors publish their status through a hosted status page. This helper keeps those
+ * catalog entries short: one line per service, with the same verified source shape.
+ */
+function statuspageService(config: {
+  slug: string;
+  name: string;
+  nameAr?: string;
+  category: CategorySlug;
+  homepage: string;
+  baseUrl: string;
+  host: string;
+  extraTargets?: CheckTarget[];
+  visibility?: 'global' | 'sa';
+  limitation?: string;
+  limitationAr?: string;
+}): ServiceDefinition {
+  const statusPage = config.baseUrl.endsWith('/') ? config.baseUrl : `${config.baseUrl}/`;
+  return {
+    slug: config.slug,
+    name: config.name,
+    nameAr: config.nameAr,
+    category: config.category,
+    homepage: config.homepage,
+    statusPage,
+    connector: 'statuspage',
+    connectorConfig: { baseUrl: config.baseUrl },
+    sourceKind: 'statuspage',
+    official: true,
+    confidence: 'high',
+    checkTargets: [
+      https(config.homepage, 'Website'),
+      https(statusPage, 'Status page'),
+      dns(config.host),
+      tcp(config.host),
+      ...(config.extraTargets ?? []),
+    ],
+    ...(config.visibility ? { visibility: config.visibility } : {}),
+    ...(config.limitation ? { limitation: config.limitation } : {}),
+    ...(config.limitationAr ? { limitationAr: config.limitationAr } : {}),
+  };
+}
 
 /**
  * The single source of truth for the catalog. Adding a service means adding one entry here
@@ -733,8 +793,8 @@ export const SERVICES: ServiceDefinition[] = [
       dns('strem.io'),
       tcp('api.strem.io'),
     ],
-    limitation: 'Stremio publishes no status page (status.stremio.com does not resolve); only connectivity is measured.',
-    limitationAr: 'لا تنشر Stremio صفحة حالة (النطاق status.stremio.com غير موجود)، ويُقاس الاتصال فقط.',
+    limitation: 'Stremio publishes no status page: status.stremio.com does not resolve, stremio.com/status returns 404 and api.strem.io/api returns 404, so only our own connectivity check is reported.',
+    limitationAr: 'لا تنشر Stremio أي صفحة حالة: النطاق status.stremio.com غير موجود، وstremio.com/status يعيد 404، وapi.strem.io/api يعيد 404 — لذلك يُعرض فحص الاتصال الخاص بنا فقط.',
   },
   {
     slug: 'tmdb',
@@ -798,6 +858,290 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('api.simkl.com'),
     ],
   },
+
+  // ---------------------------------------------------------------- Business & Finance
+  statuspageService({
+    slug: 'notion',
+    name: 'Notion',
+    category: 'business',
+    homepage: 'https://www.notion.so/',
+    baseUrl: 'https://www.notion-status.com',
+    host: 'notion.so',
+  }),
+  statuspageService({
+    slug: 'figma',
+    name: 'Figma',
+    category: 'business',
+    homepage: 'https://www.figma.com/',
+    baseUrl: 'https://status.figma.com',
+    host: 'figma.com',
+  }),
+  statuspageService({
+    slug: 'zoom',
+    name: 'Zoom',
+    category: 'business',
+    homepage: 'https://zoom.us/',
+    baseUrl: 'https://www.zoomstatus.com',
+    host: 'zoom.us',
+  }),
+  statuspageService({
+    slug: 'dropbox',
+    name: 'Dropbox',
+    category: 'business',
+    homepage: 'https://www.dropbox.com/',
+    baseUrl: 'https://status.dropbox.com',
+    host: 'dropbox.com',
+  }),
+  statuspageService({
+    slug: 'shopify',
+    name: 'Shopify',
+    category: 'business',
+    homepage: 'https://www.shopify.com/',
+    baseUrl: 'https://www.shopifystatus.com',
+    host: 'shopify.com',
+  }),
+  statuspageService({
+    slug: 'atlassian',
+    name: 'Atlassian (Jira & Confluence)',
+    nameAr: 'أتلسيان (جيرا وكونفلوينس)',
+    category: 'business',
+    homepage: 'https://www.atlassian.com/',
+    baseUrl: 'https://status.atlassian.com',
+    host: 'atlassian.com',
+  }),
+  statuspageService({
+    slug: 'coinbase',
+    name: 'Coinbase',
+    category: 'business',
+    homepage: 'https://www.coinbase.com/',
+    baseUrl: 'https://status.coinbase.com',
+    host: 'coinbase.com',
+  }),
+
+  // ---------------------------------------------------------------- Cloud / developer platforms
+  statuspageService({
+    slug: 'bitbucket',
+    name: 'Bitbucket',
+    category: 'cloud',
+    homepage: 'https://bitbucket.org/',
+    baseUrl: 'https://bitbucket.status.atlassian.com',
+    host: 'bitbucket.org',
+  }),
+  statuspageService({
+    slug: 'circleci',
+    name: 'CircleCI',
+    category: 'cloud',
+    homepage: 'https://circleci.com/',
+    baseUrl: 'https://status.circleci.com',
+    host: 'circleci.com',
+  }),
+  statuspageService({
+    slug: 'datadog',
+    name: 'Datadog',
+    category: 'cloud',
+    homepage: 'https://www.datadoghq.com/',
+    baseUrl: 'https://status.datadoghq.com',
+    host: 'datadoghq.com',
+  }),
+  statuspageService({
+    slug: 'docker',
+    name: 'Docker Hub',
+    nameAr: 'دوكر هَب',
+    category: 'cloud',
+    homepage: 'https://hub.docker.com/',
+    baseUrl: 'https://www.dockerstatus.com',
+    host: 'docker.com',
+  }),
+  statuspageService({
+    slug: 'netlify',
+    name: 'Netlify',
+    category: 'cloud',
+    homepage: 'https://www.netlify.com/',
+    baseUrl: 'https://www.netlifystatus.com',
+    host: 'netlify.com',
+  }),
+  statuspageService({
+    slug: 'render',
+    name: 'Render',
+    category: 'cloud',
+    homepage: 'https://render.com/',
+    baseUrl: 'https://status.render.com',
+    host: 'render.com',
+  }),
+  statuspageService({
+    slug: 'supabase',
+    name: 'Supabase',
+    category: 'cloud',
+    homepage: 'https://supabase.com/',
+    baseUrl: 'https://status.supabase.com',
+    host: 'supabase.com',
+  }),
+  statuspageService({
+    slug: 'mongodb-atlas',
+    name: 'MongoDB Atlas',
+    category: 'cloud',
+    homepage: 'https://www.mongodb.com/atlas',
+    baseUrl: 'https://status.mongodb.com',
+    host: 'mongodb.com',
+  }),
+  statuspageService({
+    slug: 'redis-cloud',
+    name: 'Redis Cloud',
+    category: 'cloud',
+    homepage: 'https://redis.io/cloud/',
+    baseUrl: 'https://status.redis.io',
+    host: 'redis.io',
+  }),
+  statuspageService({
+    slug: 'cloudinary',
+    name: 'Cloudinary',
+    category: 'cloud',
+    homepage: 'https://cloudinary.com/',
+    baseUrl: 'https://status.cloudinary.com',
+    host: 'cloudinary.com',
+  }),
+  statuspageService({
+    slug: 'sentry',
+    name: 'Sentry',
+    category: 'cloud',
+    homepage: 'https://sentry.io/',
+    baseUrl: 'https://status.sentry.io',
+    host: 'sentry.io',
+  }),
+  statuspageService({
+    slug: 'npm',
+    name: 'npm registry',
+    nameAr: 'مستودع npm',
+    category: 'cloud',
+    homepage: 'https://www.npmjs.com/',
+    baseUrl: 'https://status.npmjs.org',
+    host: 'npmjs.com',
+    extraTargets: [https('https://registry.npmjs.org/', 'Registry')],
+  }),
+  statuspageService({
+    slug: 'twilio',
+    name: 'Twilio',
+    category: 'cloud',
+    homepage: 'https://www.twilio.com/',
+    baseUrl: 'https://status.twilio.com',
+    host: 'twilio.com',
+  }),
+
+  // ---------------------------------------------------------------- AI (continued)
+  statuspageService({
+    slug: 'perplexity',
+    name: 'Perplexity',
+    category: 'ai',
+    homepage: 'https://www.perplexity.ai/',
+    baseUrl: 'https://status.perplexity.com',
+    host: 'perplexity.ai',
+  }),
+  statuspageService({
+    slug: 'cursor',
+    name: 'Cursor',
+    category: 'ai',
+    homepage: 'https://cursor.com/',
+    baseUrl: 'https://status.cursor.com',
+    host: 'cursor.com',
+  }),
+  statuspageService({
+    slug: 'elevenlabs',
+    name: 'ElevenLabs',
+    category: 'ai',
+    homepage: 'https://elevenlabs.io/',
+    baseUrl: 'https://status.elevenlabs.io',
+    host: 'elevenlabs.io',
+  }),
+
+  // ---------------------------------------------------------------- Media (continued)
+  statuspageService({
+    slug: 'twitch',
+    name: 'Twitch',
+    category: 'media',
+    homepage: 'https://www.twitch.tv/',
+    baseUrl: 'https://status.twitch.com',
+    host: 'twitch.tv',
+  }),
+
+  // ---------------------------------------------------------------- Local services (Saudi Arabia)
+  statuspageService({
+    slug: 'zid',
+    name: 'Zid',
+    nameAr: 'زد',
+    category: 'local',
+    homepage: 'https://zid.sa/',
+    baseUrl: 'https://status.zid.sa',
+    host: 'zid.sa',
+    visibility: 'sa',
+  }),
+  statuspageService({
+    slug: 'tabby',
+    name: 'Tabby',
+    nameAr: 'تابي',
+    category: 'local',
+    homepage: 'https://tabby.ai/',
+    baseUrl: 'https://www.tabby-status.com',
+    host: 'tabby.ai',
+    visibility: 'sa',
+  }),
+  {
+    slug: 'salla',
+    name: 'Salla',
+    nameAr: 'سلة',
+    category: 'local',
+    homepage: 'https://salla.com/',
+    statusPage: 'https://status.salla.com/',
+    connector: 'instatus',
+    connectorConfig: { summaryUrl: 'https://status.salla.com/summary.json', pageUrl: 'https://status.salla.com/' },
+    sourceKind: 'official-json',
+    official: true,
+    confidence: 'high',
+    visibility: 'sa',
+    checkTargets: [
+      https('https://salla.com/', 'Website'),
+      https('https://status.salla.com/summary.json', 'Status API'),
+      dns('salla.com'),
+      tcp('salla.com'),
+    ],
+  },
+  {
+    slug: 'paytabs',
+    name: 'PayTabs',
+    nameAr: 'بيتابس',
+    category: 'local',
+    homepage: 'https://www.paytabs.com/',
+    statusPage: 'https://status.paytabs.com/',
+    connector: 'betterstack',
+    connectorConfig: { indexUrl: 'https://status.paytabs.com/index.json', pageUrl: 'https://status.paytabs.com/' },
+    sourceKind: 'betterstack',
+    official: true,
+    confidence: 'high',
+    visibility: 'sa',
+    checkTargets: [
+      https('https://www.paytabs.com/', 'Website'),
+      https('https://status.paytabs.com/index.json', 'Status API'),
+      dns('paytabs.com'),
+      tcp('paytabs.com'),
+    ],
+  },
+  {
+    slug: 'local-coming-soon',
+    name: 'More local services',
+    nameAr: 'المزيد من الخدمات المحلية',
+    category: 'local',
+    homepage: '',
+    statusPage: null,
+    connector: 'connectivity',
+    connectorConfig: {},
+    sourceKind: 'none',
+    official: false,
+    confidence: 'low',
+    visibility: 'sa',
+    comingSoon: true,
+    checkTargets: [],
+    limitation: 'More Saudi and Gulf services are coming soon — each one is added only after a real, machine-readable status source is verified.',
+    limitationAr: 'المزيد من الخدمات السعودية والخليجية قادمة قريبًا — ولا تُضاف أي خدمة إلا بعد التحقق من وجود مصدر حالة رسمي مقروء آليًا.',
+  },
 ];
 
 export const SERVICE_BY_SLUG: Map<string, ServiceDefinition> = new Map(SERVICES.map((service) => [service.slug, service]));
@@ -819,7 +1163,20 @@ export function assertCatalogIntegrity(): string[] {
     if (!CATEGORIES.some((category) => category.slug === service.category)) {
       problems.push(`${service.slug}: unknown category ${service.category}`);
     }
-    if (service.checkTargets.length === 0) problems.push(`${service.slug}: no check targets`);
+    if (!service.comingSoon && service.checkTargets.length === 0) {
+      problems.push(`${service.slug}: no check targets`);
+    }
+    if (service.comingSoon && service.checkTargets.length > 0) {
+      problems.push(`${service.slug}: placeholders must not define check targets`);
+    }
+    if (service.category === 'local' && service.visibility !== 'sa') {
+      problems.push(`${service.slug}: local services must be scoped to Saudi Arabia`);
+    }
   }
   return problems;
+}
+
+/** Services that should be collected (skips "coming soon" placeholders). */
+export function collectableServices(): ServiceDefinition[] {
+  return SERVICES.filter((service) => !service.comingSoon);
 }

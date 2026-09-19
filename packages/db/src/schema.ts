@@ -93,6 +93,7 @@ CREATE TABLE IF NOT EXISTS incidents (
   started_at   TEXT,
   updated_at   TEXT,
   resolved_at  TEXT,
+  ends_at      TEXT,
   description  TEXT,
   url          TEXT,
   components   TEXT NOT NULL DEFAULT '[]',

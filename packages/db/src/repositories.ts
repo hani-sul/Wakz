@@ -28,7 +28,7 @@ export function seedCatalog(db: DatabaseSync, categories: CategoryDefinition[], 
   const insertService = db.prepare(
     `INSERT INTO services (slug, name, category, homepage, status_page, connector, connector_config, source_kind,
                            official, confidence, poll_seconds, check_targets, limitation, limitation_ar, enabled, created_at, updated_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
      ON CONFLICT(slug) DO UPDATE SET
        name = excluded.name,
        category = excluded.category,
@@ -43,6 +43,7 @@ export function seedCatalog(db: DatabaseSync, categories: CategoryDefinition[], 
        check_targets = excluded.check_targets,
        limitation = excluded.limitation,
        limitation_ar = excluded.limitation_ar,
+       enabled = excluded.enabled,
        updated_at = excluded.updated_at`,
   );
   for (const service of services) {
@@ -61,6 +62,8 @@ export function seedCatalog(db: DatabaseSync, categories: CategoryDefinition[], 
       JSON.stringify(service.checkTargets),
       service.limitation ?? null,
       service.limitationAr ?? null,
+      // "Coming soon" tiles are UI placeholders: stored, but never collected.
+      service.comingSoon ? 0 : 1,
       timestamp,
       timestamp,
     );
@@ -181,12 +184,12 @@ export function saveIncidents(db: DatabaseSync, serviceSlug: string, incidents: 
   if (incidents.length === 0) return;
   const statement = db.prepare(
     `INSERT INTO incidents (service_slug, external_id, kind, title, status, status_raw, impact, started_at, updated_at,
-                            resolved_at, description, url, components, source_kind, seen_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                            resolved_at, ends_at, description, url, components, source_kind, seen_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
      ON CONFLICT(service_slug, kind, external_id) DO UPDATE SET
        title = excluded.title, status = excluded.status, status_raw = excluded.status_raw, impact = excluded.impact,
        started_at = excluded.started_at, updated_at = excluded.updated_at, resolved_at = excluded.resolved_at,
-       description = excluded.description, url = excluded.url, components = excluded.components,
+       ends_at = excluded.ends_at, description = excluded.description, url = excluded.url, components = excluded.components,
        source_kind = excluded.source_kind, seen_at = excluded.seen_at`,
   );
   const timestamp = nowIso();
@@ -202,6 +205,7 @@ export function saveIncidents(db: DatabaseSync, serviceSlug: string, incidents: 
       incident.startedAt,
       incident.updatedAt,
       incident.resolvedAt,
+      incident.endsAt ?? null,
       incident.description,
       incident.url,
       JSON.stringify(incident.components),
@@ -386,12 +390,12 @@ export function getComponents(db: DatabaseSync, serviceSlug: string): ComponentS
 
 export function getIncidents(db: DatabaseSync, serviceSlug: string, kind: 'incident' | 'maintenance', limit = 20): IncidentRecord[] {
   const rows = db.prepare(
-    `SELECT external_id, kind, title, status, status_raw, impact, started_at, updated_at, resolved_at, description, url, components
+    `SELECT external_id, kind, title, status, status_raw, impact, started_at, updated_at, resolved_at, ends_at, description, url, components
      FROM incidents WHERE service_slug = ? AND kind = ?
      ORDER BY COALESCE(updated_at, started_at, seen_at) DESC LIMIT ?`,
   ).all(serviceSlug, kind, limit) as {
     external_id: string; kind: 'incident' | 'maintenance'; title: string; status: string; status_raw: string; impact: UnifiedStatus;
-    started_at: string | null; updated_at: string | null; resolved_at: string | null; description: string | null;
+    started_at: string | null; updated_at: string | null; resolved_at: string | null; ends_at: string | null; description: string | null;
     url: string | null; components: string;
   }[];
   return rows.map((row) => ({
@@ -404,6 +408,7 @@ export function getIncidents(db: DatabaseSync, serviceSlug: string, kind: 'incid
     startedAt: row.started_at,
     updatedAt: row.updated_at,
     resolvedAt: row.resolved_at,
+    endsAt: row.ends_at,
     description: row.description,
     url: row.url,
     components: safeJson<string[]>(row.components, []),
@@ -468,13 +473,13 @@ export function getConnectorRuns(db: DatabaseSync, serviceSlug: string | null, l
 export function getActiveIncidents(db: DatabaseSync, limit = 50): (IncidentRecord & { serviceSlug: string })[] {
   const rows = db.prepare(
     `SELECT service_slug, external_id, kind, title, status, status_raw, impact, started_at, updated_at, resolved_at,
-            description, url, components
+            ends_at, description, url, components
      FROM incidents WHERE resolved_at IS NULL AND status_raw NOT IN ('resolved', 'completed')
      ORDER BY COALESCE(updated_at, started_at, seen_at) DESC LIMIT ?`,
   ).all(limit) as {
     service_slug: string; external_id: string; kind: 'incident' | 'maintenance'; title: string; status: string; status_raw: string;
     impact: UnifiedStatus; started_at: string | null; updated_at: string | null; resolved_at: string | null;
-    description: string | null; url: string | null; components: string;
+    ends_at: string | null; description: string | null; url: string | null; components: string;
   }[];
   return rows.map((row) => ({
     serviceSlug: row.service_slug,
@@ -487,6 +492,7 @@ export function getActiveIncidents(db: DatabaseSync, limit = 50): (IncidentRecor
     startedAt: row.started_at,
     updatedAt: row.updated_at,
     resolvedAt: row.resolved_at,
+    endsAt: row.ends_at,
     description: row.description,
     url: row.url,
     components: safeJson<string[]>(row.components, []),

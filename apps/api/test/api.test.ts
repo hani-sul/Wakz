@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { CATEGORIES, SERVICES } from '../../../packages/core/src/index.ts';
+import { CATEGORIES, SERVICES, collectableServices } from '../../../packages/core/src/index.ts';
 import { openDatabase, saveChecks, saveConnectivity, saveConnectorResult, seedCatalog } from '../../../packages/db/src/index.ts';
 import { createApp } from '../src/app.ts';
 
@@ -36,7 +36,7 @@ test('GET /api/overview summarises the catalog', async () => {
   const response = await app.inject({ method: 'GET', url: '/api/overview' });
   assert.equal(response.statusCode, 200);
   const body = response.json();
-  assert.equal(body.services, SERVICES.length);
+  assert.equal(body.services, collectableServices().length);
   assert.equal(body.categories.length, CATEGORIES.length);
   assert.ok(Object.keys(body.counts).includes('OPERATIONAL'));
   await app.close();
@@ -108,7 +108,7 @@ test('admin routes require the configured token', async () => {
 
   const authorized = await app.inject({ method: 'GET', url: '/api/admin/overview', headers: { 'x-admin-token': 'secret-token' } });
   assert.equal(authorized.statusCode, 200);
-  assert.equal(authorized.json().services.length, SERVICES.length);
+  assert.equal(authorized.json().services.length, collectableServices().length);
   await app.close();
   db.close();
 });

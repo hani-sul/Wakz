@@ -68,6 +68,7 @@ export const betterStackConnector: Connector = {
           startedAt: toIso(String(item.attributes.starts_at ?? item.attributes.created_at ?? '')),
           updatedAt: toIso(String(item.attributes.updated_at ?? item.attributes.created_at ?? '')),
           resolvedAt: isResolved ? toIso(String(item.attributes.resolved_at ?? item.attributes.updated_at ?? '')) : null,
+          endsAt: toIso(String(item.attributes.ends_at ?? '')),
           description: body || null,
           url: ctx.service.statusPage,
           components: [],

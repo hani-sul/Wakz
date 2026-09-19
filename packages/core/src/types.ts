@@ -18,7 +18,7 @@ export const UNIFIED_STATUSES = [
 export type UnifiedStatus = (typeof UNIFIED_STATUSES)[number];
 export type Severity = 'ok' | 'warn' | 'critical' | 'info' | 'unknown';
 
-export const CATEGORY_SLUGS = ['gaming', 'ai', 'cloud', 'social', 'media'] as const;
+export const CATEGORY_SLUGS = ['gaming', 'ai', 'cloud', 'business', 'social', 'media', 'local'] as const;
 export type CategorySlug = (typeof CATEGORY_SLUGS)[number];
 
 export type SourceKind =
@@ -33,6 +33,9 @@ export type SourceKind =
   | 'none';
 
 export type Confidence = 'high' | 'medium' | 'low';
+
+/** `sa` entries are only shown to users inside Saudi Arabia (the local services category). */
+export type VisibilityScope = 'global' | 'sa';
 
 export type CheckKind = 'http' | 'https' | 'dns' | 'tcp' | 'icmp';
 
@@ -51,6 +54,7 @@ export type CheckTarget = {
 export type ConnectorId =
   | 'statuspage'
   | 'statusio'
+  | 'instatus'
   | 'betterstack'
   | 'rss-feed'
   | 'google-cloud'
@@ -80,6 +84,10 @@ export type ServiceDefinition = {
   limitation?: string;
   /** Arabic version of `limitation`, shown by the Arabic interface. */
   limitationAr?: string;
+  /** Visibility scope; defaults to `global`. */
+  visibility?: VisibilityScope;
+  /** Placeholder tile ("قريبًا" / "coming soon") that is not collected from any source. */
+  comingSoon?: boolean;
 };
 
 export type CategoryDefinition = {
@@ -89,6 +97,7 @@ export type CategoryDefinition = {
   description: string;
   descriptionAr: string;
   position: number;
+  visibility?: VisibilityScope;
 };
 
 export type ComponentState = {
@@ -110,6 +119,8 @@ export type IncidentRecord = {
   startedAt: string | null;
   updatedAt: string | null;
   resolvedAt: string | null;
+  /** Planned end of a maintenance window, when the vendor publishes it. */
+  endsAt?: string | null;
   description: string | null;
   url: string | null;
   components: string[];

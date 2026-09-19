@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
-import { DEFAULT_LOCALE, LOCALE_STORAGE_KEY, SUPPORTED_LOCALES, directionFor, localeTag, translate } from './i18n.ts';
+import { DEFAULT_LOCALE, LOCALE_STORAGE_KEY, SUPPORTED_LOCALES, deviceLocale, directionFor, localeTag, translate } from './i18n.ts';
 import type { Locale } from './i18n.ts';
 
 export type I18n = {
@@ -21,7 +21,7 @@ function readStoredLocale(): Locale {
   } catch {
     // localStorage can be unavailable; fall back to the default.
   }
-  return DEFAULT_LOCALE;
+  return deviceLocale() ?? DEFAULT_LOCALE;
 }
 
 export function LocaleProvider({ children }: { children: ReactNode }): React.JSX.Element {

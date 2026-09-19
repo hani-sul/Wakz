@@ -1,4 +1,12 @@
-# TechPulse
+# Wakz — وكز
+
+> **وكز (Wakz)** — حالة الخدمات التقنية في مكان واحد. تطبيق أندرويد عربي يعمل **محليًا على جهازك**:
+> المجمّع ومحرّك الحالة والكاش تعمل داخل التطبيق، ويتصل التطبيق بمصادر الخدمات الرسمية مباشرة،
+> دون أي خادم مركزي لجمع القياسات.
+
+---
+
+# TechPulse (الاسم السابق للمشروع)
 
 TechPulse shows the **current status of the technical services people depend on** in one place:
 whether a service is up, degraded, partially or fully down, under maintenance — plus what is
@@ -19,15 +27,21 @@ operational.
 
 ## بالعربية (نبض التقنية)
 
-نبض التقنية منصّة تعرض الحالة الحالية للخدمات التقنية في مكان واحد: هل تعمل؟ هل يوجد تدهور في
-الأداء؟ انقطاع جزئي أو كامل؟ صيانة؟ وما المكوّنات المتأثرة، وما آخر حادث ومتى بدأ، وزمن الاستجابة
-لكل فحص، ومصدر المعلومة.
+«**وكز**» تطبيق يعرض الحالة الحالية للخدمات التقنية في مكان واحد: هل تعمل؟ هل يوجد تدهور في
+الأداء؟ انقطاع جزئي أو كامل؟ صيانة قادمة ومتى تنتهي؟ وما المكوّنات المتأثرة، وما آخر حادث ومتى
+بدأ، وزمن الاستجابة لكل فحص، ومصدر المعلومة.
 
-* **الواجهة عربية بالكامل** مع دعم الاتجاه من اليمين لليسار، ويمكن التبديل إلى الإنجليزية بزر واحد،
-  وكل خدمة لا تنشر مصدرًا مقروءًا آليًا مذكورة بسببه بالعربية.
-* **تطبيق أندرويد (APK)** جاهز: `dist/TechPulse-1.0.0-ar.apk` باسم «نبض التقنية». يعمل التطبيق
-  بواجهته المدمجة، ويقرأ البيانات من خادم نبض التقنية، ويعرض آخر لقطة محفوظة داخله عند تعذّر
-  الوصول إلى الخادم.
+* **محلي بالكامل (Local-First)**: المجمّع ومحرّك الحالة والكاش تعمل على جهازك، والتطبيق يتصل
+  بمصادر الخدمات مباشرة. لا يُرسل أي قياس إلى خادم. ومن يريد خادمًا (له أو مشترك) يكتب عنوانه في
+  الإعدادات، والخادم اختياري دائمًا وليس شرطًا للتشغيل.
+* **واجهة عربية أولًا** مع دعم RTL، وزر تبديل إلى الإنجليزية، واللغة الافتراضية تتبع نظام الجهاز، وكل
+  خدمة لا تنشر مصدرًا مقروءًا آليًا مذكورة بسببه بالعربية.
+* **تطبيق أندرويد (APK)**: `dist/Wakz-1.1.0-ar.apk` باسم «وكز / Wakz»، ويعمل في الخلفية ما لم يُغلق
+  كاملًا.
+* **تصنيفات على شكل تبويبات** في الأعلى، مع زر **تحديث يدوي** (كاش 10 دقائق، و30 ثانية بين كل
+  تحديثين)، وإمكانية **تثبيت حتى 10 خدمات** في تبويب «المثبتة».
+* **خدمات محلية سعودية** (زد، سلة، تابي، بيتابس) داخل تبويب «خدمات محلية» يظهر **داخل السعودية فقط**،
+  مع بطاقة «قريبًا» للخدمات القادمة.
 * الفصل صريح بين **الحالة الرسمية** للمزوّد و**فحوص الاتصال** التي نقيسها بأنفسنا.
 
 ---
@@ -46,18 +60,21 @@ operational.
 ## Architecture
 
 ```
-Collector (background worker)
-  ├── Connectors ──► official status APIs / RSS / JSON / XML
-  └── Latency engine ──► HTTP, HTTPS, DNS, TCP, ICMP
+Local-first (default): everything below runs inside the device (Android WebView / browser)
+  ├── Connectors ──► official status APIs / RSS / JSON / XML (directly from the device)
+  └── Latency engine ──► HTTP/HTTPS from the device
             │
             ▼
       Normalise + health engine  (unified status, thresholds, events)
             │
             ▼
-        SQLite database (history, components, incidents, checks)
+        On-device store (IndexedDB: status, components, incidents, history, events)
             │
             ▼
-        Backend API (Fastify)  ──►  Dashboard (React + Vite)
+        Dashboard (React + Vite) — cache 10 min, manual refresh with a 30 s cooldown
+
+Optional server mode (same code, for people who want a hosted instance)
+  Collector → SQLite → Fastify API → the app reads from it when the user configures a server
 ```
 
 * `packages/core` — domain types, unified status mapping, health engine, HTTP/XML/RSS helpers,
@@ -225,16 +242,20 @@ npm run collector                    # run under a supervisor / service manager
 
 ## Android app (APK)
 
-The APK is a thin Android shell (no third-party libraries) that bundles the **Arabic web build**
-and the offline snapshot inside `assets/www`, and loads them from `file:///android_asset/www/index.html`.
+The APK is an Android shell (no third-party libraries) that bundles the **Arabic web build together
+with the whole local engine** inside `assets/www`, and loads it from
+`file:///android_asset/www/index.html`. No server is required.
 
-* Package: `com.techpulse.status` · label: **نبض التقنية** (Arabic) / TechPulse (English)
+* Package: `com.wakz.status` · label: **وكز** (Arabic) / **Wakz** (English)
 * `minSdk 24`, `compileSdk`/`targetSdk 36`, Java 17 source level, signed with the debug keystore
-* The app asks for the TechPulse server address once (`#/settings` or the gear entry in the nav);
-  the default points at the machine running the collector on the local network
-* If that server cannot be reached, the dashboard keeps working from the bundled snapshot and shows
-  the "saved data" banner; the app also has `INTERNET` permission and allows cleartext HTTP so a
-  local server works out of the box
+* **Background work**: a foreground service (`EngineService`, notification “وكز يعمل في الخلفية”)
+  keeps the process — and therefore the collector — alive while the app is in the background; it is
+  removed as soon as the user closes the app from the recent-tasks list
+* **Local mode** talks to the status APIs directly (CORS is bypassed for the bundled assets, so
+  sources that a normal browser would block still work), stores everything in IndexedDB, and shows
+  the measurement time per service
+* **Optional server mode** lives in the settings screen; the bundled snapshot is used as a fallback
+  for the server mode only
 
 Build it (the toolchain used on this machine):
 
@@ -273,6 +294,27 @@ and enter `http://<your-lan-ip>:4310` in the app settings (Windows Firewall must
 | Web build fails with a permissions error inside `node_modules/.vite-temp` | restricted filesystem sandbox | run the build from a normal shell |
 
 ## Services
+
+The catalog holds **66 collectable services + 1 "coming soon" tile** across seven categories:
+Gaming, AI, Cloud & infrastructure, Business & finance, Social, Media and **Local services
+(Saudi Arabia only)**.
+
+### Added in this release (verified machine-readable sources)
+
+| Service | Category | Source |
+| --- | --- | --- |
+| Notion, Figma, Zoom, Dropbox, Shopify, Atlassian, Coinbase | Business & finance | Statuspage APIs |
+| Bitbucket, CircleCI, Datadog, Docker Hub, Netlify, Render, Supabase, MongoDB Atlas, Redis Cloud, Cloudinary, Sentry, npm, Twilio | Cloud | Statuspage APIs |
+| Perplexity, Cursor, ElevenLabs | AI | Statuspage APIs |
+| Twitch | Media | Statuspage API |
+| **Zid (زد)**, **Tabby (تابي)** | Local services | Statuspage APIs |
+| **Salla (سلة)** | Local services | Instatus `summary.json` |
+| **PayTabs (بيتابس)** | Local services | Better Stack `index.json` (bilingual maintenance notices) |
+
+Stremio was re-checked during this release: `status.stremio.com` does not resolve, `stremio.com/status`
+returns 404 and `api.strem.io/api` returns 404 — there is no official status feed, so it stays a
+connectivity-only entry with the reason documented in the UI. Nuvio keeps its official
+`status.nuvio.tv/api/status` feed.
 
 Status column: **official** = machine-readable vendor source, **check** = our connectivity checks
 only (the vendor publishes no readable feed), **live/incidents** = what the source provides.

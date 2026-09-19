@@ -1,4 +1,5 @@
-import { CATEGORIES, SERVICES, createLogger, loadConfig } from '../../../packages/core/src/index.ts';
+import { CATEGORIES, SERVICES, collectableServices, createLogger } from '../../../packages/core/src/index.ts';
+import { loadConfig } from '../../../packages/core/src/config.ts';
 import { countRows, openDatabase, pruneOldData, seedCatalog } from '../../../packages/db/src/index.ts';
 import { collectAll, collectService } from './runner.ts';
 
@@ -52,7 +53,7 @@ async function main(): Promise<void> {
     running = true;
     try {
       const now = Date.now();
-      const due = SERVICES.filter((service) => {
+      const due = collectableServices().filter((service) => {
         const last = lastRun.get(service.slug);
         if (last === undefined) return true;
         const interval = Math.min(service.pollSeconds ?? config.defaultPollSeconds, config.connectivityPollSeconds);

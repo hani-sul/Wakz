@@ -108,6 +108,7 @@ export const statuspageConnector: Connector = {
         startedAt: toIso(scheduledFor ?? item.created_at),
         updatedAt: toIso(item.updated_at),
         resolvedAt: kind === 'incident' ? toIso((item as StatuspageIncident).resolved_at) : null,
+        endsAt: kind === 'maintenance' ? toIso((item as StatuspageMaintenance).scheduled_until) : null,
         description: detail ? String(detail).slice(0, 1200) : null,
         url: item.shortlink ?? null,
         components: (item.components ?? []).map((component) => component.name),

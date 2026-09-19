@@ -1,6 +1,7 @@
 import type { Connector, ConnectorId } from '../../core/src/index.ts';
 import { statuspageConnector } from './statuspage.ts';
 import { statusIoConnector } from './statusio.ts';
+import { instatusConnector } from './instatus.ts';
 import { betterStackConnector } from './betterstack.ts';
 import { rssFeedConnector } from './rss-feed.ts';
 import { googleCloudConnector } from './google-cloud.ts';
@@ -14,6 +15,7 @@ import { connectivityConnector } from './connectivity.ts';
 export const CONNECTORS: Record<ConnectorId, Connector> = {
   statuspage: statuspageConnector,
   statusio: statusIoConnector,
+  instatus: instatusConnector,
   betterstack: betterStackConnector,
   'rss-feed': rssFeedConnector,
   'google-cloud': googleCloudConnector,
@@ -34,6 +36,7 @@ export function getConnector(id: ConnectorId): Connector {
 export * from './types.ts';
 export { statuspageConnector } from './statuspage.ts';
 export { statusIoConnector } from './statusio.ts';
+export { instatusConnector } from './instatus.ts';
 export { betterStackConnector } from './betterstack.ts';
 export { rssFeedConnector } from './rss-feed.ts';
 export { googleCloudConnector } from './google-cloud.ts';

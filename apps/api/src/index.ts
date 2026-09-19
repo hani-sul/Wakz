@@ -1,6 +1,7 @@
 import { existsSync } from 'node:fs';
 import path from 'node:path';
-import { createLogger, loadConfig } from '../../../packages/core/src/index.ts';
+import { createLogger } from '../../../packages/core/src/index.ts';
+import { loadConfig } from '../../../packages/core/src/config.ts';
 import { openDatabase, seedCatalog } from '../../../packages/db/src/index.ts';
 import { CATEGORIES, SERVICES } from '../../../packages/core/src/index.ts';
 import { createApp } from './app.ts';

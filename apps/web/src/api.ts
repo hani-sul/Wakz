@@ -32,6 +32,7 @@ export type ServiceCard = {
   componentSummary: Record<string, number>;
   limitation: string | null;
   limitationAr: string | null;
+  comingSoon?: boolean;
 };
 
 export type ComponentState = {
@@ -53,6 +54,7 @@ export type IncidentRecord = {
   startedAt: string | null;
   updatedAt: string | null;
   resolvedAt: string | null;
+  endsAt?: string | null;
   description: string | null;
   url: string | null;
   components: string[];

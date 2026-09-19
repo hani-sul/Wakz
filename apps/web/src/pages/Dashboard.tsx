@@ -1,16 +1,25 @@
 import { useEffect, useMemo, useState } from 'react';
-import { api, type CategorySnapshot, type Overview, type UnifiedStatus } from '../api.ts';
-import { FilterBar } from '../components/FilterBar.tsx';
+import type { CategorySnapshot, UnifiedStatus } from '../api.ts';
+import { data } from '../data.ts';
 import { ServiceCard } from '../components/ServiceCard.tsx';
-import { displayName, relativeTime, statusEmoji, statusLabel } from '../lib/format.ts';
+import { FilterBar } from '../components/FilterBar.tsx';
 import { useI18n } from '../lib/locale.tsx';
+import type { Tab } from '../App.tsx';
 
-export function Dashboard({ onOpenService, onOpenCategory }: {
+export function Dashboard({
+  tab,
+  pinnedSlugs,
+  onOpenService,
+  onSelectTab,
+  onChanged,
+}: {
+  tab: Tab;
+  pinnedSlugs: string[];
   onOpenService: (slug: string) => void;
-  onOpenCategory: (slug: string) => void;
+  onSelectTab: (tab: Tab) => void;
+  onChanged: () => void;
 }): React.JSX.Element {
   const i18n = useI18n();
-  const [overview, setOverview] = useState<Overview | null>(null);
   const [categories, setCategories] = useState<CategorySnapshot[]>([]);
   const [filter, setFilter] = useState<'all' | UnifiedStatus>('all');
   const [query, setQuery] = useState('');
@@ -21,13 +30,12 @@ export function Dashboard({ onOpenService, onOpenCategory }: {
     let cancelled = false;
     const load = async (): Promise<void> => {
       try {
-        const [nextOverview, nextCategories] = await Promise.all([api.overview(), api.categories()]);
+        const next = await data.categories();
         if (cancelled) return;
-        setOverview(nextOverview);
-        setCategories(nextCategories);
+        setCategories(next);
         setError(null);
-      } catch (err) {
-        if (!cancelled) setError(err instanceof Error ? err.message : String(err));
+      } catch (failure) {
+        if (!cancelled) setError(failure instanceof Error ? failure.message : String(failure));
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -38,75 +46,68 @@ export function Dashboard({ onOpenService, onOpenCategory }: {
       cancelled = true;
       clearInterval(timer);
     };
-  }, []);
+  }, [onChanged]);
 
   const allServices = useMemo(() => categories.flatMap((category) => category.services), [categories]);
 
   const visible = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    return allServices.filter((service) => {
+    const base = tab.kind === 'pinned'
+      ? allServices.filter((service) => pinnedSlugs.includes(service.slug))
+      : tab.kind === 'category'
+        ? allServices.filter((service) => service.category === tab.slug)
+        : allServices;
+    return base.filter((service) => {
       if (filter !== 'all' && service.status !== filter && service.officialStatus !== filter && service.connectivityStatus !== filter) {
         return false;
       }
       if (!needle) return true;
       return service.name.toLowerCase().includes(needle)
-        || (service.nameAr ?? '').includes(needle)
+        || (service.nameAr ?? '').includes(query.trim())
         || service.category.toLowerCase().includes(needle)
         || service.slug.includes(needle);
     });
-  }, [allServices, filter, query]);
+  }, [allServices, filter, query, tab, pinnedSlugs]);
+
+  const localNote = tab.kind === 'category' && tab.slug === 'local';
 
   return (
     <div className="page">
-      <section className="hero">
-        <div className="hero-text">
-          <h1>{i18n.t('dashboard.title')}</h1>
-          <p className="hero-sub">{i18n.t('dashboard.subtitle')}</p>
-        </div>
-        <div className="hero-status">
-          {overview ? (
-            <>
-              <span className="hero-emoji" aria-hidden="true">{statusEmoji(overview.status)}</span>
-              <div>
-                <strong>{statusLabel(i18n, overview.status)}</strong>
-                <span className="hero-meta">
-                  {i18n.t('dashboard.servicesCount', { count: overview.services })} · {i18n.t('dashboard.updated', { time: relativeTime(i18n, overview.lastUpdate) })}
-                </span>
-              </div>
-            </>
-          ) : (
-            <span className="hero-meta">{loading ? i18n.t('dashboard.loading') : i18n.t('dashboard.noData')}</span>
-          )}
-        </div>
-      </section>
-
-      {overview && (
-        <section className="category-rail">
-          {overview.categories.map((category) => {
-            const outages = category.counts.MAJOR_OUTAGE + category.counts.PARTIAL_OUTAGE;
-            return (
-              <button
-                key={category.slug}
-                type="button"
-                className="category-card"
-                onClick={() => onOpenCategory(category.slug)}
-              >
-                <span className="category-name">{displayName(i18n, category.name, category.nameAr)}</span>
-                <span className="category-status">
-                  {statusEmoji(category.status)} {statusLabel(i18n, category.status)}
-                </span>
-                <span className="category-counts">
-                  {outages > 0
-                    ? i18n.t('dashboard.categoryOutage', { count: outages })
-                    : category.counts.DEGRADED > 0
-                      ? i18n.t('dashboard.categoryDegraded', { count: category.counts.DEGRADED })
-                      : i18n.t('dashboard.categoryOk', { count: category.services })}
-                </span>
-              </button>
-            );
-          })}
-        </section>
-      )}
+      <nav className="tabs" role="tablist" aria-label={i18n.t('nav.tabs')}>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={tab.kind === 'all'}
+          className={tab.kind === 'all' ? 'active' : ''}
+          onClick={() => onSelectTab({ kind: 'all' })}
+        >
+          {i18n.t('tabs.all')}
+          <span className="tab-count">{allServices.length}</span>
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={tab.kind === 'pinned'}
+          className={tab.kind === 'pinned' ? 'active' : ''}
+          onClick={() => onSelectTab({ kind: 'pinned' })}
+        >
+          {i18n.t('tabs.pinned')}
+          <span className="tab-count">{pinnedSlugs.length}</span>
+        </button>
+        {categories.map((category) => (
+          <button
+            key={category.slug}
+            type="button"
+            role="tab"
+            aria-selected={tab.kind === 'category' && tab.slug === category.slug}
+            className={tab.kind === 'category' && tab.slug === category.slug ? 'active' : ''}
+            onClick={() => onSelectTab({ kind: 'category', slug: category.slug })}
+          >
+            {i18n.locale === 'ar' ? category.nameAr : category.name}
+            <span className="tab-count">{category.services.length}</span>
+          </button>
+        ))}
+      </nav>
 
       <section className="controls">
         <input
@@ -120,26 +121,30 @@ export function Dashboard({ onOpenService, onOpenCategory }: {
         <FilterBar active={filter} onChange={setFilter} />
       </section>
 
+      {localNote && <p className="note inline-note">{i18n.t('local.note')}</p>}
       {error && <p className="error-banner">{i18n.t('dashboard.errorLoading', { error })}</p>}
 
       <section className="service-grid">
         {visible.map((service) => (
-          <ServiceCard key={service.slug} service={service} onOpen={onOpenService} />
+          <ServiceCard
+            key={service.slug}
+            service={service}
+            onOpen={onOpenService}
+            onPinChanged={onChanged}
+          />
         ))}
       </section>
 
       {!loading && visible.length === 0 && !error && (
-        <p className="empty-state">{i18n.t('dashboard.noMatch')}</p>
+        <p className="empty-state">{tab.kind === 'pinned' ? i18n.t('pin.empty') : i18n.t('dashboard.noMatch')}</p>
       )}
 
-      {overview && (
-        <section className="legend">
-          <div><span className="legend-dot ok" /> {i18n.t('legend.ok')}</div>
-          <div><span className="legend-dot warn" /> {i18n.t('legend.warn')}</div>
-          <div><span className="legend-dot critical" /> {i18n.t('legend.critical')}</div>
-          <div><span className="legend-dot unknown" /> {i18n.t('legend.unknown')}</div>
-        </section>
-      )}
+      <section className="legend">
+        <div><span className="legend-dot ok" /> {i18n.t('legend.ok')}</div>
+        <div><span className="legend-dot warn" /> {i18n.t('legend.warn')}</div>
+        <div><span className="legend-dot critical" /> {i18n.t('legend.critical')}</div>
+        <div><span className="legend-dot unknown" /> {i18n.t('legend.unknown')}</div>
+      </section>
     </div>
   );
 }

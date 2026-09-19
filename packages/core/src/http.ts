@@ -55,15 +55,34 @@ export function isAllowedPublicUrl(rawUrl: string): boolean {
   return true;
 }
 
-function decodeBody(buffer: Buffer, contentType: string): string {
-  if (buffer.length >= 2 && buffer[0] === 0xff && buffer[1] === 0xfe) {
-    return buffer.subarray(2).toString('utf16le');
+/**
+ * Decodes response bytes with the Web TextDecoder API so the same helper runs in Node and
+ * inside the Android WebView (the local-first engine runs in the browser).
+ */
+function decodeBody(bytes: Uint8Array, contentType: string): string {
+  if (bytes.length >= 2 && bytes[0] === 0xff && bytes[1] === 0xfe) {
+    return new TextDecoder('utf-16le').decode(bytes.subarray(2));
   }
-  if (buffer.length >= 2 && buffer[0] === 0xfe && buffer[1] === 0xff) {
-    return buffer.subarray(2).swap16().toString('utf16le');
+  if (bytes.length >= 2 && bytes[0] === 0xfe && bytes[1] === 0xff) {
+    const swapped = new Uint8Array(bytes.length - 2);
+    for (let index = 2; index + 1 < bytes.length; index += 2) {
+      swapped[index - 2] = bytes[index + 1] as number;
+      swapped[index - 1] = bytes[index] as number;
+    }
+    return new TextDecoder('utf-16le').decode(swapped);
   }
-  if (/charset=utf-16/i.test(contentType)) return buffer.toString('utf16le');
-  return buffer.toString('utf8');
+  if (/charset=utf-16/i.test(contentType)) return new TextDecoder('utf-16le').decode(bytes);
+  return new TextDecoder('utf-8').decode(bytes);
+}
+
+/** AbortSignal.timeout is not available on older Android WebViews, so fall back to a controller. */
+function timeoutSignal(timeoutMs: number): AbortSignal {
+  if (typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function') {
+    return AbortSignal.timeout(timeoutMs);
+  }
+  const controller = new AbortController();
+  setTimeout(() => controller.abort(), timeoutMs);
+  return controller.signal;
 }
 
 export async function fetchResource<T = unknown>(url: string, options: FetchOptions = {}): Promise<FetchResult<T>> {
@@ -81,7 +100,7 @@ export async function fetchResource<T = unknown>(url: string, options: FetchOpti
       const response = await fetch(url, {
         method: options.method ?? 'GET',
         redirect: 'follow',
-        signal: AbortSignal.timeout(timeoutMs),
+        signal: timeoutSignal(timeoutMs),
         headers: {
           'user-agent': DEFAULT_USER_AGENT,
           accept: 'application/json, text/xml, application/xml, application/rss+xml, text/html;q=0.9, */*;q=0.8',
@@ -94,8 +113,8 @@ export async function fetchResource<T = unknown>(url: string, options: FetchOpti
       status = response.status;
       contentType = response.headers.get('content-type') ?? '';
       finalUrl = response.url || url;
-      const buffer = Buffer.from(await response.arrayBuffer());
-      const trimmed = buffer.byteLength > maxBytes ? buffer.subarray(0, maxBytes) : buffer;
+      const bytes = new Uint8Array(await response.arrayBuffer());
+      const trimmed = bytes.byteLength > maxBytes ? bytes.subarray(0, maxBytes) : bytes;
       const text = decodeBody(trimmed, contentType);
       let data: T | null = null;
       if (/json/i.test(contentType) || /^\s*[[{]/.test(text)) {
@@ -109,7 +128,7 @@ export async function fetchResource<T = unknown>(url: string, options: FetchOpti
         ok: response.ok,
         status,
         contentType,
-        bytes: buffer.byteLength,
+        bytes: bytes.byteLength,
         ms: Date.now() - started,
         finalUrl,
         error: response.ok ? null : `HTTP ${status}`,

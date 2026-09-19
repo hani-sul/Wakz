@@ -1,10 +1,13 @@
-package com.techpulse.status;
+package com.wakz.status;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.webkit.WebResourceRequest;
@@ -13,12 +16,11 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 /**
- * TechPulse Android shell.
+ * Wakz Android shell.
  *
- * The dashboard is the same web build as the desktop version, bundled inside the APK and loaded
- * from local assets. Data requests go to a TechPulse server whose address the user configures in
- * the app's settings screen, and the shared JavaScript falls back to the bundled snapshot whenever
- * that server cannot be reached.
+ * The dashboard, the collector, the status engine and the cache all run inside the WebView on the
+ * device itself; the app talks to service sources directly. A server address can be configured in
+ * the app settings, but it is never required.
  */
 public class MainActivity extends Activity {
 
@@ -47,8 +49,7 @@ public class MainActivity extends Activity {
         settings.setMediaPlaybackRequiresUserGesture(true);
         settings.setTextZoom(100);
 
-        // These are trusted local assets that must be able to call the TechPulse API on a network
-        // address chosen by the user, so cross-origin access from file:// is enabled.
+        // Trusted local assets that must reach the status APIs of the tracked services directly.
         settings.setAllowFileAccessFromFileURLs(true);
         settings.setAllowUniversalAccessFromFileURLs(true);
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
@@ -72,6 +73,27 @@ public class MainActivity extends Activity {
 
         setContentView(webView);
         webView.loadUrl("file:///android_asset/www/index.html");
+
+        startEngineService();
+        requestNotificationPermission();
+    }
+
+    /** Keeps the local engine running while the app is in the background. */
+    private void startEngineService() {
+        Intent intent = new Intent(this, EngineService.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent);
+        } else {
+            startService(intent);
+        }
+    }
+
+    private void requestNotificationPermission() {
+        if (Build.VERSION.SDK_INT >= 33) {
+            if (checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[] { Manifest.permission.POST_NOTIFICATIONS }, 1001);
+            }
+        }
     }
 
     @Override
@@ -85,9 +107,12 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-        if (webView != null) {
-            webView.destroy();
-            webView = null;
+        if (isFinishing()) {
+            stopService(new Intent(this, EngineService.class));
+            if (webView != null) {
+                webView.destroy();
+                webView = null;
+            }
         }
         super.onDestroy();
     }

@@ -1,12 +1,7 @@
 import type { FastifyInstance } from 'fastify';
 import type { DatabaseSync } from 'node:sqlite';
-import {
-  CATEGORIES,
-  SERVICES,
-  collectConfigFromEnv,
-  isAllowedPublicUrl,
-  loadConfig,
-} from '../../../packages/core/src/index.ts';
+import { CATEGORIES, SERVICES, isAllowedPublicUrl } from '../../../packages/core/src/index.ts';
+import { collectConfigFromEnv, loadConfig } from '../../../packages/core/src/config.ts';
 import {
   countRows,
   deleteService,
