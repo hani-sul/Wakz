@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { loadSnapshot } from '../api.ts';
 import { data, dataMode, setDataMode, type DataMode } from '../data.ts';
-import { DEFAULT_APP_API_BASE, getApiBase, isAppShell, setApiBase } from '../lib/appConfig.ts';
+import { API_BASE_PLACEHOLDER, getApiBase, isAppShell, setApiBase } from '../lib/appConfig.ts';
 import { clockTime } from '../lib/format.ts';
 import { useI18n } from '../lib/locale.tsx';
 import { Admin } from './Admin.tsx';
@@ -92,11 +92,12 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
                 inputMode="url"
                 dir="ltr"
                 value={serverValue}
-                placeholder={DEFAULT_APP_API_BASE}
+                placeholder={API_BASE_PLACEHOLDER}
                 onChange={(event) => setServerValue(event.target.value)}
               />
             </label>
             <p className="note">{i18n.t('settings.serverHelp')}</p>
+            {getApiBase().length === 0 && <p className="note">{i18n.t('settings.serverRequired')}</p>}
             <div className="button-row">
               <button type="button" onClick={saveServer}>{i18n.t('settings.save')}</button>
               <button type="button" onClick={() => void testServer()}>{i18n.t('settings.test')}</button>

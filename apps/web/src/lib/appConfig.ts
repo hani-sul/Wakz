@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react';
 
 export const API_BASE_KEY = 'techpulse.apiBase';
 /**
- * Default TechPulse server for the Android app: the address of the machine that runs the
- * collector/API on the local network. Android emulators can use http://127.0.0.1:4310 instead.
- * Users can change it in the app's settings screen at any time.
+ * Wakz is local-first: no server address ships with the app, so nothing private is published and
+ * every user decides on their own. Server mode stays empty until the user types an address in the
+ * settings screen, while the local engine keeps working without any server.
  */
-export const DEFAULT_APP_API_BASE = 'http://127.0.0.1:4310';
+export const DEFAULT_APP_API_BASE = '';
+
+/** Illustrative example shown as placeholder text only — never stored as a value. */
+export const API_BASE_PLACEHOLDER = 'http://192.168.1.10:4310';
 
 export function isAppShell(): boolean {
   return window.location.protocol === 'file:';
@@ -27,7 +30,7 @@ export function getApiBase(): string {
     stored = '';
   }
   if (stored) return normalizeApiBase(stored);
-  return isAppShell() ? DEFAULT_APP_API_BASE : '';
+  return DEFAULT_APP_API_BASE;
 }
 
 export function setApiBase(value: string): void {
