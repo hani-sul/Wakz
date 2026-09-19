@@ -17,6 +17,21 @@ operational.
 
 ---
 
+## بالعربية (نبض التقنية)
+
+نبض التقنية منصّة تعرض الحالة الحالية للخدمات التقنية في مكان واحد: هل تعمل؟ هل يوجد تدهور في
+الأداء؟ انقطاع جزئي أو كامل؟ صيانة؟ وما المكوّنات المتأثرة، وما آخر حادث ومتى بدأ، وزمن الاستجابة
+لكل فحص، ومصدر المعلومة.
+
+* **الواجهة عربية بالكامل** مع دعم الاتجاه من اليمين لليسار، ويمكن التبديل إلى الإنجليزية بزر واحد،
+  وكل خدمة لا تنشر مصدرًا مقروءًا آليًا مذكورة بسببه بالعربية.
+* **تطبيق أندرويد (APK)** جاهز: `dist/TechPulse-1.0.0-ar.apk` باسم «نبض التقنية». يعمل التطبيق
+  بواجهته المدمجة، ويقرأ البيانات من خادم نبض التقنية، ويعرض آخر لقطة محفوظة داخله عند تعذّر
+  الوصول إلى الخادم.
+* الفصل صريح بين **الحالة الرسمية** للمزوّد و**فحوص الاتصال** التي نقيسها بأنفسنا.
+
+---
+
 ## Project overview
 
 * 38 services across five categories: **Gaming, AI, Cloud, Social, Media**.
@@ -207,6 +222,43 @@ npm run collector                    # run under a supervisor / service manager
   additional regional probes.
 * `docs/data-sources.md` documents the polling policy per source class; all third-party traffic
   happens in the collector, never per user request.
+
+## Android app (APK)
+
+The APK is a thin Android shell (no third-party libraries) that bundles the **Arabic web build**
+and the offline snapshot inside `assets/www`, and loads them from `file:///android_asset/www/index.html`.
+
+* Package: `com.techpulse.status` · label: **نبض التقنية** (Arabic) / TechPulse (English)
+* `minSdk 24`, `compileSdk`/`targetSdk 36`, Java 17 source level, signed with the debug keystore
+* The app asks for the TechPulse server address once (`#/settings` or the gear entry in the nav);
+  the default points at the machine running the collector on the local network
+* If that server cannot be reached, the dashboard keeps working from the bundled snapshot and shows
+  the "saved data" banner; the app also has `INTERNET` permission and allows cleartext HTTP so a
+  local server works out of the box
+
+Build it (the toolchain used on this machine):
+
+```powershell
+$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
+$env:ANDROID_HOME = "$env:LOCALAPPDATA\Android\Sdk"
+
+npm run snapshot         # apps/web/public/snapshot.json  (offline fallback)
+npm run web:build        # apps/web/dist
+npm run android:assets   # copies dist into android/app/src/main/assets/www
+npm run android:release  # gradle assembleRelease -> android/app/build/outputs/apk/release/app-release.apk
+```
+
+`npm run android:apk` runs the whole chain. Install on a device with
+`adb install -r android/app/build/outputs/apk/release/app-release.apk`.
+
+To let a phone reach the API, run the server on all interfaces (`.env`):
+
+```
+TECHPULSE_API_HOST=0.0.0.0
+TECHPULSE_API_PORT=4310
+```
+
+and enter `http://<your-lan-ip>:4310` in the app settings (Windows Firewall must allow the port).
 
 ## Troubleshooting
 
