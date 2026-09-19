@@ -4,6 +4,8 @@ node_modules/
 # build output
 apps/web/dist/
 dist/
+*.apk
+*.aab
 
 # android build output
 android/.gradle/
