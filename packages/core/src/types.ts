@@ -18,7 +18,7 @@ export const UNIFIED_STATUSES = [
 export type UnifiedStatus = (typeof UNIFIED_STATUSES)[number];
 export type Severity = 'ok' | 'warn' | 'critical' | 'info' | 'unknown';
 
-export const CATEGORY_SLUGS = ['gaming', 'ai', 'cloud', 'business', 'social', 'media', 'local'] as const;
+export const CATEGORY_SLUGS = ['gaming', 'ai', 'cloud', 'business', 'shopping', 'social', 'media', 'local'] as const;
 export type CategorySlug = (typeof CATEGORY_SLUGS)[number];
 
 export type SourceKind =
@@ -60,6 +60,7 @@ export type ConnectorId =
   | 'google-cloud'
   | 'aws-health'
   | 'xbox-status'
+  | 'apple-status'
   | 'nuvio-status'
   | 'uptime-json'
   | 'steam-api'

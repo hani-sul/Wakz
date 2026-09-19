@@ -75,11 +75,9 @@ export function App(): React.JSX.Element {
       setEngine(data.refreshState());
       setRefreshToken((value) => value + 1);
       if (data.mode() === 'local') {
-        // On open, always refresh the favorites plus the first services of the catalog so the first
-        // screen is current; the regular cache handles the rest.
-        const priority = [...pins, ...data.visibleServices().slice(0, 12).map((service) => service.slug)];
+        // On open the full catalog is refreshed; the seven minute cache handles the rest of the day.
         setBusy(true);
-        await data.refresh({ reason: 'auto', forceSlugs: [...new Set(priority)] });
+        await data.refresh({ reason: 'auto', force: true });
         setBusy(false);
       }
       if (cancelled) return;
@@ -132,8 +130,9 @@ export function App(): React.JSX.Element {
         setCooldown(allowed.waitSeconds);
         return;
       }
-      setCooldown(30);
       await data.refresh({ force: true, reason: 'manual' });
+      // The countdown starts when the refresh has finished, not when it was requested.
+      setCooldown(30);
       setNotice(i18n.t('actions.refreshDone'));
       setTimeout(() => setNotice(null), 2500);
       setRefreshToken((value) => value + 1);

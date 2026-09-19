@@ -15,8 +15,8 @@ import {
 } from './store.ts';
 import type { LocalIncident, LocalServicePayload, LocalServiceRecord } from './store.ts';
 
-/** Measurements stay fresh for ten minutes; a manual refresh has a 30 second cooldown. */
-export const CACHE_TTL_MS = 10 * 60_000;
+/** Measurements stay fresh for seven minutes; a manual refresh has a 30 second cooldown. */
+export const CACHE_TTL_MS = 7 * 60_000;
 export const MANUAL_REFRESH_COOLDOWN_MS = 30_000;
 const CONCURRENCY = 8;
 /** First runs touch ~66 services; small waves keep phones responsive and battery friendly. */
@@ -160,7 +160,8 @@ export type RunOptions = {
 
 export async function runCollection(options: RunOptions = {}): Promise<{ collected: number; skipped: number }> {
   if (state.running) return { collected: 0, skipped: 0 };
-  const targets = visibleServices().filter((service) => !service.comingSoon);
+  // Every service is collected; `visibility` only decides what the interface shows.
+  const targets = SERVICES.filter((service) => !service.comingSoon);
   const filtered = options.slugs ? targets.filter((service) => options.slugs?.includes(service.slug)) : targets;
 
   const queue: ServiceDefinition[] = [];

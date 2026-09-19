@@ -10,6 +10,7 @@ import { xboxStatusConnector } from './xbox-status.ts';
 import { nuvioStatusConnector } from './nuvio-status.ts';
 import { uptimeJsonConnector } from './uptime-json.ts';
 import { steamApiConnector } from './steam-api.ts';
+import { appleStatusConnector } from './apple-status.ts';
 import { connectivityConnector } from './connectivity.ts';
 
 export const CONNECTORS: Record<ConnectorId, Connector> = {
@@ -21,6 +22,7 @@ export const CONNECTORS: Record<ConnectorId, Connector> = {
   'google-cloud': googleCloudConnector,
   'aws-health': awsHealthConnector,
   'xbox-status': xboxStatusConnector,
+  'apple-status': appleStatusConnector,
   'nuvio-status': nuvioStatusConnector,
   'uptime-json': uptimeJsonConnector,
   'steam-api': steamApiConnector,
@@ -45,4 +47,5 @@ export { xboxStatusConnector } from './xbox-status.ts';
 export { nuvioStatusConnector } from './nuvio-status.ts';
 export { uptimeJsonConnector } from './uptime-json.ts';
 export { steamApiConnector } from './steam-api.ts';
+export { appleStatusConnector } from './apple-status.ts';
 export { connectivityConnector } from './connectivity.ts';

@@ -87,6 +87,9 @@ code {
   display: flex;
   align-items: center;
   gap: 20px;
+  /* Keep the brand and the navigation on a single line: the refresh button stays next to the
+     language switch and settings. */
+  flex-wrap: nowrap;
   /* Keeps the brand mark clear of the Android status bar / notch. */
   padding: calc(14px + env(safe-area-inset-top, 0px)) 28px 14px;
   background: rgba(7, 8, 13, 0.82);
@@ -98,7 +101,8 @@ code {
   display: flex;
   align-items: center;
   gap: 11px;
-  min-width: 200px;
+  min-width: 0;
+  flex: 0 1 auto;
   min-height: 40px;
 }
 
@@ -216,6 +220,13 @@ code {
   margin-inline-start: auto;
   flex-wrap: nowrap;
   white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 100%;
+}
+
+.topnav::-webkit-scrollbar {
+  display: none;
 }
 
 .topnav > * {
@@ -1540,21 +1551,15 @@ button.mini {
 
 @media (max-width: 860px) {
   .topbar {
-    flex-wrap: wrap;
-    gap: 10px 12px;
+    flex-wrap: nowrap;
+    gap: 10px;
     padding: calc(12px + env(safe-area-inset-top, 0px)) 16px 12px;
-  }
-
-  .global-search {
-    order: 3;
-    max-width: none;
-    width: 100%;
   }
 
   .topnav {
     margin-inline-start: auto;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-wrap: nowrap;
+    gap: 8px;
     justify-content: flex-end;
   }
 
@@ -1602,12 +1607,17 @@ button.mini {
   }
 
   .topnav {
-    gap: 8px;
+    gap: 6px;
+  }
+
+  .nav-link {
+    padding: 7px 9px;
+    font-size: 12.5px;
   }
 
   .refresh-button,
   .lang-toggle {
-    padding: 7px 12px;
+    padding: 7px 10px;
     font-size: 12.5px;
   }
 

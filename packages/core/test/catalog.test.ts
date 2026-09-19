@@ -7,7 +7,7 @@ test('catalog has no integrity problems', () => {
 });
 
 test('every category is populated and local services are scoped to Saudi Arabia', () => {
-  assert.equal(CATEGORIES.length, 7);
+  assert.equal(CATEGORIES.length, 8);
   for (const category of CATEGORIES) {
     assert.ok(servicesByCategory(category.slug).length > 0, `${category.slug} has services`);
     assert.ok(category.nameAr.length > 0, `${category.slug} has an Arabic name`);
