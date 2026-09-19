@@ -42,6 +42,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html[dir='rtl'] body {
+  font-family: 'Segoe UI', Tahoma, 'Noto Naskh Arabic', 'Noto Sans Arabic', Arial, sans-serif;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -163,7 +167,7 @@ code {
   gap: 12px;
   padding: 9px 11px;
   border-radius: var(--radius-sm);
-  text-align: left;
+  text-align: start;
 }
 
 .suggestions button:hover {
@@ -179,6 +183,67 @@ code {
   gap: 16px;
   color: var(--text-dim);
   font-size: 14px;
+  align-items: center;
+}
+
+.lang-toggle {
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: rgba(124, 140, 255, 0.12);
+  font-size: 13px;
+  color: var(--text);
+}
+
+.lang-toggle:hover {
+  background: rgba(124, 140, 255, 0.22);
+}
+
+.data-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 11px 28px;
+  background: rgba(245, 196, 81, 0.12);
+  border-bottom: 1px solid rgba(245, 196, 81, 0.3);
+  color: #f3ddab;
+  font-size: 13px;
+}
+
+.data-banner button {
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 196, 81, 0.45);
+  color: #f3ddab;
+  font-size: 12.5px;
+}
+
+.source-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.source-state::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.source-live {
+  color: var(--ok);
+}
+
+.source-snapshot {
+  color: var(--warn);
+}
+
+.source-none {
+  color: var(--text-faint);
 }
 
 main {
@@ -250,7 +315,7 @@ main {
 }
 
 .category-card {
-  text-align: left;
+  text-align: start;
   padding: 15px 16px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
@@ -330,7 +395,7 @@ main {
   gap: 12px;
   align-items: flex-start;
   padding: 16px;
-  text-align: left;
+  text-align: start;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
@@ -356,7 +421,7 @@ main {
 }
 
 .service-category {
-  margin-left: auto;
+  margin-inline-start: auto;
   color: var(--text-faint);
   font-size: 11px;
   text-transform: uppercase;
@@ -382,6 +447,10 @@ main {
   margin: 2px 0 0;
   font-variant-numeric: tabular-nums;
   font-size: 15px;
+  /* Latency values are Latin-script ("694 ms"); isolate them so RTL layout keeps the order. */
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
 }
 
 .service-card footer {
@@ -393,7 +462,7 @@ main {
 }
 
 .checked {
-  margin-left: auto;
+  margin-inline-start: auto;
   color: var(--text-faint);
   font-size: 12px;
 }
@@ -579,6 +648,11 @@ main {
   font-variant-numeric: tabular-nums;
 }
 
+.latency-list strong {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
 .latency-list li:last-child {
   border-bottom: none;
 }
@@ -688,7 +762,7 @@ main {
 }
 
 .incident-status {
-  margin-left: auto;
+  margin-inline-start: auto;
   color: var(--text-faint);
   font-size: 12px;
 }
@@ -838,7 +912,7 @@ button.mini {
 
 .admin-table th,
 .admin-table td {
-  text-align: left;
+  text-align: start;
   padding: 8px 10px;
   border-bottom: 1px solid var(--border);
 }
@@ -899,7 +973,7 @@ button.mini {
   }
 
   .topnav {
-    margin-left: auto;
+    margin-inline-start: auto;
   }
 
   .page {

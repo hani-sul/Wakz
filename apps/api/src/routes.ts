@@ -6,7 +6,6 @@ import {
   collectConfigFromEnv,
   isAllowedPublicUrl,
   loadConfig,
-  mapStatusText,
 } from '../../../packages/core/src/index.ts';
 import {
   countRows,
@@ -23,7 +22,15 @@ import {
   setServiceEnabled,
 } from '../../../packages/db/src/index.ts';
 import { collectService } from '../../collector/src/runner.ts';
-import { buildAllSnapshots, buildCategorySnapshots, buildServiceSnapshot, overallSummary } from './snapshots.ts';
+import {
+  buildAllSnapshots,
+  buildCategorySnapshots,
+  buildOverview,
+  buildServiceSnapshot,
+  toCategorySummary,
+  toServiceCard,
+  toServiceDetail,
+} from './snapshots.ts';
 
 export type RouteDeps = {
   db: DatabaseSync;
@@ -48,32 +55,19 @@ export function registerRoutes(app: FastifyInstance, deps: RouteDeps): void {
   });
 
   app.get('/api/overview', async () => {
-    const summary = overallSummary(db);
-    const categories = buildCategorySnapshots(db).map((snapshot) => ({
-      slug: snapshot.category.slug,
-      name: snapshot.category.name,
-      description: snapshot.category.description,
-      status: snapshot.status,
-      counts: snapshot.counts,
-      services: snapshot.services.length,
-    }));
-    return { ...summary, categories };
+    return buildOverview(db);
   });
 
   app.get('/api/categories', async () => {
     return buildCategorySnapshots(db).map((snapshot) => ({
-      slug: snapshot.category.slug,
-      name: snapshot.category.name,
-      description: snapshot.category.description,
-      status: snapshot.status,
-      counts: snapshot.counts,
-      services: snapshot.services.map(toCard),
+      ...toCategorySummary(snapshot),
+      services: snapshot.services.map(toServiceCard),
     }));
   });
 
   app.get('/api/services', async (request) => {
     const query = request.query as { category?: string; status?: string; q?: string };
-    return buildAllSnapshots(db, query).map(toCard);
+    return buildAllSnapshots(db, query).map(toServiceCard);
   });
 
   app.get('/api/services/:slug', async (request, reply) => {
@@ -86,7 +80,7 @@ export function registerRoutes(app: FastifyInstance, deps: RouteDeps): void {
       return { error: 'service_not_found', slug };
     }
     const runs = getConnectorRuns(db, slug, 5);
-    return { ...toDetail(snapshot), recentRuns: runs };
+    return toServiceDetail(snapshot, runs);
   });
 
   app.get('/api/incidents', async (request) => {
@@ -316,54 +310,4 @@ export function registerRoutes(app: FastifyInstance, deps: RouteDeps): void {
 function SERVICE_NAME(db: DatabaseSync, slug: string): string {
   const row = getServiceRow(db, slug);
   return row?.name ?? slug;
-}
-
-type SnapshotLike = ReturnType<typeof buildAllSnapshots>[number];
-
-function toCard(snapshot: SnapshotLike): Record<string, unknown> {
-  return {
-    slug: snapshot.service.slug,
-    name: snapshot.service.name,
-    category: snapshot.service.category,
-    homepage: snapshot.service.homepage,
-    statusPage: snapshot.service.statusPage,
-    officialStatus: snapshot.officialStatus,
-    officialStatusRaw: snapshot.officialStatusRaw,
-    officialSourceKind: snapshot.officialSourceKind,
-    officialSourceUrl: snapshot.officialSourceUrl,
-    officialCheckedAt: snapshot.officialCheckedAt,
-    officialConfidence: snapshot.officialConfidence,
-    officialErrorMessage: snapshot.officialErrorMessage,
-    connectivityStatus: snapshot.connectivityStatus,
-    connectivityCheckedAt: snapshot.connectivityCheckedAt,
-    latency: snapshot.latency,
-    activeIncidents: snapshot.incidents.filter((incident) => incident.resolvedAt === null).length,
-    componentCount: snapshot.components.length,
-    limitation: snapshot.limitation ?? null,
-    status: snapshot.officialStatus !== 'UNKNOWN' ? snapshot.officialStatus : snapshot.connectivityStatus,
-    componentSummary: summarizeComponents(snapshot.components),
-  };
-}
-
-function toDetail(snapshot: SnapshotLike): Record<string, unknown> {
-  return {
-    ...toCard(snapshot),
-    components: snapshot.components,
-    incidents: snapshot.incidents,
-    maintenances: snapshot.maintenances,
-    history: snapshot.history,
-    officialStatusDescription: snapshot.officialStatusRaw,
-  };
-}
-
-function summarizeComponents(components: { status: string }[]): Record<string, number> {
-  const summary: Record<string, number> = {};
-  for (const component of components) {
-    summary[component.status] = (summary[component.status] ?? 0) + 1;
-  }
-  return summary;
-}
-
-export function statusLabelFor(raw: string): string {
-  return mapStatusText(raw);
 }

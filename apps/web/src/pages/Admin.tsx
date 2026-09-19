@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import { api } from '../api.ts';
+import { apiUrl } from '../lib/appConfig.ts';
+import { clockTime } from '../lib/format.ts';
+import { useI18n } from '../lib/locale.tsx';
 
 type AdminOverview = {
   database: Record<string, number>;
@@ -13,6 +16,7 @@ type AdminOverview = {
 };
 
 export function Admin(): React.JSX.Element {
+  const i18n = useI18n();
   const [token, setToken] = useState(() => sessionStorage.getItem('techpulse.adminToken') ?? '');
   const [data, setData] = useState<AdminOverview | null>(null);
   const [status, setStatus] = useState<string | null>(null);
@@ -21,7 +25,7 @@ export function Admin(): React.JSX.Element {
   const load = async (): Promise<void> => {
     if (!token) return;
     try {
-      const response = await fetch('/api/admin/overview', { headers: { 'x-admin-token': token } });
+      const response = await fetch(apiUrl('/api/admin/overview'), { headers: { 'x-admin-token': token } });
       if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
       setData((await response.json()) as AdminOverview);
       setStatus(null);
@@ -32,29 +36,33 @@ export function Admin(): React.JSX.Element {
 
   useEffect(() => {
     void load();
+    // The token is the only input for the first load.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const append = (line: string): void => setLog((current) => [`${new Date().toLocaleTimeString()} ${line}`, ...current].slice(0, 30));
+  const append = (line: string): void => setLog((current) => [`${new Date().toLocaleTimeString(i18n.tag)} ${line}`, ...current].slice(0, 30));
 
   const runCheck = async (slug: string): Promise<void> => {
-    append(`running check for ${slug}…`);
-    const response = await fetch(`/api/admin/services/${slug}/check`, { method: 'POST', headers: { 'x-admin-token': token } });
+    append(i18n.t('admin.running', { slug }));
+    const response = await fetch(apiUrl(`/api/admin/services/${slug}/check`), {
+      method: 'POST',
+      headers: { 'x-admin-token': token },
+    });
     const body = await response.json();
-    append(`${slug}: ${response.ok ? 'ok' : 'error'} ${response.ok ? JSON.stringify(body.summary?.officialStatus ?? body.summary) : JSON.stringify(body).slice(0, 200)}`);
+    append(`${slug}: ${response.ok ? 'ok' : 'error'} ${JSON.stringify(body.summary?.officialStatus ?? body).slice(0, 160)}`);
     await load();
   };
 
   const testUrl = async (): Promise<void> => {
-    const url = window.prompt('Public https:// URL to test (SSRF-protected):');
+    const url = window.prompt(i18n.locale === 'ar' ? 'عنوان URL عام (https) للاختبار (محمي ضد SSRF):' : 'Public https:// URL to test (SSRF-protected):');
     if (!url) return;
-    const response = await fetch('/api/admin/test-url', {
+    const response = await fetch(apiUrl('/api/admin/test-url'), {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'x-admin-token': token },
       body: JSON.stringify({ url }),
     });
     const body = await response.json();
-    append(`test-url ${url}: ${response.status} ${JSON.stringify(body).slice(0, 220)}`);
+    append(`test-url ${url}: ${response.status} ${JSON.stringify(body).slice(0, 200)}`);
   };
 
   const health = async (): Promise<void> => {
@@ -66,18 +74,15 @@ export function Admin(): React.JSX.Element {
     <div className="page">
       <section className="hero">
         <div className="hero-text">
-          <a className="back-link" href="#/">← Dashboard</a>
-          <h1>Developer tools</h1>
-          <p className="hero-sub">
-            Admin routes stay disabled until <code>TECHPULSE_ADMIN_TOKEN</code> is set. The token is kept in this browser
-            session only.
-          </p>
+          <a className="back-link" href="#/">{i18n.t('category.back')}</a>
+          <h1>{i18n.t('admin.title')}</h1>
+          <p className="hero-sub">{i18n.t('admin.subtitle')}</p>
         </div>
       </section>
 
       <section className="panel">
         <label className="field">
-          <span>Admin token</span>
+          <span>{i18n.t('admin.token')}</span>
           <input
             type="password"
             value={token}
@@ -89,9 +94,9 @@ export function Admin(): React.JSX.Element {
           />
         </label>
         <div className="button-row">
-          <button type="button" onClick={() => void load()}>Load admin data</button>
-          <button type="button" onClick={() => void testUrl()}>Test a URL</button>
-          <button type="button" onClick={() => void health()}>Show DB counts</button>
+          <button type="button" onClick={() => void load()}>{i18n.t('admin.load')}</button>
+          <button type="button" onClick={() => void testUrl()}>{i18n.t('admin.testUrl')}</button>
+          <button type="button" onClick={() => void health()}>{i18n.t('admin.dbCounts')}</button>
         </div>
         {status && <p className="error-inline">{status}</p>}
       </section>
@@ -99,7 +104,7 @@ export function Admin(): React.JSX.Element {
       {data && (
         <>
           <section className="panel">
-            <h2>Database</h2>
+            <h2>{i18n.t('admin.database')}</h2>
             <ul className="run-list">
               {Object.entries(data.database).map(([table, count]) => (
                 <li key={table}><span>{table}</span><strong>{count}</strong></li>
@@ -108,12 +113,18 @@ export function Admin(): React.JSX.Element {
           </section>
 
           <section className="panel">
-            <h2>Services ({data.services.length})</h2>
+            <h2>{i18n.t('admin.services')} ({data.services.length})</h2>
             <table className="admin-table">
               <thead>
                 <tr>
-                  <th>Service</th><th>Category</th><th>Connector</th><th>Source</th><th>Official</th>
-                  <th>Conf.</th><th>Poll</th><th />
+                  <th>{i18n.t('admin.tableService')}</th>
+                  <th>{i18n.t('admin.tableCategory')}</th>
+                  <th>{i18n.t('admin.tableConnector')}</th>
+                  <th>{i18n.t('admin.tableSource')}</th>
+                  <th>{i18n.t('admin.tableOfficial')}</th>
+                  <th>{i18n.t('admin.tableConfidence')}</th>
+                  <th>{i18n.t('admin.tablePoll')}</th>
+                  <th />
                 </tr>
               </thead>
               <tbody>
@@ -123,11 +134,13 @@ export function Admin(): React.JSX.Element {
                     <td>{service.category}</td>
                     <td>{service.connector}</td>
                     <td>{service.sourceKind}</td>
-                    <td>{service.official ? 'yes' : 'no'}</td>
+                    <td>{service.official ? i18n.t('admin.yes') : i18n.t('admin.no')}</td>
                     <td>{service.confidence}</td>
                     <td>{service.pollSeconds}s</td>
                     <td>
-                      <button type="button" className="mini" onClick={() => void runCheck(service.slug)}>Run check</button>
+                      <button type="button" className="mini" onClick={() => void runCheck(service.slug)}>
+                        {i18n.t('admin.runCheck')}
+                      </button>
                     </td>
                   </tr>
                 ))}
@@ -136,13 +149,13 @@ export function Admin(): React.JSX.Element {
           </section>
 
           <section className="panel">
-            <h2>Recent connector runs</h2>
+            <h2>{i18n.t('admin.runs')}</h2>
             <ul className="run-list">
               {data.recentRuns.map((run) => (
                 <li key={`${run.service_slug}-${run.started_at}`}>
                   <span>{run.service_slug}</span>
                   <span className={run.ok === 1 ? 'run-ok' : 'run-fail'}>{run.ok === 1 ? 'ok' : 'error'}</span>
-                  <span>{new Date(run.started_at).toLocaleTimeString()}</span>
+                  <span>{clockTime(i18n, run.started_at)}</span>
                   <span>{run.duration_ms ?? 0} ms</span>
                   {run.error && <span className="run-error">{run.error}</span>}
                 </li>
@@ -151,11 +164,11 @@ export function Admin(): React.JSX.Element {
           </section>
 
           <section className="panel">
-            <h2>Events</h2>
+            <h2>{i18n.t('admin.events')}</h2>
             <ul className="run-list">
               {data.recentEvents.map((event) => (
                 <li key={`${event.service_slug}-${event.created_at}`}>
-                  <span>{new Date(event.created_at).toLocaleTimeString()}</span>
+                  <span>{clockTime(i18n, event.created_at)}</span>
                   <span>{event.service_slug}</span>
                   <span>{event.message}</span>
                 </li>
@@ -166,8 +179,8 @@ export function Admin(): React.JSX.Element {
       )}
 
       <section className="panel">
-        <h2>Session log</h2>
-        <pre className="console">{log.length > 0 ? log.join('\n') : 'No actions yet.'}</pre>
+        <h2>{i18n.t('admin.log')}</h2>
+        <pre className="console">{log.length > 0 ? log.join('\n') : i18n.t('admin.logEmpty')}</pre>
       </section>
     </div>
   );

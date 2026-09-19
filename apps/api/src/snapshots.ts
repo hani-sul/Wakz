@@ -22,6 +22,14 @@ import {
   listServiceRows,
 } from '../../../packages/db/src/index.ts';
 
+const CATEGORY_ARABIC: Record<string, string> = {
+  gaming: 'الألعاب',
+  ai: 'الذكاء الاصطناعي',
+  cloud: 'السحابة والبنية التحتية',
+  social: 'التواصل الاجتماعي',
+  media: 'الوسائط',
+};
+
 function parseJson<T>(value: string | null | undefined, fallback: T): T {
   if (!value) return fallback;
   try {
@@ -71,6 +79,7 @@ export function buildServiceSnapshot(db: DatabaseSync, slug: string, historyHour
     },
     history: historyWithLatency,
     limitation: definition.limitation,
+    limitationAr: definition.limitationAr,
   };
 }
 
@@ -98,7 +107,14 @@ export function buildAllSnapshots(db: DatabaseSync, options: { category?: string
 }
 
 export function buildCategorySnapshots(db: DatabaseSync, options: { category?: string } = {}): CategorySnapshot[] {
-  const categories = listCategories(db) as CategoryDefinition[];
+  const categories: CategoryDefinition[] = listCategories(db).map((row) => ({
+    slug: row.slug as CategoryDefinition['slug'],
+    name: row.name,
+    nameAr: row.name_ar,
+    description: row.description,
+    descriptionAr: row.description_ar,
+    position: row.position,
+  }));
   const snapshots = buildAllSnapshots(db, {});
   const byCategory = new Map<string, ServiceSnapshot[]>();
   for (const snapshot of snapshots) {
@@ -172,4 +188,126 @@ export function serviceRowToDefinition(db: DatabaseSync, slug: string): ServiceD
   const row = getServiceRow(db, slug);
   if (!row) return null;
   return SERVICE_BY_SLUG.get(slug) ?? null;
+}
+
+export type ServiceCard = {
+  slug: string;
+  name: string;
+  nameAr?: string;
+  category: string;
+  categoryNameAr: string;
+  homepage: string;
+  statusPage: string | null;
+  status: UnifiedStatus;
+  officialStatus: UnifiedStatus;
+  officialStatusRaw: string | null;
+  officialSourceKind: string;
+  officialSourceUrl: string | null;
+  officialCheckedAt: string | null;
+  officialConfidence: string;
+  officialErrorMessage: string | null;
+  connectivityStatus: UnifiedStatus;
+  connectivityCheckedAt: string | null;
+  latency: ServiceSnapshot['latency'];
+  activeIncidents: number;
+  componentCount: number;
+  componentSummary: Record<string, number>;
+  limitation: string | null;
+  limitationAr: string | null;
+};
+
+export type ServiceDetailPayload = ServiceCard & {
+  components: ServiceSnapshot['components'];
+  incidents: ServiceSnapshot['incidents'];
+  maintenances: ServiceSnapshot['maintenances'];
+  history: ServiceSnapshot['history'];
+  officialStatusDescription: string | null;
+  recentRuns: { started_at: string; ok: number; duration_ms: number | null; error: string | null }[];
+};
+
+export type CategorySummaryPayload = {
+  slug: string;
+  name: string;
+  nameAr: string;
+  description: string;
+  descriptionAr: string;
+  status: UnifiedStatus;
+  counts: Record<UnifiedStatus, number>;
+  services: number;
+};
+
+export function toServiceCard(snapshot: ServiceSnapshot): ServiceCard {
+  return {
+    slug: snapshot.service.slug,
+    name: snapshot.service.name,
+    nameAr: snapshot.service.nameAr,
+    category: snapshot.service.category,
+    categoryNameAr: CATEGORY_ARABIC[snapshot.service.category] ?? snapshot.service.category,
+    homepage: snapshot.service.homepage,
+    statusPage: snapshot.service.statusPage,
+    status: effectiveStatus(snapshot),
+    officialStatus: snapshot.officialStatus,
+    officialStatusRaw: snapshot.officialStatusRaw,
+    officialSourceKind: snapshot.officialSourceKind,
+    officialSourceUrl: snapshot.officialSourceUrl,
+    officialCheckedAt: snapshot.officialCheckedAt,
+    officialConfidence: snapshot.officialConfidence,
+    officialErrorMessage: snapshot.officialErrorMessage,
+    connectivityStatus: snapshot.connectivityStatus,
+    connectivityCheckedAt: snapshot.connectivityCheckedAt,
+    latency: snapshot.latency,
+    activeIncidents: snapshot.incidents.filter((incident) => incident.resolvedAt === null && incident.kind === 'incident').length,
+    componentCount: snapshot.components.length,
+    componentSummary: summarizeComponents(snapshot.components),
+    limitation: snapshot.limitation ?? null,
+    limitationAr: snapshot.limitationAr ?? null,
+  };
+}
+
+export function toServiceDetail(
+  snapshot: ServiceSnapshot,
+  recentRuns: { started_at: string; ok: number; duration_ms: number | null; error: string | null }[] = [],
+): ServiceDetailPayload {
+  return {
+    ...toServiceCard(snapshot),
+    components: snapshot.components,
+    incidents: snapshot.incidents,
+    maintenances: snapshot.maintenances,
+    history: snapshot.history,
+    officialStatusDescription: snapshot.officialStatusRaw,
+    recentRuns,
+  };
+}
+
+export function toCategorySummary(snapshot: CategorySnapshot): CategorySummaryPayload {
+  return {
+    slug: snapshot.category.slug,
+    name: snapshot.category.name,
+    nameAr: snapshot.category.nameAr,
+    description: snapshot.category.description,
+    descriptionAr: snapshot.category.descriptionAr,
+    status: snapshot.status,
+    counts: snapshot.counts,
+    services: snapshot.services.length,
+  };
+}
+
+export function buildOverview(db: DatabaseSync): {
+  status: UnifiedStatus;
+  counts: Record<UnifiedStatus, number>;
+  services: number;
+  lastUpdate: string | null;
+  categories: CategorySummaryPayload[];
+} {
+  const summary = overallSummary(db);
+  const categories = buildCategorySnapshots(db).map(toCategorySummary);
+  return { ...summary, categories };
+}
+
+function summarizeComponents(components: { status: UnifiedStatus }[]): Record<string, number> {
+  const summary: Record<string, number> = {};
+  for (const component of components) {
+    summary[component.status] = (summary[component.status] ?? 0) + 1;
+  }
+  return summary;
 }

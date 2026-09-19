@@ -10,6 +10,17 @@ test('all five categories are populated', () => {
   assert.equal(CATEGORIES.length, 5);
   for (const category of CATEGORIES) {
     assert.ok(servicesByCategory(category.slug).length > 0, `${category.slug} has services`);
+    assert.ok(category.nameAr.length > 0, `${category.slug} has an Arabic name`);
+    assert.ok(category.descriptionAr.length > 0, `${category.slug} has an Arabic description`);
+  }
+});
+
+test('every documented limitation also has an Arabic translation', () => {
+  const withLimitation = SERVICES.filter((service) => service.limitation);
+  assert.ok(withLimitation.length >= 15, `expected several services to document a limitation, found ${withLimitation.length}`);
+  for (const service of withLimitation) {
+    assert.ok(service.limitationAr && service.limitationAr.length > 10, `${service.slug}: Arabic limitation text`);
+    assert.match(service.limitationAr ?? '', /[\u0600-\u06FF]/, `${service.slug}: Arabic limitation must contain Arabic characters`);
   }
 });
 

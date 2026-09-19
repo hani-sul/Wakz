@@ -22,6 +22,7 @@ app.get('/', async (_request, reply) => {
     );
   }
   reply.header('content-length', index.size);
+  reply.header('cache-control', 'no-cache, must-revalidate');
   return reply.type(index.type).send(index.stream);
 });
 
@@ -35,12 +36,15 @@ app.get('/*', async (request, reply) => {
     reply.header('content-length', file.size);
     if (urlPath.startsWith('/assets/')) {
       reply.header('cache-control', 'public, max-age=31536000, immutable');
+    } else {
+      reply.header('cache-control', 'no-cache, must-revalidate');
     }
     return reply.type(file.type).send(file.stream);
   }
   const index = indexFile(WEB_DIST);
   if (index) {
     reply.header('content-length', index.size);
+    reply.header('cache-control', 'no-cache, must-revalidate');
     return reply.type(index.type).send(index.stream);
   }
   return reply.code(404).send({ error: 'not_found' });

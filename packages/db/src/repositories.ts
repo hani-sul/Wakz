@@ -15,17 +15,20 @@ type SqlValue = string | number | null;
 export function seedCatalog(db: DatabaseSync, categories: CategoryDefinition[], services: ServiceDefinition[], defaultPollSeconds: number): void {
   const timestamp = nowIso();
   const insertCategory = db.prepare(
-    `INSERT INTO categories (slug, name, description, position) VALUES (?, ?, ?, ?)
-     ON CONFLICT(slug) DO UPDATE SET name = excluded.name, description = excluded.description, position = excluded.position`,
+    `INSERT INTO categories (slug, name, name_ar, description, description_ar, position) VALUES (?, ?, ?, ?, ?, ?)
+     ON CONFLICT(slug) DO UPDATE SET
+       name = excluded.name, name_ar = excluded.name_ar,
+       description = excluded.description, description_ar = excluded.description_ar,
+       position = excluded.position`,
   );
   for (const category of categories) {
-    insertCategory.run(category.slug, category.name, category.description, category.position);
+    insertCategory.run(category.slug, category.name, category.nameAr, category.description, category.descriptionAr, category.position);
   }
 
   const insertService = db.prepare(
     `INSERT INTO services (slug, name, category, homepage, status_page, connector, connector_config, source_kind,
-                           official, confidence, poll_seconds, check_targets, limitation, enabled, created_at, updated_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?)
+                           official, confidence, poll_seconds, check_targets, limitation, limitation_ar, enabled, created_at, updated_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?)
      ON CONFLICT(slug) DO UPDATE SET
        name = excluded.name,
        category = excluded.category,
@@ -39,6 +42,7 @@ export function seedCatalog(db: DatabaseSync, categories: CategoryDefinition[], 
        poll_seconds = excluded.poll_seconds,
        check_targets = excluded.check_targets,
        limitation = excluded.limitation,
+       limitation_ar = excluded.limitation_ar,
        updated_at = excluded.updated_at`,
   );
   for (const service of services) {
@@ -56,6 +60,7 @@ export function seedCatalog(db: DatabaseSync, categories: CategoryDefinition[], 
       service.pollSeconds ?? defaultPollSeconds,
       JSON.stringify(service.checkTargets),
       service.limitation ?? null,
+      service.limitationAr ?? null,
       timestamp,
       timestamp,
     );
@@ -297,6 +302,7 @@ export type ServiceRow = {
   poll_seconds: number;
   check_targets: string;
   limitation: string | null;
+  limitation_ar: string | null;
   enabled: number;
 };
 
@@ -312,9 +318,9 @@ export function getServiceRow(db: DatabaseSync, slug: string): ServiceRow | null
   return row ?? null;
 }
 
-export function listCategories(db: DatabaseSync): { slug: string; name: string; description: string; position: number }[] {
-  return db.prepare('SELECT slug, name, description, position FROM categories ORDER BY position').all() as {
-    slug: string; name: string; description: string; position: number;
+export function listCategories(db: DatabaseSync): { slug: string; name: string; name_ar: string; description: string; description_ar: string; position: number }[] {
+  return db.prepare('SELECT slug, name, name_ar, description, description_ar, position FROM categories ORDER BY position').all() as {
+    slug: string; name: string; name_ar: string; description: string; description_ar: string; position: number;
   }[];
 }
 
@@ -557,8 +563,8 @@ export function insertService(db: DatabaseSync, service: ServiceDefinition, defa
   const timestamp = nowIso();
   db.prepare(
     `INSERT INTO services (slug, name, category, homepage, status_page, connector, connector_config, source_kind, official,
-                           confidence, poll_seconds, check_targets, limitation, enabled, created_at, updated_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?)`,
+                           confidence, poll_seconds, check_targets, limitation, limitation_ar, enabled, created_at, updated_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?)`,
   ).run(
     service.slug,
     service.name,
@@ -573,6 +579,7 @@ export function insertService(db: DatabaseSync, service: ServiceDefinition, defa
     service.pollSeconds ?? defaultPollSeconds,
     JSON.stringify(service.checkTargets),
     service.limitation ?? null,
+    service.limitationAr ?? null,
     timestamp,
     timestamp,
   );

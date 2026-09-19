@@ -1,13 +1,14 @@
 import type { UnifiedStatus } from '../api.ts';
+import { useI18n } from '../lib/locale.tsx';
 
-const FILTERS: { id: 'all' | UnifiedStatus; label: string }[] = [
-  { id: 'all', label: 'All' },
-  { id: 'OPERATIONAL', label: 'Operational' },
-  { id: 'DEGRADED', label: 'Degraded' },
-  { id: 'PARTIAL_OUTAGE', label: 'Partial outage' },
-  { id: 'MAJOR_OUTAGE', label: 'Outage' },
-  { id: 'MAINTENANCE', label: 'Maintenance' },
-  { id: 'UNKNOWN', label: 'Unknown' },
+const FILTER_ORDER: ('all' | UnifiedStatus)[] = [
+  'all',
+  'OPERATIONAL',
+  'DEGRADED',
+  'PARTIAL_OUTAGE',
+  'MAJOR_OUTAGE',
+  'MAINTENANCE',
+  'UNKNOWN',
 ];
 
 export function FilterBar({
@@ -17,18 +18,19 @@ export function FilterBar({
   active: 'all' | UnifiedStatus;
   onChange: (value: 'all' | UnifiedStatus) => void;
 }): React.JSX.Element {
+  const i18n = useI18n();
   return (
-    <div className="filter-bar" role="tablist" aria-label="Filter services by status">
-      {FILTERS.map((filter) => (
+    <div className="filter-bar" role="tablist" aria-label={i18n.t('filters.all')}>
+      {FILTER_ORDER.map((id) => (
         <button
-          key={filter.id}
+          key={id}
           type="button"
           role="tab"
-          aria-selected={active === filter.id}
-          className={active === filter.id ? 'active' : ''}
-          onClick={() => onChange(filter.id)}
+          aria-selected={active === id}
+          className={active === id ? 'active' : ''}
+          onClick={() => onChange(id)}
         >
-          {filter.label}
+          {id === 'all' ? i18n.t('filters.all') : i18n.t(`filters.${id}`)}
         </button>
       ))}
     </div>

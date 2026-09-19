@@ -64,6 +64,8 @@ export type ConnectorId =
 export type ServiceDefinition = {
   slug: string;
   name: string;
+  /** Arabic display name when the brand is normally written in Arabic; brands keep their Latin name otherwise. */
+  nameAr?: string;
   category: CategorySlug;
   homepage: string;
   statusPage: string | null;
@@ -76,12 +78,16 @@ export type ServiceDefinition = {
   checkTargets: CheckTarget[];
   /** Documents why a service has no machine-readable source (rendered in the UI). */
   limitation?: string;
+  /** Arabic version of `limitation`, shown by the Arabic interface. */
+  limitationAr?: string;
 };
 
 export type CategoryDefinition = {
   slug: CategorySlug;
   name: string;
+  nameAr: string;
   description: string;
+  descriptionAr: string;
   position: number;
 };
 
@@ -168,6 +174,7 @@ export type ServiceSnapshot = {
   };
   history: { checkedAt: string; status: UnifiedStatus; latencyMs: number | null }[];
   limitation?: string;
+  limitationAr?: string;
 };
 
 export type CategorySnapshot = {

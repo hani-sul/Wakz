@@ -1,4 +1,5 @@
 import type { UnifiedStatus } from '../api.ts';
+import { useI18n } from '../lib/locale.tsx';
 
 const COLOR: Record<UnifiedStatus, string> = {
   OPERATIONAL: '#3ddc97',
@@ -18,8 +19,10 @@ export function Sparkline({
   width?: number;
   height?: number;
 }): React.JSX.Element {
+  const i18n = useI18n();
+
   if (points.length === 0) {
-    return <div className="sparkline empty">No history yet — the collector has not produced samples for this window.</div>;
+    return <div className="sparkline empty">{i18n.t('sparkline.empty')}</div>;
   }
 
   const values = points.map((point) => point.latencyMs ?? 0);
@@ -37,7 +40,7 @@ export function Sparkline({
 
   return (
     <div className="sparkline">
-      <svg viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="none" role="img" aria-label="Latency history">
+      <svg viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="none" role="img" aria-label={i18n.t('service.history')}>
         {points.map((point, index) => (
           <rect
             key={`${point.checkedAt}-${index}`}
@@ -52,8 +55,8 @@ export function Sparkline({
         <path d={path} fill="none" stroke="#7c8cff" strokeWidth="1.6" strokeLinejoin="round" strokeLinecap="round" />
       </svg>
       <div className="sparkline-meta">
-        <span>{points.length} samples</span>
-        <span>peak {Math.round(max)} ms</span>
+        <span>{i18n.t('sparkline.samples', { count: points.length })}</span>
+        <span>{i18n.t('sparkline.peak', { value: Math.round(max) })}</span>
       </div>
     </div>
   );

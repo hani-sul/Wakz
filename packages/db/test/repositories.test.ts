@@ -61,6 +61,19 @@ test('seeding creates every catalog service plus its status rows', () => {
   db.close();
 });
 
+test('the catalog is seeded with Arabic category text and limitations', () => {
+  const db = freshDb();
+  const categories = db.prepare('SELECT slug, name_ar, description_ar FROM categories ORDER BY position').all() as {
+    slug: string; name_ar: string; description_ar: string;
+  }[];
+  assert.equal(categories.length, CATEGORIES.length);
+  assert.ok(categories.every((category) => category.name_ar.length > 0 && category.description_ar.length > 0));
+
+  const arabicLimitations = db.prepare("SELECT COUNT(*) AS c FROM services WHERE limitation_ar IS NOT NULL").get() as { c: number };
+  assert.ok(arabicLimitations.c >= 15, `expected Arabic limitation text for the documented services, found ${arabicLimitations.c}`);
+  db.close();
+});
+
 test('saving a connector result stores status, components and incidents', () => {
   const db = freshDb();
   saveConnectorResult(db, 'github', result());

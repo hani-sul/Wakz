@@ -57,6 +57,22 @@ test('GET /api/services/:slug returns components, latency and history', async ()
   db.close();
 });
 
+test('the API exposes Arabic category names and limitation text', async () => {
+  const { app, db } = buildApp();
+  const categories = await app.inject({ method: 'GET', url: '/api/categories' });
+  assert.equal(categories.statusCode, 200);
+  const body = categories.json() as { slug: string; nameAr: string; descriptionAr: string }[];
+  assert.ok(body.length >= 5);
+  assert.ok(body.every((category) => category.nameAr.length > 0 && category.descriptionAr.length > 0));
+
+  const service = await app.inject({ method: 'GET', url: '/api/services/whatsapp' });
+  const detail = service.json() as { limitationAr: string | null; categoryNameAr: string };
+  assert.ok(detail.limitationAr && /[\u0600-\u06FF]/.test(detail.limitationAr));
+  assert.equal(detail.categoryNameAr, 'التواصل الاجتماعي');
+  await app.close();
+  db.close();
+});
+
 test('GET /api/services/:slug returns 404 for an unknown service', async () => {
   const { app, db } = buildApp();
   const response = await app.inject({ method: 'GET', url: '/api/services/does-not-exist' });

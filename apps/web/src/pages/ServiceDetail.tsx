@@ -3,15 +3,17 @@ import { api, type ServiceDetail as Detail } from '../api.ts';
 import { IncidentList } from '../components/IncidentList.tsx';
 import { Sparkline } from '../components/Sparkline.tsx';
 import { DualStatus, StatusPill } from '../components/StatusPill.tsx';
-import { STATUS_LABEL, clockTime, latency, relativeTime, sourceLabel } from '../lib/format.ts';
+import { clockTime, confidenceLabel, displayName, latency, relativeTime, sourceLabel } from '../lib/format.ts';
+import { useI18n } from '../lib/locale.tsx';
 
 const RANGES = [
-  { hours: 24, label: '24h' },
-  { hours: 168, label: '7d' },
-  { hours: 720, label: '30d' },
+  { hours: 24, key: 'range.24h' },
+  { hours: 168, key: 'range.7d' },
+  { hours: 720, key: 'range.30d' },
 ];
 
 export function ServiceDetail({ slug }: { slug: string }): React.JSX.Element {
+  const i18n = useI18n();
   const [detail, setDetail] = useState<Detail | null>(null);
   const [hours, setHours] = useState(24);
   const [error, setError] = useState<string | null>(null);
@@ -37,74 +39,80 @@ export function ServiceDetail({ slug }: { slug: string }): React.JSX.Element {
     };
   }, [slug, hours]);
 
-  if (error) return <p className="error-banner">Could not load {slug}: {error}</p>;
-  if (!detail) return <p className="empty-state">Loading service…</p>;
+  if (error) return <p className="error-banner">{i18n.t('service.notFound', { slug, error })}</p>;
+  if (!detail) return <p className="empty-state">{i18n.t('service.loading')}</p>;
+
+  const limitation = i18n.locale === 'ar' ? (detail.limitationAr ?? detail.limitation) : detail.limitation;
 
   const groups = new Map<string, typeof detail.components>();
   for (const component of detail.components) {
-    const key = component.group ?? 'Components';
+    const key = component.group ?? '—';
     groups.set(key, [...(groups.get(key) ?? []), component]);
   }
+
+  const activeIncidents = detail.incidents.filter((incident) => incident.resolvedAt === null);
+  const pastIncidents = detail.incidents.filter((incident) => incident.resolvedAt !== null).slice(0, 10);
 
   return (
     <div className="page">
       <section className="hero">
         <div className="hero-text">
-          <a className="back-link" href="#/">← All services</a>
-          <h1>{detail.name}</h1>
+          <a className="back-link" href="#/">{i18n.t('service.back')}</a>
+          <h1>{displayName(i18n, detail.name, detail.nameAr)}</h1>
           <p className="hero-sub">
-            {detail.category} ·{' '}
-            <a href={detail.homepage} target="_blank" rel="noreferrer noopener">homepage</a>
+            {i18n.locale === 'ar' ? detail.categoryNameAr : detail.category}
+            {' · '}
+            <a href={detail.homepage} target="_blank" rel="noreferrer noopener">{i18n.t('service.homepage')}</a>
             {detail.statusPage && (
               <>
                 {' · '}
-                <a href={detail.statusPage} target="_blank" rel="noreferrer noopener">official status page</a>
+                <a href={detail.statusPage} target="_blank" rel="noreferrer noopener">{i18n.t('service.statusPage')}</a>
               </>
             )}
           </p>
         </div>
         <div className="hero-status">
           <StatusPill status={detail.status} />
-          <span className="hero-meta">checked {relativeTime(detail.officialCheckedAt ?? detail.connectivityCheckedAt)}</span>
+          <span className="hero-meta">{i18n.t('service.checked', { time: relativeTime(i18n, detail.officialCheckedAt ?? detail.connectivityCheckedAt) })}</span>
         </div>
       </section>
 
       <section className="detail-grid">
         <article className="panel">
-          <h2>Status</h2>
+          <h2>{i18n.t('service.statusTitle')}</h2>
           <DualStatus official={detail.officialStatus} connectivity={detail.connectivityStatus} />
           <dl className="kv">
-            <div><dt>Official source</dt><dd>{sourceLabel(detail.officialSourceKind)}</dd></div>
-            <div><dt>Official detail</dt><dd>{detail.officialStatusDescription ?? '—'}</dd></div>
-            <div><dt>Confidence</dt><dd>{detail.officialConfidence}</dd></div>
-            <div><dt>Official checked</dt><dd>{clockTime(detail.officialCheckedAt)}</dd></div>
-            <div><dt>Connectivity checked</dt><dd>{clockTime(detail.connectivityCheckedAt)}</dd></div>
+            <div><dt>{i18n.t('service.officialSource')}</dt><dd>{sourceLabel(i18n, detail.officialSourceKind)}</dd></div>
+            <div><dt>{i18n.t('service.officialDetail')}</dt><dd>{detail.officialStatusDescription ?? '—'}</dd></div>
+            <div><dt>{i18n.t('service.confidence')}</dt><dd>{confidenceLabel(i18n, detail.officialConfidence)}</dd></div>
+            <div><dt>{i18n.t('service.officialChecked')}</dt><dd>{clockTime(i18n, detail.officialCheckedAt)}</dd></div>
+            <div><dt>{i18n.t('service.connectivityChecked')}</dt><dd>{clockTime(i18n, detail.connectivityCheckedAt)}</dd></div>
           </dl>
           {detail.officialErrorMessage && (
-            <p className="error-inline">Source error: {detail.officialErrorMessage}</p>
+            <p className="error-inline">{i18n.t('service.sourceError', { error: detail.officialErrorMessage })}</p>
           )}
-          {detail.limitation && <p className="limitation-block">{detail.limitation}</p>}
+          {limitation && <p className="limitation-block">{limitation}</p>}
         </article>
 
         <article className="panel">
-          <h2>Connectivity (our checks)</h2>
+          <h2>{i18n.t('service.connectivityTitle')}</h2>
           <ul className="latency-list">
-            <li><span>HTTPS</span><strong>{latency(detail.latency.https)}</strong></li>
-            <li><span>HTTP</span><strong>{latency(detail.latency.http)}</strong></li>
-            <li><span>DNS</span><strong>{latency(detail.latency.dns)}</strong></li>
-            <li><span>TCP</span><strong>{latency(detail.latency.tcp)}</strong></li>
-            <li><span>ICMP ping</span><strong>{detail.latency.icmp === null ? 'not measured' : latency(detail.latency.icmp)}</strong></li>
+            <li><span>{i18n.t('service.https')}</span><strong>{latency(detail.latency.https)}</strong></li>
+            <li><span>{i18n.t('service.http')}</span><strong>{latency(detail.latency.http)}</strong></li>
+            <li><span>{i18n.t('service.dns')}</span><strong>{latency(detail.latency.dns)}</strong></li>
+            <li><span>{i18n.t('service.tcp')}</span><strong>{latency(detail.latency.tcp)}</strong></li>
+            <li>
+              <span>{i18n.t('service.icmp')}</span>
+              <strong>{detail.latency.icmp === null ? i18n.t('service.notMeasured') : latency(detail.latency.icmp)}</strong>
+            </li>
           </ul>
-          <p className="note">
-            These numbers are measured from a single central collector, not from global probes, and they never
-            override the vendor's official status.
-          </p>
+          <p className="note">{i18n.t('service.connectivityNote')}</p>
         </article>
       </section>
 
       <section className="panel">
         <div className="panel-head">
-          <h2>History</h2>
+          <h2>{i18n.t('service.history')}</h2>
           <div className="range-switch">
             {RANGES.map((range) => (
               <button
@@ -113,7 +121,7 @@ export function ServiceDetail({ slug }: { slug: string }): React.JSX.Element {
                 className={hours === range.hours ? 'active' : ''}
                 onClick={() => setHours(range.hours)}
               >
-                {range.label}
+                {i18n.t(range.key)}
               </button>
             ))}
           </div>
@@ -123,7 +131,7 @@ export function ServiceDetail({ slug }: { slug: string }): React.JSX.Element {
 
       {detail.components.length > 0 && (
         <section className="panel">
-          <h2>Components</h2>
+          <h2>{i18n.t('service.components')}</h2>
           {[...groups.entries()].map(([group, components]) => (
             <div key={group} className="component-group">
               <h3>{group}</h3>
@@ -142,38 +150,36 @@ export function ServiceDetail({ slug }: { slug: string }): React.JSX.Element {
       )}
 
       <section className="panel">
-        <h2>Active incidents</h2>
-        <IncidentList
-          incidents={detail.incidents.filter((incident) => incident.resolvedAt === null)}
-          emptyLabel="No active incidents reported by this source."
-        />
-        <h2 className="panel-subhead">Maintenance</h2>
-        <IncidentList incidents={detail.maintenances} emptyLabel="No scheduled maintenance in the source feed." />
-        <h2 className="panel-subhead">Past incidents</h2>
-        <IncidentList
-          incidents={detail.incidents.filter((incident) => incident.resolvedAt !== null).slice(0, 10)}
-          emptyLabel="No past incidents stored yet."
-        />
+        <h2>{i18n.t('service.activeIncidents')}</h2>
+        <IncidentList incidents={activeIncidents} emptyLabel={i18n.t('incidents.emptyActive')} />
+        <h2 className="panel-subhead">{i18n.t('service.maintenance')}</h2>
+        <IncidentList incidents={detail.maintenances} emptyLabel={i18n.t('incidents.emptyMaintenance')} />
+        <h2 className="panel-subhead">{i18n.t('service.pastIncidents')}</h2>
+        <IncidentList incidents={pastIncidents} emptyLabel={i18n.t('incidents.emptyPast')} />
       </section>
 
       <section className="panel">
-        <h2>Collector runs</h2>
+        <h2>{i18n.t('service.collectorRuns')}</h2>
         <ul className="run-list">
           {detail.recentRuns.map((run) => (
             <li key={run.started_at}>
               <span className={run.ok === 1 ? 'run-ok' : 'run-fail'}>{run.ok === 1 ? 'ok' : 'error'}</span>
-              <span>{clockTime(run.started_at)}</span>
+              <span>{clockTime(i18n, run.started_at)}</span>
               <span>{run.duration_ms ?? 0} ms</span>
               {run.error && <span className="run-error">{run.error}</span>}
             </li>
           ))}
-          {detail.recentRuns.length === 0 && <li>No runs recorded yet.</li>}
+          {detail.recentRuns.length === 0 && <li>{i18n.t('service.noRuns')}</li>}
         </ul>
       </section>
 
       <p className="footer-note">
-        Unified status: {STATUS_LABEL[detail.officialStatus]}
-        {detail.officialStatus !== detail.connectivityStatus && ` · Our check: ${STATUS_LABEL[detail.connectivityStatus]}`}
+        {detail.officialStatus === detail.connectivityStatus
+          ? i18n.t('service.unifiedFooterShort', { official: i18n.t(`status.${detail.officialStatus}`) })
+          : i18n.t('service.unifiedFooter', {
+            official: i18n.t(`status.${detail.officialStatus}`),
+            connectivity: i18n.t(`status.${detail.connectivityStatus}`),
+          })}
       </p>
     </div>
   );

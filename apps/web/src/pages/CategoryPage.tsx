@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { api, type CategorySnapshot, type UnifiedStatus } from '../api.ts';
 import { FilterBar } from '../components/FilterBar.tsx';
 import { ServiceCard } from '../components/ServiceCard.tsx';
-import { STATUS_LABEL, statusEmoji } from '../lib/format.ts';
+import { displayName, statusEmoji, statusLabel } from '../lib/format.ts';
+import { useI18n } from '../lib/locale.tsx';
 
 export function CategoryPage({ slug, onOpenService }: { slug: string; onOpenService: (slug: string) => void }): React.JSX.Element {
+  const i18n = useI18n();
   const [category, setCategory] = useState<CategorySnapshot | null>(null);
   const [filter, setFilter] = useState<'all' | UnifiedStatus>('all');
   const [error, setError] = useState<string | null>(null);
@@ -16,6 +18,7 @@ export function CategoryPage({ slug, onOpenService }: { slug: string; onOpenServ
         const categories = await api.categories();
         if (cancelled) return;
         setCategory(categories.find((item) => item.slug === slug) ?? null);
+        setError(null);
       } catch (err) {
         if (!cancelled) setError(err instanceof Error ? err.message : String(err));
       }
@@ -28,24 +31,27 @@ export function CategoryPage({ slug, onOpenService }: { slug: string; onOpenServ
     };
   }, [slug]);
 
-  if (error) return <p className="error-banner">Could not load this category: {error}</p>;
-  if (!category) return <p className="empty-state">Loading category…</p>;
+  if (error) return <p className="error-banner">{i18n.t('category.error', { error })}</p>;
+  if (!category) return <p className="empty-state">{i18n.t('category.loading')}</p>;
 
-  const services = filter === 'all' ? category.services : category.services.filter((service) => service.status === filter);
+  const services = filter === 'all'
+    ? category.services
+    : category.services.filter((service) =>
+      service.status === filter || service.officialStatus === filter || service.connectivityStatus === filter);
 
   return (
     <div className="page">
       <section className="hero">
         <div className="hero-text">
-          <a className="back-link" href="#/">← All categories</a>
-          <h1>{category.name}</h1>
-          <p className="hero-sub">{category.description}</p>
+          <a className="back-link" href="#/">{i18n.t('category.back')}</a>
+          <h1>{displayName(i18n, category.name, category.nameAr)}</h1>
+          <p className="hero-sub">{i18n.locale === 'ar' ? category.descriptionAr : category.description}</p>
         </div>
         <div className="hero-status">
           <span className="hero-emoji" aria-hidden="true">{statusEmoji(category.status)}</span>
           <div>
-            <strong>{STATUS_LABEL[category.status]}</strong>
-            <span className="hero-meta">{category.services.length} services tracked</span>
+            <strong>{statusLabel(i18n, category.status)}</strong>
+            <span className="hero-meta">{i18n.t('category.tracked', { count: category.services.length })}</span>
           </div>
         </div>
       </section>
@@ -60,7 +66,7 @@ export function CategoryPage({ slug, onOpenService }: { slug: string; onOpenServ
         ))}
       </section>
 
-      {services.length === 0 && <p className="empty-state">No service in this category matches the filter.</p>}
+      {services.length === 0 && <p className="empty-state">{i18n.t('category.noMatch')}</p>}
     </div>
   );
 }

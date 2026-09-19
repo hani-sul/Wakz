@@ -1,11 +1,46 @@
 import type { CategoryDefinition, CheckTarget, ServiceDefinition } from './types.ts';
 
 export const CATEGORIES: CategoryDefinition[] = [
-  { slug: 'gaming', name: 'Gaming', description: 'Game platforms, stores and multiplayer networks', position: 1 },
-  { slug: 'ai', name: 'AI', description: 'Model providers and AI platforms', position: 2 },
-  { slug: 'cloud', name: 'Cloud', description: 'Cloud, edge, developer platforms and infrastructure', position: 3 },
-  { slug: 'social', name: 'Social', description: 'Messaging and social networks', position: 4 },
-  { slug: 'media', name: 'Media', description: 'Media metadata, tracking and streaming services', position: 5 },
+  {
+    slug: 'gaming',
+    name: 'Gaming',
+    nameAr: 'الألعاب',
+    description: 'Game platforms, stores and multiplayer networks',
+    descriptionAr: 'منصات الألعاب والمتاجر وشبكات اللعب الجماعي',
+    position: 1,
+  },
+  {
+    slug: 'ai',
+    name: 'AI',
+    nameAr: 'الذكاء الاصطناعي',
+    description: 'Model providers and AI platforms',
+    descriptionAr: 'مزوّدو النماذج ومنصات الذكاء الاصطناعي',
+    position: 2,
+  },
+  {
+    slug: 'cloud',
+    name: 'Cloud',
+    nameAr: 'السحابة والبنية التحتية',
+    description: 'Cloud, edge, developer platforms and infrastructure',
+    descriptionAr: 'الخدمات السحابية ومنصات المطوّرين والبنية التحتية',
+    position: 3,
+  },
+  {
+    slug: 'social',
+    name: 'Social',
+    nameAr: 'التواصل الاجتماعي',
+    description: 'Messaging and social networks',
+    descriptionAr: 'شبكات التواصل والرسائل',
+    position: 4,
+  },
+  {
+    slug: 'media',
+    name: 'Media',
+    nameAr: 'الوسائط',
+    description: 'Media metadata, tracking and streaming services',
+    descriptionAr: 'خدمات الوسائط والبيانات الوصفية والمتابعة',
+    position: 5,
+  },
 ];
 
 const https = (url: string, label?: string): CheckTarget => ({
@@ -43,6 +78,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('store.steampowered.com'),
     ],
     limitation: 'Valve publishes no official status or incident feed. The official Web API is used as a liveness signal; the community service steamstat.us blocks automated requests (HTTP 403) and is therefore not used.',
+    limitationAr: 'لا تنشر Valve أي تغذية رسمية للحالة أو الأعطال. يُستخدم الـAPI الرسمي كمؤشر على التوفّر، أما خدمة steamstat.us المجتمعية فتحجب الطلبات الآلية (HTTP 403) ولذلك لا تُستخدم.',
   },
   {
     slug: 'playstation-network',
@@ -62,6 +98,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('www.playstation.com'),
     ],
     limitation: 'Sony runs a status page, but its data feed (status.playstation.com/data/statuses/region/*.json) answered HTTP 404 for every probed region and /api/status answered HTTP 503, so only our own connectivity is reported.',
+    limitationAr: 'تملك Sony صفحة حالة، لكن تغذية بياناتها (status.playstation.com/data/statuses/region/*.json) أعادت 404 لكل المناطق التي جُرّبت، وأعاد /api/status الرمز 503، لذلك نعرض فحوص الاتصال الخاصة بنا فقط.',
   },
   {
     slug: 'xbox-network',
@@ -99,6 +136,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('www.nintendo.com'),
     ],
     limitation: 'Nintendo publishes network maintenance information as human-readable pages only (Japanese network-info page); no machine-readable status API was found.',
+    limitationAr: 'تنشر Nintendo معلومات صيانة الشبكة كصفحات نصية فقط (صفحة معلومات الشبكة اليابانية)، ولم يتم العثور على واجهة برمجية مقروءة آليًا.',
   },
   {
     slug: 'epic-games',
@@ -135,6 +173,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('www.fortnite.com'),
     ],
     limitation: 'Fortnite shares the Epic Games status page; only Fortnite-related components and incidents are surfaced.',
+    limitationAr: 'تشترك Fortnite في صفحة حالة Epic Games؛ ويُعرض فقط المكوّنات والحوادث المتعلقة بـFortnite.',
   },
   {
     slug: 'riot-games',
@@ -154,6 +193,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('www.riotgames.com'),
     ],
     limitation: 'The Riot status page is fully client-rendered and exposes no public JSON; the official platform-status API returns HTTP 401 without a Riot API key (set RIOT_API_KEY to enable it).',
+    limitationAr: 'صفحة حالة Riot مبنية بالكامل على جافاسكربت ولا تُتيح JSON عامًا، وواجهة حالة المنصّات الرسمية تُعيد الرمز 401 بدون مفتاح Riot API (يمكن تفعيلها بإضافة RIOT_API_KEY).',
   },
   {
     slug: 'ea',
@@ -173,6 +213,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('www.ea.com'),
     ],
     limitation: 'EA publishes a service-updates page whose data comes from an undocumented GraphQL endpoint that rejects introspection, so no dependable machine-readable source exists.',
+    limitationAr: 'تنشر EA صفحة تحديثات خدمة تعتمد على واجهة GraphQL غير موثّقة ترفض الاستكشاف الداخلي، لذلك لا يوجد مصدر موثوق مقروء آليًا.',
   },
   {
     slug: 'ubisoft',
@@ -192,6 +233,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('www.ubisoft.com'),
     ],
     limitation: 'Ubisoft’s status page is a support portal with no public JSON/API; only connectivity can be verified.',
+    limitationAr: 'صفحة حالة Ubisoft هي بوابة دعم بدون واجهة JSON/API عامة، لذلك يمكن التحقق من الاتصال فقط.',
   },
   {
     slug: 'battle-net',
@@ -211,6 +253,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('account.battle.net'),
     ],
     limitation: 'Blizzard’s status page API answered HTTP 401 (authentication required); no public machine-readable feed is available.',
+    limitationAr: 'أعادت واجهة صفحة حالة Blizzard الرمز 401 (تتطلب مصادقة)، ولا توجد تغذية عامة مقروءة آليًا.',
   },
   {
     slug: 'roblox',
@@ -248,6 +291,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('www.minecraft.net'),
     ],
     limitation: 'Mojang retired status.mojang.com (the host no longer resolves) and publishes no replacement feed; the official services API needs authentication.',
+    limitationAr: 'أوقفت Mojang خدمة status.mojang.com (النطاق لم يعد موجودًا) دون بديل، وواجهة الخدمات الرسمية تتطلب مصادقة.',
   },
   {
     slug: 'discord',
@@ -327,6 +371,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('generativelanguage.googleapis.com'),
     ],
     limitation: 'Gemini has no dedicated status page; incidents are derived from Google Cloud’s feed for Vertex AI / Generative Language API products.',
+    limitationAr: 'لا تملك Gemini صفحة حالة مستقلة؛ تُستخرج الحوادث من تغذية Google Cloud لمكوّنات Vertex AI وGenerative Language API.',
   },
   {
     slug: 'deepseek',
@@ -534,6 +579,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('web.whatsapp.com'),
     ],
     limitation: 'Meta’s status page (metastatus.com) is client-rendered and exposes no public JSON; its metrics endpoints use parameters that are not discoverable, so only connectivity is reported.',
+    limitationAr: 'صفحة حالة Meta (metastatus.com) مبنية على جافاسكربت ولا تُتيح JSON عامًا، ونقاط القياس فيها تستخدم معاملات غير معروفة، لذلك نعرض فحوص الاتصال فقط.',
   },
   {
     slug: 'instagram',
@@ -552,6 +598,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('www.instagram.com'),
     ],
     limitation: 'Same limitation as WhatsApp: Meta publishes no machine-readable status feed.',
+    limitationAr: 'نفس قيد واتساب: لا تنشر Meta تغذية حالة مقروءة آليًا.',
   },
   {
     slug: 'facebook',
@@ -570,6 +617,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('www.facebook.com'),
     ],
     limitation: 'Same limitation as WhatsApp: Meta publishes no machine-readable status feed.',
+    limitationAr: 'نفس قيد واتساب: لا تنشر Meta تغذية حالة مقروءة آليًا.',
   },
   {
     slug: 'x',
@@ -589,6 +637,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('api.x.com'),
     ],
     limitation: 'X has no official status page: status.twitter.com and status.x.com do not resolve, and the community page api.twitterstat.us reports the page as inactive (HTTP 401).',
+    limitationAr: 'لا تملك X صفحة حالة رسمية: النطاقان status.twitter.com وstatus.x.com غير موجودين، والصفحة المجتمعية api.twitterstat.us معلنة كغير نشطة (HTTP 401).',
   },
   {
     slug: 'tiktok',
@@ -607,6 +656,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('www.tiktok.com'),
     ],
     limitation: 'No official TikTok status surface was found (status.tiktok.com does not resolve, developers.tiktok.com/status returns HTTP 404).',
+    limitationAr: 'لم يتم العثور على واجهة حالة رسمية لـTikTok (النطاق status.tiktok.com غير موجود، وdevelopers.tiktok.com/status يُعيد 404).',
   },
   {
     slug: 'reddit',
@@ -644,6 +694,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('telegram.org'),
     ],
     limitation: 'Telegram publishes no status page (status.telegram.org is not a status surface); incident news is posted on Telegram channels only.',
+    limitationAr: 'لا تنشر Telegram صفحة حالة (status.telegram.org ليست واجهة حالة)، وتُنشر أخبار الأعطال على قنوات تلجرام فقط.',
   },
 
   // ---------------------------------------------------------------- Media
@@ -683,6 +734,7 @@ export const SERVICES: ServiceDefinition[] = [
       tcp('api.strem.io'),
     ],
     limitation: 'Stremio publishes no status page (status.stremio.com does not resolve); only connectivity is measured.',
+    limitationAr: 'لا تنشر Stremio صفحة حالة (النطاق status.stremio.com غير موجود)، ويُقاس الاتصال فقط.',
   },
   {
     slug: 'tmdb',

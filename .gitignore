@@ -5,6 +5,14 @@ node_modules/
 apps/web/dist/
 dist/
 
+# android build output
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+*.jks
+*.keystore
+
 # runtime data (SQLite database, cache)
 data/*.db
 data/*.db-wal

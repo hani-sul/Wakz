@@ -1,13 +1,5 @@
 import type { UnifiedStatus } from '../api.ts';
-
-export const STATUS_LABEL: Record<UnifiedStatus, string> = {
-  OPERATIONAL: 'Operational',
-  DEGRADED: 'Degraded',
-  PARTIAL_OUTAGE: 'Partial outage',
-  MAJOR_OUTAGE: 'Major outage',
-  MAINTENANCE: 'Maintenance',
-  UNKNOWN: 'Unknown',
-};
+import type { I18n } from './locale.tsx';
 
 export const STATUS_CLASS: Record<UnifiedStatus, string> = {
   OPERATIONAL: 'ok',
@@ -18,26 +10,29 @@ export const STATUS_CLASS: Record<UnifiedStatus, string> = {
   UNKNOWN: 'unknown',
 };
 
-export function relativeTime(iso: string | null): string {
-  if (!iso) return 'never';
-  const diff = Date.now() - Date.parse(iso);
-  if (Number.isNaN(diff)) return 'unknown';
-  const seconds = Math.max(0, Math.round(diff / 1000));
-  if (seconds < 5) return 'just now';
-  if (seconds < 60) return `${seconds} seconds ago`;
-  const minutes = Math.round(seconds / 60);
-  if (minutes < 60) return `${minutes} minute${minutes === 1 ? '' : 's'} ago`;
-  const hours = Math.round(minutes / 60);
-  if (hours < 24) return `${hours} hour${hours === 1 ? '' : 's'} ago`;
-  const days = Math.round(hours / 24);
-  return `${days} day${days === 1 ? '' : 's'} ago`;
+export function statusLabel(i18n: I18n, status: UnifiedStatus): string {
+  return i18n.t(`status.${status}`);
 }
 
-export function clockTime(iso: string | null): string {
-  if (!iso) return '—';
-  const date = new Date(iso);
+export function relativeTime(i18n: I18n, isoTimestamp: string | null): string {
+  if (!isoTimestamp) return i18n.t('common.never');
+  const diff = Date.now() - Date.parse(isoTimestamp);
+  if (Number.isNaN(diff)) return i18n.t('common.unknown');
+  const seconds = Math.max(0, Math.round(diff / 1000));
+  if (seconds < 5) return i18n.t('common.justNow');
+  if (seconds < 60) return i18n.t('common.secondsAgo', { count: seconds });
+  const minutes = Math.round(seconds / 60);
+  if (minutes < 60) return i18n.t('common.minutesAgo', { count: minutes });
+  const hours = Math.round(minutes / 60);
+  if (hours < 24) return i18n.t('common.hoursAgo', { count: hours });
+  return i18n.t('common.daysAgo', { count: Math.round(hours / 24) });
+}
+
+export function clockTime(i18n: I18n, isoTimestamp: string | null): string {
+  if (!isoTimestamp) return '—';
+  const date = new Date(isoTimestamp);
   if (Number.isNaN(date.getTime())) return '—';
-  return date.toLocaleString(undefined, { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
+  return date.toLocaleString(i18n.tag, { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
 }
 
 export function latency(value: number | null): string {
@@ -46,27 +41,16 @@ export function latency(value: number | null): string {
   return `${Math.round(value)} ms`;
 }
 
-export function sourceLabel(kind: string): string {
-  switch (kind) {
-    case 'statuspage':
-      return 'Statuspage';
-    case 'statusio':
-      return 'status.io';
-    case 'betterstack':
-      return 'Better Stack';
-    case 'rss':
-      return 'Official RSS';
-    case 'official-json':
-      return 'Official JSON';
-    case 'official-api':
-      return 'Official API';
-    case 'official-page':
-      return 'Official page';
-    case 'community':
-      return 'Community';
-    default:
-      return 'No source';
-  }
+export function sourceLabel(i18n: I18n, kind: string): string {
+  const key = `source.${kind}`;
+  const translated = i18n.t(key);
+  return translated === key ? i18n.t('source.none') : translated;
+}
+
+export function confidenceLabel(i18n: I18n, confidence: string): string {
+  const key = `confidence.${confidence}`;
+  const translated = i18n.t(key);
+  return translated === key ? confidence : translated;
 }
 
 export function statusEmoji(status: UnifiedStatus): string {
@@ -83,4 +67,10 @@ export function statusEmoji(status: UnifiedStatus): string {
     default:
       return '⚪';
   }
+}
+
+/** Arabic interfaces show the Arabic name when a category or service has one. */
+export function displayName(i18n: I18n, english: string, arabic?: string | null): string {
+  if (i18n.locale === 'ar' && arabic) return arabic;
+  return english;
 }

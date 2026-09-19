@@ -5,7 +5,9 @@ PRAGMA foreign_keys = ON;
 CREATE TABLE IF NOT EXISTS categories (
   slug        TEXT PRIMARY KEY,
   name        TEXT NOT NULL,
+  name_ar     TEXT NOT NULL DEFAULT '',
   description TEXT NOT NULL DEFAULT '',
+  description_ar TEXT NOT NULL DEFAULT '',
   position    INTEGER NOT NULL DEFAULT 0
 );
 
@@ -23,6 +25,7 @@ CREATE TABLE IF NOT EXISTS services (
   poll_seconds     INTEGER NOT NULL DEFAULT 60,
   check_targets    TEXT NOT NULL DEFAULT '[]',
   limitation       TEXT,
+  limitation_ar    TEXT,
   enabled          INTEGER NOT NULL DEFAULT 1,
   created_at       TEXT NOT NULL,
   updated_at       TEXT NOT NULL

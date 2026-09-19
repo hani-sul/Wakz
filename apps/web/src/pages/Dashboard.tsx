@@ -2,12 +2,14 @@ import { useEffect, useMemo, useState } from 'react';
 import { api, type CategorySnapshot, type Overview, type UnifiedStatus } from '../api.ts';
 import { FilterBar } from '../components/FilterBar.tsx';
 import { ServiceCard } from '../components/ServiceCard.tsx';
-import { STATUS_LABEL, relativeTime, statusEmoji } from '../lib/format.ts';
+import { displayName, relativeTime, statusEmoji, statusLabel } from '../lib/format.ts';
+import { useI18n } from '../lib/locale.tsx';
 
 export function Dashboard({ onOpenService, onOpenCategory }: {
   onOpenService: (slug: string) => void;
   onOpenCategory: (slug: string) => void;
 }): React.JSX.Element {
+  const i18n = useI18n();
   const [overview, setOverview] = useState<Overview | null>(null);
   const [categories, setCategories] = useState<CategorySnapshot[]>([]);
   const [filter, setFilter] = useState<'all' | UnifiedStatus>('all');
@@ -43,9 +45,12 @@ export function Dashboard({ onOpenService, onOpenCategory }: {
   const visible = useMemo(() => {
     const needle = query.trim().toLowerCase();
     return allServices.filter((service) => {
-      if (filter !== 'all' && service.status !== filter && service.officialStatus !== filter && service.connectivityStatus !== filter) return false;
+      if (filter !== 'all' && service.status !== filter && service.officialStatus !== filter && service.connectivityStatus !== filter) {
+        return false;
+      }
       if (!needle) return true;
       return service.name.toLowerCase().includes(needle)
+        || (service.nameAr ?? '').includes(needle)
         || service.category.toLowerCase().includes(needle)
         || service.slug.includes(needle);
     });
@@ -55,50 +60,51 @@ export function Dashboard({ onOpenService, onOpenCategory }: {
     <div className="page">
       <section className="hero">
         <div className="hero-text">
-          <h1>All systems</h1>
-          <p className="hero-sub">
-            Official vendor status, kept separate from our own connectivity and latency checks.
-          </p>
+          <h1>{i18n.t('dashboard.title')}</h1>
+          <p className="hero-sub">{i18n.t('dashboard.subtitle')}</p>
         </div>
         <div className="hero-status">
           {overview ? (
             <>
               <span className="hero-emoji" aria-hidden="true">{statusEmoji(overview.status)}</span>
               <div>
-                <strong>{STATUS_LABEL[overview.status]}</strong>
+                <strong>{statusLabel(i18n, overview.status)}</strong>
                 <span className="hero-meta">
-                  {overview.services} services · updated {relativeTime(overview.lastUpdate)}
+                  {i18n.t('dashboard.servicesCount', { count: overview.services })} · {i18n.t('dashboard.updated', { time: relativeTime(i18n, overview.lastUpdate) })}
                 </span>
               </div>
             </>
           ) : (
-            <span className="hero-meta">{loading ? 'Loading…' : 'No data yet'}</span>
+            <span className="hero-meta">{loading ? i18n.t('dashboard.loading') : i18n.t('dashboard.noData')}</span>
           )}
         </div>
       </section>
 
       {overview && (
         <section className="category-rail">
-          {overview.categories.map((category) => (
-            <button
-              key={category.slug}
-              type="button"
-              className="category-card"
-              onClick={() => onOpenCategory(category.slug)}
-            >
-              <span className="category-name">{category.name}</span>
-              <span className="category-status">
-                {statusEmoji(category.status)} {STATUS_LABEL[category.status]}
-              </span>
-              <span className="category-counts">
-                {category.counts.MAJOR_OUTAGE + category.counts.PARTIAL_OUTAGE > 0
-                  ? `${category.counts.MAJOR_OUTAGE + category.counts.PARTIAL_OUTAGE} outage`
-                  : category.counts.DEGRADED > 0
-                    ? `${category.counts.DEGRADED} degraded`
-                    : `${category.services} services operational`}
-              </span>
-            </button>
-          ))}
+          {overview.categories.map((category) => {
+            const outages = category.counts.MAJOR_OUTAGE + category.counts.PARTIAL_OUTAGE;
+            return (
+              <button
+                key={category.slug}
+                type="button"
+                className="category-card"
+                onClick={() => onOpenCategory(category.slug)}
+              >
+                <span className="category-name">{displayName(i18n, category.name, category.nameAr)}</span>
+                <span className="category-status">
+                  {statusEmoji(category.status)} {statusLabel(i18n, category.status)}
+                </span>
+                <span className="category-counts">
+                  {outages > 0
+                    ? i18n.t('dashboard.categoryOutage', { count: outages })
+                    : category.counts.DEGRADED > 0
+                      ? i18n.t('dashboard.categoryDegraded', { count: category.counts.DEGRADED })
+                      : i18n.t('dashboard.categoryOk', { count: category.services })}
+                </span>
+              </button>
+            );
+          })}
         </section>
       )}
 
@@ -106,15 +112,15 @@ export function Dashboard({ onOpenService, onOpenCategory }: {
         <input
           className="search-input"
           type="search"
-          placeholder="Search services or components…"
+          placeholder={i18n.t('search.servicesPlaceholder')}
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          aria-label="Search services"
+          aria-label={i18n.t('search.servicesPlaceholder')}
         />
         <FilterBar active={filter} onChange={setFilter} />
       </section>
 
-      {error && <p className="error-banner">Could not load the dashboard: {error}</p>}
+      {error && <p className="error-banner">{i18n.t('dashboard.errorLoading', { error })}</p>}
 
       <section className="service-grid">
         {visible.map((service) => (
@@ -123,15 +129,15 @@ export function Dashboard({ onOpenService, onOpenCategory }: {
       </section>
 
       {!loading && visible.length === 0 && !error && (
-        <p className="empty-state">No service matches this filter.</p>
+        <p className="empty-state">{i18n.t('dashboard.noMatch')}</p>
       )}
 
       {overview && (
         <section className="legend">
-          <div><span className="legend-dot ok" /> Operational — vendor reports normal operation and our checks pass</div>
-          <div><span className="legend-dot warn" /> Degraded — vendor reports degradation or our latency thresholds are exceeded</div>
-          <div><span className="legend-dot critical" /> Outage — partial or major outage reported by the vendor</div>
-          <div><span className="legend-dot unknown" /> Unknown — the vendor publishes no machine-readable status</div>
+          <div><span className="legend-dot ok" /> {i18n.t('legend.ok')}</div>
+          <div><span className="legend-dot warn" /> {i18n.t('legend.warn')}</div>
+          <div><span className="legend-dot critical" /> {i18n.t('legend.critical')}</div>
+          <div><span className="legend-dot unknown" /> {i18n.t('legend.unknown')}</div>
         </section>
       )}
     </div>
