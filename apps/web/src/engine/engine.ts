@@ -18,10 +18,10 @@ import type { LocalIncident, LocalServicePayload, LocalServiceRecord } from './s
 /** Measurements stay fresh for ten minutes; a manual refresh has a 30 second cooldown. */
 export const CACHE_TTL_MS = 10 * 60_000;
 export const MANUAL_REFRESH_COOLDOWN_MS = 30_000;
-const CONCURRENCY = 4;
+const CONCURRENCY = 8;
 /** First runs touch ~66 services; small waves keep phones responsive and battery friendly. */
-const WAVE_SIZE = 8;
-const WAVE_PAUSE_MS = 350;
+const WAVE_SIZE = 12;
+const WAVE_PAUSE_MS = 120;
 const HISTORY_LIMIT = 300;
 
 export const SAUDI_TIMEZONES = ['Asia/Riyadh'];

@@ -4,7 +4,7 @@ import { data, dataMode, setDataMode, type DataMode } from '../data.ts';
 import { DEFAULT_APP_API_BASE, getApiBase, isAppShell, setApiBase } from '../lib/appConfig.ts';
 import { clockTime } from '../lib/format.ts';
 import { useI18n } from '../lib/locale.tsx';
-import { MAX_PINS } from '../lib/pins.ts';
+import { Admin } from './Admin.tsx';
 
 export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.Element {
   const i18n = useI18n();
@@ -13,6 +13,7 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
   const [message, setMessage] = useState<string | null>(null);
   const [snapshotDate, setSnapshotDate] = useState<string | null>(null);
   const [engine, setEngine] = useState(() => data.refreshState());
+  const [showDeveloper, setShowDeveloper] = useState(false);
 
   useEffect(() => {
     void (async () => {
@@ -64,7 +65,6 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
   return (
     <div className="page">
       <section className="service-head">
-        <a className="back-link" href="#/">{i18n.t('category.back')}</a>
         <h1>{i18n.t('settings.title')}</h1>
         <p className="hero-sub">{i18n.t('settings.localNote')}</p>
       </section>
@@ -111,19 +111,12 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
 
       <section className="panel">
         <h2>{i18n.t('settings.geoTitle')}</h2>
-        <div className="button-row">
-          <button type="button" className={!data.location.isManual() ? 'active' : ''} onClick={() => { data.location.setOverride(null); onChanged(); }}>
-            {i18n.t('settings.geoAuto')}
-          </button>
-          <button type="button" className={data.location.isManual() && inside ? 'active' : ''} onClick={() => { data.location.setOverride('inside'); onChanged(); }}>
-            {i18n.t('settings.geoInside')}
-          </button>
-          <button type="button" className={data.location.isManual() && !inside ? 'active' : ''} onClick={() => { data.location.setOverride('outside'); onChanged(); }}>
-            {i18n.t('settings.geoOutside')}
-          </button>
-        </div>
-        <p className="note">{i18n.t('settings.geoNote')}</p>
-        <p className="note">{inside ? i18n.t('settings.geoInside') : i18n.t('settings.geoOutside')}</p>
+        <p className="geo-state">
+          <span className={`geo-badge ${inside ? 'inside' : 'outside'}`}>
+            {inside ? i18n.t('settings.geoInside') : i18n.t('settings.geoOutside')}
+          </span>
+        </p>
+        <p className="note">{i18n.t('settings.geoMandatory')}</p>
       </section>
 
       <section className="panel">
@@ -134,21 +127,32 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
             <dd>{isAppShell() ? i18n.t('settings.modeApp') : i18n.t('settings.modeBrowser')}</dd>
           </div>
           <div>
-            <dt>{i18n.t('dashboard.updated', { time: '' }).trim()}</dt>
+            <dt>{i18n.t('actions.refreshLabel')}</dt>
             <dd>{engine.lastRun ? clockTime(i18n, new Date(engine.lastRun).toISOString()) : i18n.t('common.never')}</dd>
-          </div>
-          <div>
-            <dt>{i18n.t('pin.limit')}</dt>
-            <dd>{MAX_PINS}</dd>
           </div>
           <div>
             <dt>{i18n.t('settings.snapshotTime')}</dt>
             <dd>{snapshotDate ? clockTime(i18n, snapshotDate) : i18n.t('settings.snapshotNone')}</dd>
           </div>
+          <div>
+            <dt>{i18n.t('pin.hint')}</dt>
+            <dd>{data.visibleServices().length}</dd>
+          </div>
         </dl>
         <div className="button-row">
           <button type="button" onClick={() => void clearCache()}>{i18n.t('settings.clearCache')}</button>
         </div>
+      </section>
+
+      <section className="panel">
+        <div className="panel-head">
+          <h2>{i18n.t('settings.developer')}</h2>
+          <button type="button" className="mini" onClick={() => setShowDeveloper((value) => !value)}>
+            {showDeveloper ? '−' : '+'}
+          </button>
+        </div>
+        <p className="note">{i18n.t('settings.developerNote')}</p>
+        {showDeveloper && <Admin />}
       </section>
     </div>
   );

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 
 const PINS_KEY = 'wakz.pins';
-export const MAX_PINS = 10;
+/** Pinning is unlimited by design: pinned services simply sort first on Home. */
+export const MAX_PINS = Number.POSITIVE_INFINITY;
 
 const listeners = new Set<(pins: string[]) => void>();
 
@@ -11,7 +12,7 @@ export function getPins(): string[] {
     if (!raw) return [];
     const parsed = JSON.parse(raw) as unknown;
     if (!Array.isArray(parsed)) return [];
-    return parsed.filter((value): value is string => typeof value === 'string').slice(0, MAX_PINS);
+    return parsed.filter((value): value is string => typeof value === 'string');
   } catch {
     return [];
   }
@@ -19,7 +20,7 @@ export function getPins(): string[] {
 
 function save(pins: string[]): void {
   try {
-    window.localStorage.setItem(PINS_KEY, JSON.stringify(pins.slice(0, MAX_PINS)));
+    window.localStorage.setItem(PINS_KEY, JSON.stringify(pins));
   } catch {
     // Ignore storage failures.
   }
@@ -36,7 +37,6 @@ export function togglePin(slug: string): { ok: boolean; pinned: boolean; reason?
     save(pins.filter((value) => value !== slug));
     return { ok: true, pinned: false };
   }
-  if (pins.length >= MAX_PINS) return { ok: false, pinned: false, reason: 'limit' };
   save([...pins, slug]);
   return { ok: true, pinned: true };
 }

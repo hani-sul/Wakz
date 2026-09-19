@@ -26,19 +26,19 @@ function quietLogger(scope: string) {
  * so only HTTP(S) latency is measurable locally; the other columns stay empty and are labelled.
  */
 async function latencyChecks(service: ServiceDefinition, timeoutMs: number): Promise<CheckResult[]> {
-  const results: CheckResult[] = [];
-  for (const target of service.checkTargets) {
-    if (target.kind !== 'https' && target.kind !== 'http') continue;
+  const targets = service.checkTargets.filter((target) => target.kind === 'https' || target.kind === 'http');
+  // The checks of a single service run in parallel: it keeps the first collection fast.
+  const results = await Promise.all(targets.map(async (target): Promise<CheckResult | null> => {
     const started = performance.now();
     const response = await fetchResource(target.target, { timeoutMs, retries: 0 });
     const elapsed = Math.round(performance.now() - started);
     // No HTTP response at all means the browser blocked the request (CORS/mixed content) or the
     // device is offline. That is not evidence of an outage, so the check is skipped instead of
     // being counted as a failure (the same rule as an unavailable ICMP probe).
-    if (response.status === 0) continue;
+    if (response.status === 0) return null;
     const expected = target.expectStatus ?? [200, 204, 301, 302, 307, 308, 400, 401, 403, 404, 405, 412, 429];
     const ok = response.status > 0 && expected.includes(response.status);
-    results.push({
+    return {
       kind: target.kind,
       target: target.label ?? target.target,
       ok,
@@ -48,9 +48,9 @@ async function latencyChecks(service: ServiceDefinition, timeoutMs: number): Pro
       region: 'device',
       checkedAt: new Date().toISOString(),
       detail: `HTTP ${response.status} in ${elapsed} ms`,
-    });
-  }
-  return results;
+    };
+  }));
+  return results.filter((check): check is CheckResult => check !== null);
 }
 
 export async function collectServiceLocally(service: ServiceDefinition, timeoutMs = 12_000): Promise<LocalServicePayload> {

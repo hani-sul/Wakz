@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-09-19T09:09:23.545Z",
+  "generatedAt": "2026-09-19T16:43:50.903Z",
   "database": "D:\\AIProjects\\Pro2\\data\\techpulse.db",
   "overview": {
     "status": "UNKNOWN",
     "counts": {
-      "OPERATIONAL": 32,
-      "DEGRADED": 5,
+      "OPERATIONAL": 31,
+      "DEGRADED": 6,
       "PARTIAL_OUTAGE": 0,
       "MAJOR_OUTAGE": 1,
       "MAINTENANCE": 0,
       "UNKNOWN": 28
     },
     "services": 66,
-    "lastUpdate": "2026-09-19T09:09:23.517Z",
+    "lastUpdate": "2026-09-19T16:43:49.105Z",
     "categories": [
       {
         "slug": "gaming",
@@ -22,8 +22,8 @@
         "descriptionAr": "منصات الألعاب والمتاجر وشبكات اللعب الجماعي",
         "status": "DEGRADED",
         "counts": {
-          "OPERATIONAL": 10,
-          "DEGRADED": 3,
+          "OPERATIONAL": 9,
+          "DEGRADED": 4,
           "PARTIAL_OUTAGE": 0,
           "MAJOR_OUTAGE": 0,
           "MAINTENANCE": 0,
@@ -144,8 +144,8 @@
       "descriptionAr": "منصات الألعاب والمتاجر وشبكات اللعب الجماعي",
       "status": "DEGRADED",
       "counts": {
-        "OPERATIONAL": 10,
-        "DEGRADED": 3,
+        "OPERATIONAL": 9,
+        "DEGRADED": 4,
         "PARTIAL_OUTAGE": 0,
         "MAJOR_OUTAGE": 0,
         "MAINTENANCE": 0,
@@ -164,16 +164,16 @@
           "officialStatusRaw": null,
           "officialSourceKind": "official-page",
           "officialSourceUrl": "https://account.battle.net/status",
-          "officialCheckedAt": "2026-09-19T09:09:21.107Z",
+          "officialCheckedAt": "2026-09-19T16:43:45.710Z",
           "officialConfidence": "low",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:22.739Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:47.161Z",
           "latency": {
             "http": null,
-            "https": 758,
-            "dns": 5,
-            "tcp": 107,
+            "https": 665,
+            "dns": 3,
+            "tcp": 114,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -194,16 +194,16 @@
           "officialStatusRaw": "All Systems Operational",
           "officialSourceKind": "statuspage",
           "officialSourceUrl": "https://discordstatus.com/",
-          "officialCheckedAt": "2026-09-19T09:09:22.067Z",
+          "officialCheckedAt": "2026-09-19T16:43:46.314Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:23.145Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:47.126Z",
           "latency": {
             "http": null,
-            "https": 400,
-            "dns": 147,
-            "tcp": 109,
+            "https": 343,
+            "dns": 5,
+            "tcp": 83,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -226,16 +226,16 @@
           "officialStatusRaw": null,
           "officialSourceKind": "official-page",
           "officialSourceUrl": "https://www.ea.com/service-updates",
-          "officialCheckedAt": "2026-09-19T09:09:20.787Z",
+          "officialCheckedAt": "2026-09-19T16:43:44.795Z",
           "officialConfidence": "low",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:22.217Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:45.260Z",
           "latency": {
             "http": null,
-            "https": 652,
-            "dns": 3,
-            "tcp": 119,
+            "https": 215,
+            "dns": 5,
+            "tcp": 19,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -256,16 +256,16 @@
           "officialStatusRaw": "All Systems Operational",
           "officialSourceKind": "statuspage",
           "officialSourceUrl": "https://status.epicgames.com/",
-          "officialCheckedAt": "2026-09-19T09:09:19.981Z",
+          "officialCheckedAt": "2026-09-19T16:43:44.080Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:20.785Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:44.794Z",
           "latency": {
             "http": null,
-            "https": 333,
-            "dns": 12,
-            "tcp": 96,
+            "https": 289,
+            "dns": 3,
+            "tcp": 91,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -288,16 +288,16 @@
           "officialStatusRaw": "All Systems Operational",
           "officialSourceKind": "statuspage",
           "officialSourceUrl": "https://status.epicgames.com/",
-          "officialCheckedAt": "2026-09-19T09:09:20.024Z",
+          "officialCheckedAt": "2026-09-19T16:43:44.025Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:20.479Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:44.428Z",
           "latency": {
             "http": null,
-            "https": 333,
+            "https": 286,
             "dns": 3,
-            "tcp": 95,
+            "tcp": 83,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -320,16 +320,16 @@
           "officialStatusRaw": null,
           "officialSourceKind": "none",
           "officialSourceUrl": null,
-          "officialCheckedAt": "2026-09-19T09:09:04.444Z",
+          "officialCheckedAt": "2026-09-19T16:43:13.290Z",
           "officialConfidence": "medium",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:14.829Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:23.611Z",
           "latency": {
             "http": null,
-            "https": 191,
-            "dns": 73,
-            "tcp": 112,
+            "https": 141,
+            "dns": 3,
+            "tcp": 155,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -350,16 +350,16 @@
           "officialStatusRaw": null,
           "officialSourceKind": "official-page",
           "officialSourceUrl": "https://www.nintendo.co.jp/netinfo/ja_JP/index.html",
-          "officialCheckedAt": "2026-09-19T09:09:19.457Z",
+          "officialCheckedAt": "2026-09-19T16:43:43.339Z",
           "officialConfidence": "medium",
           "officialErrorMessage": null,
           "connectivityStatus": "DEGRADED",
-          "connectivityCheckedAt": "2026-09-19T09:09:21.372Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:46.223Z",
           "latency": {
             "http": null,
-            "https": 924,
-            "dns": 5,
-            "tcp": 46,
+            "https": 1375,
+            "dns": 10,
+            "tcp": 109,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -375,21 +375,21 @@
           "categoryNameAr": "الألعاب",
           "homepage": "https://www.playstation.com",
           "statusPage": "https://status.playstation.com/",
-          "status": "OPERATIONAL",
+          "status": "DEGRADED",
           "officialStatus": "UNKNOWN",
           "officialStatusRaw": null,
           "officialSourceKind": "official-page",
           "officialSourceUrl": "https://status.playstation.com/",
-          "officialCheckedAt": "2026-09-19T09:09:19.456Z",
+          "officialCheckedAt": "2026-09-19T16:43:43.337Z",
           "officialConfidence": "medium",
           "officialErrorMessage": null,
-          "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:21.041Z",
+          "connectivityStatus": "DEGRADED",
+          "connectivityCheckedAt": "2026-09-19T16:43:45.709Z",
           "latency": {
             "http": null,
-            "https": 719,
+            "https": 1088,
             "dns": 4,
-            "tcp": 127,
+            "tcp": 172,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -410,16 +410,16 @@
           "officialStatusRaw": null,
           "officialSourceKind": "official-page",
           "officialSourceUrl": "https://status.riotgames.com/",
-          "officialCheckedAt": "2026-09-19T09:09:20.481Z",
+          "officialCheckedAt": "2026-09-19T16:43:44.430Z",
           "officialConfidence": "medium",
           "officialErrorMessage": null,
           "connectivityStatus": "DEGRADED",
-          "connectivityCheckedAt": "2026-09-19T09:09:22.619Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:47.581Z",
           "latency": {
             "http": null,
-            "https": 1013,
+            "https": 1503,
             "dns": 4,
-            "tcp": 106,
+            "tcp": 137,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -440,16 +440,16 @@
           "officialStatusRaw": "Operational",
           "officialSourceKind": "statusio",
           "officialSourceUrl": "https://status.roblox.com/",
-          "officialCheckedAt": "2026-09-19T09:09:21.511Z",
+          "officialCheckedAt": "2026-09-19T16:43:46.008Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:22.712Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:47.117Z",
           "latency": {
             "http": null,
-            "https": 538,
-            "dns": 7,
-            "tcp": 114,
+            "https": 494,
+            "dns": 3,
+            "tcp": 101,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -469,19 +469,19 @@
           "statusPage": null,
           "status": "OPERATIONAL",
           "officialStatus": "OPERATIONAL",
-          "officialStatusRaw": "Steam Web API responding (server time Sat Sep 19 02:09:19 2026)",
+          "officialStatusRaw": "Steam Web API responding (server time Sat Sep 19 09:43:43 2026)",
           "officialSourceKind": "official-api",
           "officialSourceUrl": "https://api.steampowered.com/ISteamWebAPIUtil/GetServerInfo/v1/",
-          "officialCheckedAt": "2026-09-19T09:09:20.012Z",
+          "officialCheckedAt": "2026-09-19T16:43:43.951Z",
           "officialConfidence": "medium",
           "officialErrorMessage": null,
-          "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:21.105Z",
+          "connectivityStatus": "DEGRADED",
+          "connectivityCheckedAt": "2026-09-19T16:43:45.906Z",
           "latency": {
             "http": null,
-            "https": 527,
-            "dns": 7,
-            "tcp": 26,
+            "https": 885,
+            "dns": 5,
+            "tcp": 168,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -504,16 +504,16 @@
           "officialStatusRaw": null,
           "officialSourceKind": "official-page",
           "officialSourceUrl": "https://www.ubisoft.com/en-us/help/status",
-          "officialCheckedAt": "2026-09-19T09:09:21.044Z",
+          "officialCheckedAt": "2026-09-19T16:43:45.261Z",
           "officialConfidence": "low",
           "officialErrorMessage": null,
           "connectivityStatus": "DEGRADED",
-          "connectivityCheckedAt": "2026-09-19T09:09:22.794Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:47.026Z",
           "latency": {
             "http": null,
-            "https": 818,
-            "dns": 4,
-            "tcp": 107,
+            "https": 830,
+            "dns": 5,
+            "tcp": 94,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -534,16 +534,16 @@
           "officialStatusRaw": "None",
           "officialSourceKind": "official-api",
           "officialSourceUrl": "https://support.xbox.com/en-US/xbox-live-status",
-          "officialCheckedAt": "2026-09-19T09:09:20.019Z",
+          "officialCheckedAt": "2026-09-19T16:43:43.898Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
-          "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:21.235Z",
+          "connectivityStatus": "DEGRADED",
+          "connectivityCheckedAt": "2026-09-19T16:43:45.750Z",
           "latency": {
             "http": null,
-            "https": 550,
-            "dns": 6,
-            "tcp": 105,
+            "https": 834,
+            "dns": 11,
+            "tcp": 164,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -584,16 +584,16 @@
           "officialStatusRaw": "All Systems Operational",
           "officialSourceKind": "statuspage",
           "officialSourceUrl": "https://status.claude.com/",
-          "officialCheckedAt": "2026-09-19T09:09:23.159Z",
+          "officialCheckedAt": "2026-09-19T16:43:47.783Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:39.647Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:48.572Z",
           "latency": {
             "http": null,
-            "https": 400,
-            "dns": 163,
-            "tcp": 100,
+            "https": 330,
+            "dns": 4,
+            "tcp": 88,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -646,16 +646,16 @@
           "officialStatusRaw": "no active incidents in feed",
           "officialSourceKind": "rss",
           "officialSourceUrl": "https://status.deepseek.com/",
-          "officialCheckedAt": "2026-09-19T09:08:40.440Z",
+          "officialCheckedAt": "2026-09-19T16:43:29.695Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
-          "connectivityStatus": "DEGRADED",
-          "connectivityCheckedAt": "2026-09-19T09:08:42.419Z",
+          "connectivityStatus": "OPERATIONAL",
+          "connectivityCheckedAt": "2026-09-19T16:43:30.150Z",
           "latency": {
             "http": null,
-            "https": 294,
-            "dns": 1313,
-            "tcp": 43,
+            "https": 205,
+            "dns": 3,
+            "tcp": 31,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -706,16 +706,16 @@
           "officialStatusRaw": "no active incidents in Google Cloud feed",
           "officialSourceKind": "official-json",
           "officialSourceUrl": "https://status.cloud.google.com/",
-          "officialCheckedAt": "2026-09-19T09:09:23.225Z",
+          "officialCheckedAt": "2026-09-19T16:43:28.769Z",
           "officialConfidence": "medium",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:41.425Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:30.463Z",
           "latency": {
             "http": null,
-            "https": 1044,
-            "dns": 161,
-            "tcp": 75,
+            "https": 953,
+            "dns": 4,
+            "tcp": 42,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -738,16 +738,16 @@
           "officialStatusRaw": "All Systems Operational",
           "officialSourceKind": "statuspage",
           "officialSourceUrl": "https://groqstatus.com/",
-          "officialCheckedAt": "2026-09-19T09:09:23.320Z",
+          "officialCheckedAt": "2026-09-19T16:43:28.831Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:40.565Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:29.688Z",
           "latency": {
             "http": null,
-            "https": 370,
-            "dns": 181,
-            "tcp": 54,
+            "https": 368,
+            "dns": 3,
+            "tcp": 96,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -770,16 +770,16 @@
           "officialStatusRaw": "operational",
           "officialSourceKind": "betterstack",
           "officialSourceUrl": "https://status.huggingface.co/",
-          "officialCheckedAt": "2026-09-19T09:09:23.517Z",
+          "officialCheckedAt": "2026-09-19T16:43:28.729Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:40.156Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:29.606Z",
           "latency": {
             "http": null,
-            "https": 389,
-            "dns": 151,
-            "tcp": 45,
+            "https": 668,
+            "dns": 4,
+            "tcp": 188,
             "icmp": null
           },
           "activeIncidents": 8,
@@ -802,16 +802,16 @@
           "officialStatusRaw": "All Systems Operational",
           "officialSourceKind": "statuspage",
           "officialSourceUrl": "https://status.openai.com/",
-          "officialCheckedAt": "2026-09-19T09:09:22.658Z",
+          "officialCheckedAt": "2026-09-19T16:43:46.655Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:23.491Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:47.205Z",
           "latency": {
             "http": null,
-            "https": 309,
-            "dns": 176,
-            "tcp": 25,
+            "https": 248,
+            "dns": 2,
+            "tcp": 22,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -882,16 +882,16 @@
           "officialStatusRaw": "2 event(s) in AWS Health feed — affected regions: UAE, Bahrain",
           "officialSourceKind": "official-json",
           "officialSourceUrl": "https://health.aws.amazon.com/health/status",
-          "officialCheckedAt": "2026-09-19T09:08:40.360Z",
+          "officialCheckedAt": "2026-09-19T16:43:30.351Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:42.426Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:31.733Z",
           "latency": {
             "http": null,
-            "https": 999,
-            "dns": 3,
-            "tcp": 59,
+            "https": 668,
+            "dns": 4,
+            "tcp": 32,
             "icmp": null
           },
           "activeIncidents": 2,
@@ -974,23 +974,23 @@
           "officialStatusRaw": "Minor Service Outage",
           "officialSourceKind": "statuspage",
           "officialSourceUrl": "https://www.cloudflarestatus.com/",
-          "officialCheckedAt": "2026-09-19T09:09:05.395Z",
+          "officialCheckedAt": "2026-09-19T16:43:29.216Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:09:16.128Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:39.953Z",
           "latency": {
             "http": null,
-            "https": 590,
-            "dns": 4,
-            "tcp": 104,
+            "https": 577,
+            "dns": 5,
+            "tcp": 86,
             "icmp": null
           },
           "activeIncidents": 0,
           "componentCount": 472,
           "componentSummary": {
-            "OPERATIONAL": 440,
-            "MAINTENANCE": 19,
+            "OPERATIONAL": 441,
+            "MAINTENANCE": 18,
             "PARTIAL_OUTAGE": 12,
             "DEGRADED": 1
           },
@@ -1069,16 +1069,16 @@
           "officialStatusRaw": "All Systems Operational",
           "officialSourceKind": "statuspage",
           "officialSourceUrl": "https://status.digitalocean.com/",
-          "officialCheckedAt": "2026-09-19T09:08:41.659Z",
+          "officialCheckedAt": "2026-09-19T16:43:31.002Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:43.001Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:32.171Z",
           "latency": {
             "http": null,
-            "https": 612,
-            "dns": 4,
-            "tcp": 93,
+            "https": 520,
+            "dns": 2,
+            "tcp": 85,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1132,16 +1132,16 @@
           "officialStatusRaw": "All Systems Operational",
           "officialSourceKind": "statuspage",
           "officialSourceUrl": "https://www.githubstatus.com/",
-          "officialCheckedAt": "2026-09-19T09:08:39.807Z",
+          "officialCheckedAt": "2026-09-19T16:43:28.856Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:41.106Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:29.902Z",
           "latency": {
             "http": null,
-            "https": 541,
-            "dns": 147,
-            "tcp": 44,
+            "https": 485,
+            "dns": 3,
+            "tcp": 36,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1164,16 +1164,16 @@
           "officialStatusRaw": "no active incidents in Google Cloud feed",
           "officialSourceKind": "official-json",
           "officialSourceUrl": "https://status.cloud.google.com/",
-          "officialCheckedAt": "2026-09-19T09:08:49.880Z",
+          "officialCheckedAt": "2026-09-19T16:43:30.096Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "DEGRADED",
-          "connectivityCheckedAt": "2026-09-19T09:08:54.578Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:34.718Z",
           "latency": {
             "http": null,
-            "https": 2266,
+            "https": 2214,
             "dns": 4,
-            "tcp": 154,
+            "tcp": 173,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1196,16 +1196,16 @@
           "officialStatusRaw": "no active entries in official feed",
           "officialSourceKind": "rss",
           "officialSourceUrl": "https://azure.status.microsoft/en-us/status/",
-          "officialCheckedAt": "2026-09-19T09:08:40.894Z",
+          "officialCheckedAt": "2026-09-19T16:43:30.405Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "DEGRADED",
-          "connectivityCheckedAt": "2026-09-19T09:08:42.516Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:33.504Z",
           "latency": {
             "http": null,
-            "https": 780,
-            "dns": 2,
-            "tcp": 56,
+            "https": 1513,
+            "dns": 4,
+            "tcp": 57,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1467,16 +1467,16 @@
           "officialStatusRaw": "All Systems Operational",
           "officialSourceKind": "statuspage",
           "officialSourceUrl": "https://www.vercel-status.com/",
-          "officialCheckedAt": "2026-09-19T09:08:41.043Z",
+          "officialCheckedAt": "2026-09-19T16:43:30.584Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "DEGRADED",
-          "connectivityCheckedAt": "2026-09-19T09:08:45.437Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:34.514Z",
           "latency": {
             "http": null,
-            "https": 2144,
-            "dns": 26,
-            "tcp": 63,
+            "https": 1917,
+            "dns": 7,
+            "tcp": 59,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1512,21 +1512,21 @@
           "categoryNameAr": "التواصل الاجتماعي",
           "homepage": "https://www.facebook.com",
           "statusPage": "https://metastatus.com/",
-          "status": "OPERATIONAL",
+          "status": "DEGRADED",
           "officialStatus": "UNKNOWN",
           "officialStatusRaw": null,
           "officialSourceKind": "official-page",
           "officialSourceUrl": "https://metastatus.com/",
-          "officialCheckedAt": "2026-09-19T09:08:42.427Z",
+          "officialCheckedAt": "2026-09-19T16:43:33.082Z",
           "officialConfidence": "low",
           "officialErrorMessage": null,
-          "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:43.242Z",
+          "connectivityStatus": "DEGRADED",
+          "connectivityCheckedAt": "2026-09-19T16:43:34.422Z",
           "latency": {
             "http": null,
-            "https": 719,
+            "https": 1218,
             "dns": 4,
-            "tcp": 90,
+            "tcp": 105,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1542,21 +1542,21 @@
           "categoryNameAr": "التواصل الاجتماعي",
           "homepage": "https://www.instagram.com",
           "statusPage": "https://metastatus.com/",
-          "status": "DEGRADED",
+          "status": "OPERATIONAL",
           "officialStatus": "UNKNOWN",
           "officialStatusRaw": null,
           "officialSourceKind": "official-page",
           "officialSourceUrl": "https://metastatus.com/",
-          "officialCheckedAt": "2026-09-19T09:08:42.422Z",
+          "officialCheckedAt": "2026-09-19T16:43:32.173Z",
           "officialConfidence": "low",
           "officialErrorMessage": null,
-          "connectivityStatus": "DEGRADED",
-          "connectivityCheckedAt": "2026-09-19T09:08:44.086Z",
+          "connectivityStatus": "OPERATIONAL",
+          "connectivityCheckedAt": "2026-09-19T16:43:33.127Z",
           "latency": {
             "http": null,
-            "https": 1563,
-            "dns": 4,
-            "tcp": 94,
+            "https": 840,
+            "dns": 5,
+            "tcp": 96,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1577,16 +1577,16 @@
           "officialStatusRaw": "All Systems Operational",
           "officialSourceKind": "statuspage",
           "officialSourceUrl": "https://www.redditstatus.com/",
-          "officialCheckedAt": "2026-09-19T09:08:50.176Z",
+          "officialCheckedAt": "2026-09-19T16:43:34.958Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:51.099Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:35.769Z",
           "latency": {
             "http": null,
-            "https": 396,
-            "dns": 53,
-            "tcp": 54,
+            "https": 331,
+            "dns": 4,
+            "tcp": 53,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1609,16 +1609,16 @@
           "officialStatusRaw": null,
           "officialSourceKind": "none",
           "officialSourceUrl": null,
-          "officialCheckedAt": "2026-09-19T09:08:43.127Z",
+          "officialCheckedAt": "2026-09-19T16:43:34.426Z",
           "officialConfidence": "medium",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:44.465Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:35.562Z",
           "latency": {
             "http": null,
-            "https": 594,
+            "https": 487,
             "dns": 4,
-            "tcp": 144,
+            "tcp": 145,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1639,16 +1639,16 @@
           "officialStatusRaw": null,
           "officialSourceKind": "none",
           "officialSourceUrl": null,
-          "officialCheckedAt": "2026-09-19T09:08:43.002Z",
+          "officialCheckedAt": "2026-09-19T16:43:33.507Z",
           "officialConfidence": "medium",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:44.061Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:34.676Z",
           "latency": {
             "http": null,
-            "https": 823,
-            "dns": 125,
-            "tcp": 109,
+            "https": 1044,
+            "dns": 4,
+            "tcp": 106,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1669,16 +1669,16 @@
           "officialStatusRaw": null,
           "officialSourceKind": "official-page",
           "officialSourceUrl": "https://metastatus.com/",
-          "officialCheckedAt": "2026-09-19T09:08:41.427Z",
+          "officialCheckedAt": "2026-09-19T16:43:31.734Z",
           "officialConfidence": "low",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:43.126Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:33.080Z",
           "latency": {
             "http": null,
-            "https": 752,
-            "dns": 98,
-            "tcp": 97,
+            "https": 603,
+            "dns": 4,
+            "tcp": 124,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1699,16 +1699,16 @@
           "officialStatusRaw": null,
           "officialSourceKind": "none",
           "officialSourceUrl": null,
-          "officialCheckedAt": "2026-09-19T09:08:42.518Z",
+          "officialCheckedAt": "2026-09-19T16:43:33.129Z",
           "officialConfidence": "medium",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:43.456Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:34.240Z",
           "latency": {
             "http": null,
-            "https": 449,
+            "https": 487,
             "dns": 5,
-            "tcp": 30,
+            "tcp": 120,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1747,16 +1747,16 @@
           "officialStatusRaw": "All systems operational",
           "officialSourceKind": "official-json",
           "officialSourceUrl": "https://status.nuvio.tv/",
-          "officialCheckedAt": "2026-09-19T09:08:45.222Z",
+          "officialCheckedAt": "2026-09-19T16:43:36.647Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:46.152Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:37.580Z",
           "latency": {
             "http": null,
-            "https": 411,
-            "dns": 3,
-            "tcp": 93,
+            "https": 399,
+            "dns": 4,
+            "tcp": 94,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1779,15 +1779,15 @@
           "officialStatusRaw": "worst of 14 monitored endpoints",
           "officialSourceKind": "official-json",
           "officialSourceUrl": "https://status.simkl.com/",
-          "officialCheckedAt": "2026-09-19T09:08:45.141Z",
+          "officialCheckedAt": "2026-09-19T16:43:36.066Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:46.536Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:37.350Z",
           "latency": {
             "http": null,
-            "https": 641,
-            "dns": 3,
+            "https": 580,
+            "dns": 4,
             "tcp": 101,
             "icmp": null
           },
@@ -1811,16 +1811,16 @@
           "officialStatusRaw": null,
           "officialSourceKind": "none",
           "officialSourceUrl": null,
-          "officialCheckedAt": "2026-09-19T09:08:43.457Z",
+          "officialCheckedAt": "2026-09-19T16:43:34.679Z",
           "officialConfidence": "medium",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:44.310Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:35.621Z",
           "latency": {
             "http": null,
-            "https": 359,
-            "dns": 43,
-            "tcp": 89,
+            "https": 414,
+            "dns": 3,
+            "tcp": 97,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1841,16 +1841,16 @@
           "officialStatusRaw": "worst component status from 3 feed entries",
           "officialSourceKind": "rss",
           "officialSourceUrl": "https://status.themoviedb.org/",
-          "officialCheckedAt": "2026-09-19T09:08:44.824Z",
+          "officialCheckedAt": "2026-09-19T16:43:47.907Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:46.162Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:49.105Z",
           "latency": {
             "http": null,
-            "https": 591,
-            "dns": 3,
-            "tcp": 148,
+            "https": 523,
+            "dns": 4,
+            "tcp": 132,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -1873,16 +1873,16 @@
           "officialStatusRaw": "worst of 2 monitored endpoints",
           "officialSourceKind": "official-json",
           "officialSourceUrl": "https://status.trakt.tv/",
-          "officialCheckedAt": "2026-09-19T09:08:44.548Z",
+          "officialCheckedAt": "2026-09-19T16:43:35.285Z",
           "officialConfidence": "high",
           "officialErrorMessage": null,
           "connectivityStatus": "OPERATIONAL",
-          "connectivityCheckedAt": "2026-09-19T09:08:46.024Z",
+          "connectivityCheckedAt": "2026-09-19T16:43:36.587Z",
           "latency": {
             "http": null,
-            "https": 495,
-            "dns": 4,
-            "tcp": 120,
+            "https": 412,
+            "dns": 5,
+            "tcp": 91,
             "icmp": null
           },
           "activeIncidents": 0,
@@ -2310,16 +2310,16 @@
       "officialStatusRaw": "2 event(s) in AWS Health feed — affected regions: UAE, Bahrain",
       "officialSourceKind": "official-json",
       "officialSourceUrl": "https://health.aws.amazon.com/health/status",
-      "officialCheckedAt": "2026-09-19T09:08:40.360Z",
+      "officialCheckedAt": "2026-09-19T16:43:30.351Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:42.426Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:31.733Z",
       "latency": {
         "http": null,
-        "https": 999,
-        "dns": 3,
-        "tcp": 59,
+        "https": 668,
+        "dns": 4,
+        "tcp": 32,
         "icmp": null
       },
       "activeIncidents": 2,
@@ -4698,6 +4698,86 @@
           "checkedAt": "2026-09-19T09:03:24.546Z",
           "status": "MAJOR_OUTAGE",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:33:27.517Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:03:36.050Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:33:39.141Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:03:57.026Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:17:02.872Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:17:42.116Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:48:20.557Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:18:26.790Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:48:36.191Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:19:12.212Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:49:36.556Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:19:51.813Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:49:54.653Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:19:57.319Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:52:10.300Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:22:27.829Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "2 event(s) in AWS Health feed — affected regions: UAE, Bahrain",
@@ -4715,16 +4795,16 @@
       "officialStatusRaw": "All Systems Operational",
       "officialSourceKind": "statuspage",
       "officialSourceUrl": "https://status.claude.com/",
-      "officialCheckedAt": "2026-09-19T09:09:23.159Z",
+      "officialCheckedAt": "2026-09-19T16:43:47.783Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:39.647Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:48.572Z",
       "latency": {
         "http": null,
-        "https": 400,
-        "dns": 163,
-        "tcp": 100,
+        "https": 330,
+        "dns": 4,
+        "tcp": 88,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -5341,6 +5421,86 @@
           "checkedAt": "2026-09-19T08:40:06.075Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:08.357Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:12.118Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:24.339Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:28.299Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:41.110Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:43.659Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:54.519Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:07.736Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:40.444Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:41:44.421Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:11:47.090Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:42:22.352Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:12:25.556Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:42:52.386Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:13:25.210Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:43:47.783Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "All Systems Operational",
@@ -5395,16 +5555,16 @@
       "officialStatusRaw": null,
       "officialSourceKind": "official-page",
       "officialSourceUrl": "https://account.battle.net/status",
-      "officialCheckedAt": "2026-09-19T09:09:21.107Z",
+      "officialCheckedAt": "2026-09-19T16:43:45.710Z",
       "officialConfidence": "low",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:09:22.739Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:47.161Z",
       "latency": {
         "http": null,
-        "https": 758,
-        "dns": 5,
-        "tcp": 107,
+        "https": 665,
+        "dns": 3,
+        "tcp": 114,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -5468,6 +5628,76 @@
         },
         {
           "checkedAt": "2026-09-19T09:09:21.107Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:39:24.278Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:09:37.279Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:10.086Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:12.626Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:15.421Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:52.678Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:05.585Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:38.385Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:16.232Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:12:48.158Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:43:05.789Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:13:08.938Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:43:45.604Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:14:08.161Z",
           "status": "UNKNOWN",
           "latencyMs": null
         }
@@ -5559,23 +5789,23 @@
       "officialStatusRaw": "Minor Service Outage",
       "officialSourceKind": "statuspage",
       "officialSourceUrl": "https://www.cloudflarestatus.com/",
-      "officialCheckedAt": "2026-09-19T09:09:05.395Z",
+      "officialCheckedAt": "2026-09-19T16:43:29.216Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:09:16.128Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:39.953Z",
       "latency": {
         "http": null,
-        "https": 590,
-        "dns": 4,
-        "tcp": 104,
+        "https": 577,
+        "dns": 5,
+        "tcp": 86,
         "icmp": null
       },
       "activeIncidents": 0,
       "componentCount": 472,
       "componentSummary": {
-        "OPERATIONAL": 440,
-        "MAINTENANCE": 19,
+        "OPERATIONAL": 441,
+        "MAINTENANCE": 18,
         "PARTIAL_OUTAGE": 12,
         "DEGRADED": 1
       },
@@ -5986,8 +6216,8 @@
           "externalId": "2dg91ffn660j",
           "name": "Dammam, Saudi Arabia - (DMM)",
           "group": null,
-          "status": "OPERATIONAL",
-          "statusRaw": "operational",
+          "status": "MAINTENANCE",
+          "statusRaw": "under_maintenance",
           "position": 7
         },
         {
@@ -6026,8 +6256,8 @@
           "externalId": "cscgtg7yfz1b",
           "name": "Dar Es Salaam, Tanzania - (DAR)",
           "group": null,
-          "status": "MAINTENANCE",
-          "statusRaw": "under_maintenance",
+          "status": "OPERATIONAL",
+          "statusRaw": "operational",
           "position": 8
         },
         {
@@ -6490,8 +6720,8 @@
           "externalId": "hf1csyqv3x7s",
           "name": "Dhaka, Bangladesh - (DAC)",
           "group": null,
-          "status": "MAINTENANCE",
-          "statusRaw": "under_maintenance",
+          "status": "OPERATIONAL",
+          "statusRaw": "operational",
           "position": 16
         },
         {
@@ -10255,6 +10485,81 @@
           "checkedAt": "2026-09-19T08:39:47.742Z",
           "status": "DEGRADED",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:09:50.340Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:39:53.223Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:35.847Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:41:14.153Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:11:56.519Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:41:59.077Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:12:06.883Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:42:09.300Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:12:52.260Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:43:05.874Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:13:18.949Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:43:35.326Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:13:38.158Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:43:50.103Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:13:51.902Z",
+          "status": "DEGRADED",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "Minor Service Outage",
@@ -10416,16 +10721,16 @@
       "officialStatusRaw": "no active incidents in feed",
       "officialSourceKind": "rss",
       "officialSourceUrl": "https://status.deepseek.com/",
-      "officialCheckedAt": "2026-09-19T09:08:40.440Z",
+      "officialCheckedAt": "2026-09-19T16:43:29.695Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
-      "connectivityStatus": "DEGRADED",
-      "connectivityCheckedAt": "2026-09-19T09:08:42.419Z",
+      "connectivityStatus": "OPERATIONAL",
+      "connectivityCheckedAt": "2026-09-19T16:43:30.150Z",
       "latency": {
         "http": null,
-        "https": 294,
-        "dns": 1313,
-        "tcp": 43,
+        "https": 205,
+        "dns": 3,
+        "tcp": 31,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -10872,6 +11177,86 @@
           "checkedAt": "2026-09-19T09:04:54.257Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:34:57.620Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:05:25.935Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:35:53.580Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:06:11.467Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:36:14.064Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:06:25.499Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:36:37.858Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:06:41.004Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:37:13.658Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:07:17.582Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:37:53.144Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:07:55.944Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:34:59.134Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:40:22.257Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:10:25.545Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:40:29.538Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "no active incidents in feed",
@@ -10889,16 +11274,16 @@
       "officialStatusRaw": "All Systems Operational",
       "officialSourceKind": "statuspage",
       "officialSourceUrl": "https://status.digitalocean.com/",
-      "officialCheckedAt": "2026-09-19T09:08:41.659Z",
+      "officialCheckedAt": "2026-09-19T16:43:31.002Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:43.001Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:32.171Z",
       "latency": {
         "http": null,
-        "https": 612,
-        "dns": 4,
-        "tcp": 93,
+        "https": 520,
+        "dns": 2,
+        "tcp": 85,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -13801,6 +14186,86 @@
           "checkedAt": "2026-09-19T08:39:22.553Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:09:25.696Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:39:28.815Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:09:41.111Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:30.220Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:43.636Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:46.197Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:56.686Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:10.018Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:42.601Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:41:46.314Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:11:49.111Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:42:24.247Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:12:27.701Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:42:56.171Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:13:27.632Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:43:31.002Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "All Systems Operational",
@@ -13818,16 +14283,16 @@
       "officialStatusRaw": "All Systems Operational",
       "officialSourceKind": "statuspage",
       "officialSourceUrl": "https://discordstatus.com/",
-      "officialCheckedAt": "2026-09-19T09:09:22.067Z",
+      "officialCheckedAt": "2026-09-19T16:43:46.314Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:09:23.145Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:47.126Z",
       "latency": {
         "http": null,
-        "https": 400,
-        "dns": 147,
-        "tcp": 109,
+        "https": 343,
+        "dns": 5,
+        "tcp": 83,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -14619,6 +15084,81 @@
           "checkedAt": "2026-09-19T08:40:05.281Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:07.741Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:10.894Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:23.223Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:45.850Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:58.930Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:41:01.841Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:11:39.114Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:41.726Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:12:24.512Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:52.293Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:13:34.586Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:43:34.995Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:13:37.887Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:43:46.755Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:14:09.311Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "All Systems Operational",
@@ -14709,16 +15249,16 @@
       "officialStatusRaw": null,
       "officialSourceKind": "official-page",
       "officialSourceUrl": "https://www.ea.com/service-updates",
-      "officialCheckedAt": "2026-09-19T09:09:20.787Z",
+      "officialCheckedAt": "2026-09-19T16:43:44.795Z",
       "officialConfidence": "low",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:09:22.217Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:45.260Z",
       "latency": {
         "http": null,
-        "https": 652,
-        "dns": 3,
-        "tcp": 119,
+        "https": 215,
+        "dns": 5,
+        "tcp": 19,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -14784,6 +15324,76 @@
           "checkedAt": "2026-09-19T09:09:20.787Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:39:23.602Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:09:36.514Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:09.001Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:11.752Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:14.416Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:51.925Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:05.040Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:37.594Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:15.223Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:12:47.716Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:42:49.380Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:12:52.215Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:43:44.649Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:14:06.938Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -14837,16 +15447,16 @@
       "officialStatusRaw": "All Systems Operational",
       "officialSourceKind": "statuspage",
       "officialSourceUrl": "https://status.epicgames.com/",
-      "officialCheckedAt": "2026-09-19T09:09:19.981Z",
+      "officialCheckedAt": "2026-09-19T16:43:44.080Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:09:20.785Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:44.794Z",
       "latency": {
         "http": null,
-        "https": 333,
-        "dns": 12,
-        "tcp": 96,
+        "https": 289,
+        "dns": 3,
+        "tcp": 91,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -16556,6 +17166,81 @@
           "checkedAt": "2026-09-19T08:55:48.542Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:25:51.818Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:55:54.148Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:26:21.828Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:56:24.712Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:26:42.671Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:57:25.048Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:27:32.646Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:58:20.750Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:28:53.331Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:59:15.793Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:29:33.746Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:59:36.666Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:29:39.769Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:59:50.032Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:30:13.094Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "All Systems Operational",
@@ -16568,21 +17253,21 @@
       "categoryNameAr": "التواصل الاجتماعي",
       "homepage": "https://www.facebook.com",
       "statusPage": "https://metastatus.com/",
-      "status": "OPERATIONAL",
+      "status": "DEGRADED",
       "officialStatus": "UNKNOWN",
       "officialStatusRaw": null,
       "officialSourceKind": "official-page",
       "officialSourceUrl": "https://metastatus.com/",
-      "officialCheckedAt": "2026-09-19T09:08:42.427Z",
+      "officialCheckedAt": "2026-09-19T16:43:33.082Z",
       "officialConfidence": "low",
       "officialErrorMessage": null,
-      "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:43.242Z",
+      "connectivityStatus": "DEGRADED",
+      "connectivityCheckedAt": "2026-09-19T16:43:34.422Z",
       "latency": {
         "http": null,
-        "https": 719,
+        "https": 1218,
         "dns": 4,
-        "tcp": 90,
+        "tcp": 105,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -16643,6 +17328,86 @@
           "checkedAt": "2026-09-19T08:39:24.045Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:09:26.194Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:39:29.699Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:09:42.142Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:39:42.356Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:09:59.832Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:01.540Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:13.037Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:40:25.403Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:10:59.915Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:41:02.460Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:11:19.707Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:41:39.792Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:11:42.887Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:42:02.452Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:12:43.607Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:42:49.521Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -16696,16 +17461,16 @@
       "officialStatusRaw": "All Systems Operational",
       "officialSourceKind": "statuspage",
       "officialSourceUrl": "https://status.epicgames.com/",
-      "officialCheckedAt": "2026-09-19T09:09:20.024Z",
+      "officialCheckedAt": "2026-09-19T16:43:44.025Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:09:20.479Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:44.428Z",
       "latency": {
         "http": null,
-        "https": 333,
+        "https": 286,
         "dns": 3,
-        "tcp": 95,
+        "tcp": 83,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -17939,6 +18704,76 @@
           "checkedAt": "2026-09-19T09:09:20.024Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:39:22.713Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:09:35.721Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:08.063Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:10.868Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:13.473Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:51.220Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:04.020Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:36.694Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:14.322Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:12:47.222Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:43:04.907Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:13:08.068Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:43:43.886Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:14:06.171Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "All Systems Operational",
@@ -17956,16 +18791,16 @@
       "officialStatusRaw": "All Systems Operational",
       "officialSourceKind": "statuspage",
       "officialSourceUrl": "https://www.githubstatus.com/",
-      "officialCheckedAt": "2026-09-19T09:08:39.807Z",
+      "officialCheckedAt": "2026-09-19T16:43:28.856Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:41.106Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:29.902Z",
       "latency": {
         "http": null,
-        "https": 541,
-        "dns": 147,
-        "tcp": 44,
+        "https": 485,
+        "dns": 3,
+        "tcp": 36,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -18950,6 +19785,81 @@
           "checkedAt": "2026-09-19T09:08:39.807Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:38:44.096Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:08:55.223Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:39:38.948Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:09:56.674Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:39:59.030Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:11.119Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:40:22.943Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:10:56.948Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:40:59.704Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:11:03.265Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:41:38.672Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:11:41.619Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:41:58.909Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:12:40.824Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:42:43.751Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "All Systems Operational",
@@ -18967,16 +19877,16 @@
       "officialStatusRaw": "no active incidents in Google Cloud feed",
       "officialSourceKind": "official-json",
       "officialSourceUrl": "https://status.cloud.google.com/",
-      "officialCheckedAt": "2026-09-19T09:09:23.225Z",
+      "officialCheckedAt": "2026-09-19T16:43:28.769Z",
       "officialConfidence": "medium",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:41.425Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:30.463Z",
       "latency": {
         "http": null,
-        "https": 1044,
-        "dns": 161,
-        "tcp": 75,
+        "https": 953,
+        "dns": 4,
+        "tcp": 42,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -19357,6 +20267,81 @@
           "checkedAt": "2026-09-19T09:08:39.494Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:38:42.669Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:08:54.131Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:39:38.012Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:09:55.834Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:39:58.716Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:10.041Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:40:22.282Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:10:55.436Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:40:59.217Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:11:01.919Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:41:37.476Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:11:40.458Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:41:57.466Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:12:40.055Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:42:43.695Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "no active incidents in Google Cloud feed",
@@ -19374,16 +20359,16 @@
       "officialStatusRaw": "no active incidents in Google Cloud feed",
       "officialSourceKind": "official-json",
       "officialSourceUrl": "https://status.cloud.google.com/",
-      "officialCheckedAt": "2026-09-19T09:08:49.880Z",
+      "officialCheckedAt": "2026-09-19T16:43:30.096Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "DEGRADED",
-      "connectivityCheckedAt": "2026-09-19T09:08:54.578Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:34.718Z",
       "latency": {
         "http": null,
-        "https": 2266,
+        "https": 2214,
         "dns": 4,
-        "tcp": 154,
+        "tcp": 173,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -19922,6 +20907,81 @@
           "checkedAt": "2026-09-19T09:08:49.880Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:39:28.154Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:09:40.645Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:29.541Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:42.278Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:44.969Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:11:21.521Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:55.088Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:12:26.832Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:30.545Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:12:49.751Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:42:49.841Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:12:52.690Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:42:54.472Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:13:26.606Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:43:30.096Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "no active incidents in Google Cloud feed",
@@ -19939,16 +20999,16 @@
       "officialStatusRaw": "All Systems Operational",
       "officialSourceKind": "statuspage",
       "officialSourceUrl": "https://groqstatus.com/",
-      "officialCheckedAt": "2026-09-19T09:09:23.320Z",
+      "officialCheckedAt": "2026-09-19T16:43:28.831Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:40.565Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:29.688Z",
       "latency": {
         "http": null,
-        "https": 370,
-        "dns": 181,
-        "tcp": 54,
+        "https": 368,
+        "dns": 3,
+        "tcp": 96,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -20553,6 +21613,81 @@
           "checkedAt": "2026-09-19T09:08:39.576Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:38:42.860Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:08:54.645Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:39:38.067Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:09:55.783Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:39:58.511Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:10.347Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:40:22.379Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:10:56.171Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:40:59.276Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:11:01.880Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:41:37.896Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:11:41.100Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:41:57.662Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:12:40.577Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:42:43.786Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "All Systems Operational",
@@ -20570,16 +21705,16 @@
       "officialStatusRaw": "operational",
       "officialSourceKind": "betterstack",
       "officialSourceUrl": "https://status.huggingface.co/",
-      "officialCheckedAt": "2026-09-19T09:08:39.463Z",
+      "officialCheckedAt": "2026-09-19T16:43:28.729Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:40.156Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:29.606Z",
       "latency": {
         "http": null,
-        "https": 389,
-        "dns": 151,
-        "tcp": 45,
+        "https": 668,
+        "dns": 4,
+        "tcp": 188,
         "icmp": null
       },
       "activeIncidents": 8,
@@ -20833,6 +21968,81 @@
           "checkedAt": "2026-09-19T09:08:39.463Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:38:43.470Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:08:54.843Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:39:37.921Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:09:55.813Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:39:58.477Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:10.507Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:40:22.990Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:10:56.701Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:40:59.175Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:11:03.016Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:41:37.971Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:11:41.404Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:41:57.904Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:12:40.544Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:42:43.675Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "operational",
@@ -20845,21 +22055,21 @@
       "categoryNameAr": "التواصل الاجتماعي",
       "homepage": "https://www.instagram.com",
       "statusPage": "https://metastatus.com/",
-      "status": "DEGRADED",
+      "status": "OPERATIONAL",
       "officialStatus": "UNKNOWN",
       "officialStatusRaw": null,
       "officialSourceKind": "official-page",
       "officialSourceUrl": "https://metastatus.com/",
-      "officialCheckedAt": "2026-09-19T09:08:42.422Z",
+      "officialCheckedAt": "2026-09-19T16:43:32.173Z",
       "officialConfidence": "low",
       "officialErrorMessage": null,
-      "connectivityStatus": "DEGRADED",
-      "connectivityCheckedAt": "2026-09-19T09:08:44.086Z",
+      "connectivityStatus": "OPERATIONAL",
+      "connectivityCheckedAt": "2026-09-19T16:43:33.127Z",
       "latency": {
         "http": null,
-        "https": 1563,
-        "dns": 4,
-        "tcp": 94,
+        "https": 840,
+        "dns": 5,
+        "tcp": 96,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -20925,6 +22135,81 @@
           "checkedAt": "2026-09-19T09:08:42.422Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:38:45.305Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:08:56.381Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:38:57.163Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:09:14.413Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:39:16.768Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:09:26.786Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:39:40.143Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:10:13.768Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:40:17.356Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:10:19.448Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:40:53.961Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:10:57.403Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:41:07.635Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:11:13.061Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:41:17.258Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -20942,16 +22227,16 @@
       "officialStatusRaw": "no active entries in official feed",
       "officialSourceKind": "rss",
       "officialSourceUrl": "https://azure.status.microsoft/en-us/status/",
-      "officialCheckedAt": "2026-09-19T09:08:40.894Z",
+      "officialCheckedAt": "2026-09-19T16:43:30.405Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "DEGRADED",
-      "connectivityCheckedAt": "2026-09-19T09:08:42.516Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:33.504Z",
       "latency": {
         "http": null,
-        "https": 780,
-        "dns": 2,
-        "tcp": 56,
+        "https": 1513,
+        "dns": 4,
+        "tcp": 57,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -21022,6 +22307,81 @@
           "checkedAt": "2026-09-19T09:05:40.559Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:35:42.752Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:06:01.674Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:36:39.925Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:06:57.114Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:36:59.903Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:07:11.112Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:37:23.949Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:07:55.955Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:37:59.730Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:08:03.924Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:38:38.806Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:08:42.054Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:38:56.016Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:08:56.530Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:39:00.400Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "no active entries in official feed",
@@ -21039,16 +22399,16 @@
       "officialStatusRaw": null,
       "officialSourceKind": "none",
       "officialSourceUrl": null,
-      "officialCheckedAt": "2026-09-19T09:09:04.444Z",
+      "officialCheckedAt": "2026-09-19T16:43:13.290Z",
       "officialConfidence": "medium",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:09:14.829Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:23.611Z",
       "latency": {
         "http": null,
-        "https": 191,
-        "dns": 73,
-        "tcp": 112,
+        "https": 141,
+        "dns": 3,
+        "tcp": 155,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -21107,6 +22467,81 @@
         },
         {
           "checkedAt": "2026-09-19T08:40:31.784Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:34.545Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:37.244Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:49.932Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:41:12.646Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:11:25.459Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:41:28.103Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:11:50.753Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:42:26.190Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:12:36.125Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:51.719Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:13:01.597Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:43:19.430Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:13:22.252Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:43:46.139Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:13:50.872Z",
           "status": "UNKNOWN",
           "latencyMs": null
         }
@@ -21198,16 +22633,16 @@
       "officialStatusRaw": null,
       "officialSourceKind": "official-page",
       "officialSourceUrl": "https://www.nintendo.co.jp/netinfo/ja_JP/index.html",
-      "officialCheckedAt": "2026-09-19T09:09:19.457Z",
+      "officialCheckedAt": "2026-09-19T16:43:43.339Z",
       "officialConfidence": "medium",
       "officialErrorMessage": null,
       "connectivityStatus": "DEGRADED",
-      "connectivityCheckedAt": "2026-09-19T09:09:21.372Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:46.223Z",
       "latency": {
         "http": null,
-        "https": 924,
-        "dns": 5,
-        "tcp": 46,
+        "https": 1375,
+        "dns": 10,
+        "tcp": 109,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -21268,6 +22703,81 @@
           "checkedAt": "2026-09-19T08:40:01.752Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:04.516Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:07.216Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:19.873Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:42.604Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:55.386Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:58.064Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:11:35.737Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:38.351Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:12:21.122Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:48.893Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:13:16.628Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:43:49.471Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:13:52.300Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:44:38.375Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:14:50.960Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -21321,16 +22831,16 @@
       "officialStatusRaw": "All systems operational",
       "officialSourceKind": "official-json",
       "officialSourceUrl": "https://status.nuvio.tv/",
-      "officialCheckedAt": "2026-09-19T09:08:45.222Z",
+      "officialCheckedAt": "2026-09-19T16:43:36.647Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:46.152Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:37.580Z",
       "latency": {
         "http": null,
-        "https": 411,
-        "dns": 3,
-        "tcp": 93,
+        "https": 399,
+        "dns": 4,
+        "tcp": 94,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -21346,7 +22856,7 @@
           "name": "Nuvio Website",
           "group": "Public web app and account surface",
           "status": "OPERATIONAL",
-          "statusRaw": "operational — Reachable in 152 ms",
+          "statusRaw": "operational — Reachable in 148 ms",
           "position": 0
         },
         {
@@ -21354,7 +22864,7 @@
           "name": "Auth",
           "group": "Login, signup, session, and user endpoints",
           "status": "OPERATIONAL",
-          "statusRaw": "operational — Reachable in 234 ms",
+          "statusRaw": "operational — Reachable in 232 ms",
           "position": 1
         },
         {
@@ -21362,7 +22872,7 @@
           "name": "API / RPC",
           "group": "Supabase REST and RPC gateway",
           "status": "OPERATIONAL",
-          "statusRaw": "operational — Reachable in 358 ms",
+          "statusRaw": "operational — Reachable in 385 ms",
           "position": 2
         },
         {
@@ -21370,7 +22880,7 @@
           "name": "Sync",
           "group": "Profile, library, progress, and settings sync RPCs",
           "status": "OPERATIONAL",
-          "statusRaw": "operational — Reachable in 431 ms",
+          "statusRaw": "operational — Reachable in 447 ms",
           "position": 3
         },
         {
@@ -21378,7 +22888,7 @@
           "name": "TV Login",
           "group": "Device pairing and browser handoff",
           "status": "OPERATIONAL",
-          "statusRaw": "operational — Reachable in 240 ms",
+          "statusRaw": "operational — Reachable in 250 ms",
           "position": 4
         },
         {
@@ -21386,7 +22896,7 @@
           "name": "Storage / Avatars",
           "group": "Public avatar and media object delivery",
           "status": "OPERATIONAL",
-          "statusRaw": "operational — Reachable in 432 ms",
+          "statusRaw": "operational — Reachable in 436 ms",
           "position": 5
         }
       ],
@@ -21763,6 +23273,111 @@
           "checkedAt": "2026-09-19T09:08:45.222Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:38:47.684Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:08:59.834Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:39:00.455Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:02:55.659Z",
+          "status": "MAJOR_OUTAGE",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:04:21.595Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:35:03.096Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:05:44.612Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:35:58.073Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:38:58.325Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:39:43.050Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:10:16.739Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:40:20.321Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:10:37.896Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:40:38.086Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:10:41.408Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:16:41.838Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:17:27.428Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:36:59.834Z",
+          "status": "DEGRADED",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:37:44.805Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:08:16.620Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:38:21.192Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "All systems operational",
@@ -21780,16 +23395,16 @@
       "officialStatusRaw": "All Systems Operational",
       "officialSourceKind": "statuspage",
       "officialSourceUrl": "https://status.openai.com/",
-      "officialCheckedAt": "2026-09-19T09:09:22.658Z",
+      "officialCheckedAt": "2026-09-19T16:43:46.655Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:38.998Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:47.205Z",
       "latency": {
         "http": null,
-        "https": 389,
-        "dns": 4,
-        "tcp": 28,
+        "https": 248,
+        "dns": 2,
+        "tcp": 22,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -22501,6 +24116,81 @@
           "checkedAt": "2026-09-19T08:40:50.594Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:52.905Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:55.898Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:11:08.954Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:41:31.137Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:11:44.118Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:41:47.459Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:12:24.587Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:42:27.265Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:13:09.553Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:43:49.397Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:14:02.469Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:44:37.481Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:14:40.216Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:44:42.609Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:14:54.660Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "All Systems Operational",
@@ -22586,21 +24276,21 @@
       "categoryNameAr": "الألعاب",
       "homepage": "https://www.playstation.com",
       "statusPage": "https://status.playstation.com/",
-      "status": "OPERATIONAL",
+      "status": "DEGRADED",
       "officialStatus": "UNKNOWN",
       "officialStatusRaw": null,
       "officialSourceKind": "official-page",
       "officialSourceUrl": "https://status.playstation.com/",
-      "officialCheckedAt": "2026-09-19T09:09:19.456Z",
+      "officialCheckedAt": "2026-09-19T16:43:43.337Z",
       "officialConfidence": "medium",
       "officialErrorMessage": null,
-      "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:09:21.041Z",
+      "connectivityStatus": "DEGRADED",
+      "connectivityCheckedAt": "2026-09-19T16:43:45.709Z",
       "latency": {
         "http": null,
-        "https": 719,
+        "https": 1088,
         "dns": 4,
-        "tcp": 127,
+        "tcp": 172,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -22661,6 +24351,81 @@
           "checkedAt": "2026-09-19T08:40:01.746Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:04.515Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:07.213Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:19.871Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:42.602Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:55.384Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:58.063Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:11:35.735Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:38.349Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:12:21.120Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:48.890Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:13:31.649Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:43:49.470Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:13:52.300Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:44:38.372Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:14:50.957Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -22678,16 +24443,16 @@
       "officialStatusRaw": "All Systems Operational",
       "officialSourceKind": "statuspage",
       "officialSourceUrl": "https://www.redditstatus.com/",
-      "officialCheckedAt": "2026-09-19T09:08:50.176Z",
+      "officialCheckedAt": "2026-09-19T16:43:34.958Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:51.099Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:35.769Z",
       "latency": {
         "http": null,
-        "https": 396,
-        "dns": 53,
-        "tcp": 54,
+        "https": 331,
+        "dns": 4,
+        "tcp": 53,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -23758,6 +25523,81 @@
           "checkedAt": "2026-09-19T09:08:50.176Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:39:30.543Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:09:43.256Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:39:43.761Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:14.310Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:17.470Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:58.813Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:12.490Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:45.667Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:41:49.038Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:12:05.730Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:42:06.764Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:12:10.029Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:42:59.583Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:13:30.669Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:43:34.958Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "All Systems Operational",
@@ -23847,16 +25687,16 @@
       "officialStatusRaw": null,
       "officialSourceKind": "official-page",
       "officialSourceUrl": "https://status.riotgames.com/",
-      "officialCheckedAt": "2026-09-19T09:09:20.481Z",
+      "officialCheckedAt": "2026-09-19T16:43:44.430Z",
       "officialConfidence": "medium",
       "officialErrorMessage": null,
       "connectivityStatus": "DEGRADED",
-      "connectivityCheckedAt": "2026-09-19T09:09:22.619Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:47.581Z",
       "latency": {
         "http": null,
-        "https": 1013,
+        "https": 1503,
         "dns": 4,
-        "tcp": 106,
+        "tcp": 137,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -23917,6 +25757,81 @@
           "checkedAt": "2026-09-19T08:40:03.340Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:05.800Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:08.555Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:20.930Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:43.538Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:56.577Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:59.046Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:11:36.979Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:39.371Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:12:22.178Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:49.987Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:13:31.657Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:43:49.486Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:13:52.309Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:44:39.473Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:14:52.297Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -23934,16 +25849,16 @@
       "officialStatusRaw": "Operational",
       "officialSourceKind": "statusio",
       "officialSourceUrl": "https://status.roblox.com/",
-      "officialCheckedAt": "2026-09-19T09:09:21.511Z",
+      "officialCheckedAt": "2026-09-19T16:43:46.008Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:09:22.712Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:47.117Z",
       "latency": {
         "http": null,
-        "https": 538,
-        "dns": 7,
-        "tcp": 114,
+        "https": 494,
+        "dns": 3,
+        "tcp": 101,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -24119,6 +26034,81 @@
           "checkedAt": "2026-09-19T08:40:04.885Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:06.396Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:10.364Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:22.730Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:45.437Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:58.336Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:41:00.851Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:11:38.484Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:40.775Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:12:23.917Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:51.263Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:13:34.361Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:43:51.131Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:13:54.365Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:44:40.864Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:14:54.073Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "Operational",
@@ -24245,15 +26235,15 @@
       "officialStatusRaw": "worst of 14 monitored endpoints",
       "officialSourceKind": "official-json",
       "officialSourceUrl": "https://status.simkl.com/",
-      "officialCheckedAt": "2026-09-19T09:08:45.141Z",
+      "officialCheckedAt": "2026-09-19T16:43:36.066Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:46.536Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:37.350Z",
       "latency": {
         "http": null,
-        "https": 641,
-        "dns": 3,
+        "https": 580,
+        "dns": 4,
         "tcp": 101,
         "icmp": null
       },
@@ -24435,6 +26425,96 @@
           "checkedAt": "2026-09-19T09:08:45.141Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:38:48.322Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:03:09.086Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:03:45.130Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:33:45.243Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:04:15.077Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:08:45.327Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:09:30.782Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:39:33.098Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:15.641Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:40:28.284Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:03.868Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:41:05.417Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:11:22.966Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:41:40.908Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:11:44.264Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:42:06.244Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:12:47.153Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:42:52.393Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "worst of 14 monitored endpoints",
@@ -24449,19 +26529,19 @@
       "statusPage": null,
       "status": "OPERATIONAL",
       "officialStatus": "OPERATIONAL",
-      "officialStatusRaw": "Steam Web API responding (server time Sat Sep 19 02:09:19 2026)",
+      "officialStatusRaw": "Steam Web API responding (server time Sat Sep 19 09:43:43 2026)",
       "officialSourceKind": "official-api",
       "officialSourceUrl": "https://api.steampowered.com/ISteamWebAPIUtil/GetServerInfo/v1/",
-      "officialCheckedAt": "2026-09-19T09:09:20.012Z",
+      "officialCheckedAt": "2026-09-19T16:43:43.951Z",
       "officialConfidence": "medium",
       "officialErrorMessage": null,
-      "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:09:21.105Z",
+      "connectivityStatus": "DEGRADED",
+      "connectivityCheckedAt": "2026-09-19T16:43:45.906Z",
       "latency": {
         "http": null,
-        "https": 527,
-        "dns": 7,
-        "tcp": 26,
+        "https": 885,
+        "dns": 5,
+        "tcp": 168,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -24533,9 +26613,84 @@
           "checkedAt": "2026-09-19T08:40:02.269Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:04.991Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:07.884Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:20.555Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:43.321Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:56.117Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:58.868Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:11:36.429Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:38.969Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:12:21.831Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:49.559Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:13:32.329Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:43:50.272Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:13:52.979Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:44:39.033Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:14:51.778Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
-      "officialStatusDescription": "Steam Web API responding (server time Sat Sep 19 02:09:19 2026)",
+      "officialStatusDescription": "Steam Web API responding (server time Sat Sep 19 09:43:43 2026)",
       "recentRuns": []
     },
     "stremio": {
@@ -24550,16 +26705,16 @@
       "officialStatusRaw": null,
       "officialSourceKind": "none",
       "officialSourceUrl": null,
-      "officialCheckedAt": "2026-09-19T09:08:43.457Z",
+      "officialCheckedAt": "2026-09-19T16:43:34.679Z",
       "officialConfidence": "medium",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:44.310Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:35.621Z",
       "latency": {
         "http": null,
-        "https": 359,
-        "dns": 43,
-        "tcp": 89,
+        "https": 414,
+        "dns": 3,
+        "tcp": 97,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -24620,6 +26775,86 @@
           "checkedAt": "2026-09-19T08:39:26.068Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:09:27.040Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:39:30.783Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:09:43.684Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:39:44.059Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:01.837Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:03.119Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:13.884Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:40:26.660Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:01.675Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:41:03.741Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:11:21.328Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:41:22.619Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:11:25.723Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:42:04.002Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:12:45.737Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:42:51.053Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -24673,16 +26908,16 @@
       "officialStatusRaw": "worst component status from 3 feed entries",
       "officialSourceKind": "rss",
       "officialSourceUrl": "https://status.themoviedb.org/",
-      "officialCheckedAt": "2026-09-19T09:08:44.824Z",
+      "officialCheckedAt": "2026-09-19T16:43:47.907Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:46.162Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:49.105Z",
       "latency": {
         "http": null,
-        "https": 591,
-        "dns": 3,
-        "tcp": 148,
+        "https": 523,
+        "dns": 4,
+        "tcp": 132,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -24759,6 +26994,81 @@
           "checkedAt": "2026-09-19T09:08:44.824Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:38:47.811Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:09:00.422Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:39:45.062Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:15.187Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:18.372Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:11:00.062Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:13.900Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:46.721Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:41:50.676Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:12:07.643Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:42:08.587Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:12:11.975Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:43:01.339Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:13:31.849Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:43:47.907Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "worst component status from 3 feed entries",
@@ -24813,16 +27123,16 @@
       "officialStatusRaw": null,
       "officialSourceKind": "none",
       "officialSourceUrl": null,
-      "officialCheckedAt": "2026-09-19T09:08:43.127Z",
+      "officialCheckedAt": "2026-09-19T16:43:34.426Z",
       "officialConfidence": "medium",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:44.465Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:35.562Z",
       "latency": {
         "http": null,
-        "https": 594,
+        "https": 487,
         "dns": 4,
-        "tcp": 144,
+        "tcp": 145,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -24888,6 +27198,81 @@
           "checkedAt": "2026-09-19T09:08:43.127Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:38:46.187Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:08:58.470Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:39:10.669Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:09:16.158Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:39:17.752Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:09:28.374Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:39:41.457Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:10:15.133Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:40:18.820Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:10:35.857Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:40:36.436Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:10:39.435Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:41:09.528Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:11:15.231Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:41:19.522Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -24905,16 +27290,16 @@
       "officialStatusRaw": null,
       "officialSourceKind": "none",
       "officialSourceUrl": null,
-      "officialCheckedAt": "2026-09-19T09:08:43.002Z",
+      "officialCheckedAt": "2026-09-19T16:43:33.507Z",
       "officialConfidence": "medium",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:44.061Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:34.676Z",
       "latency": {
         "http": null,
-        "https": 823,
-        "dns": 125,
-        "tcp": 109,
+        "https": 1044,
+        "dns": 4,
+        "tcp": 106,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -24975,6 +27360,86 @@
           "checkedAt": "2026-09-19T08:40:09.680Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:11.527Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:14.914Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:28.751Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:32.416Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:45.730Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:48.039Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:57.972Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:11.514Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:44.157Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:41:47.910Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:12:04.988Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:42:05.606Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:12:08.588Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:42:58.852Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:13:29.414Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:43:33.507Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -24992,16 +27457,16 @@
       "officialStatusRaw": "worst of 2 monitored endpoints",
       "officialSourceKind": "official-json",
       "officialSourceUrl": "https://status.trakt.tv/",
-      "officialCheckedAt": "2026-09-19T09:08:44.548Z",
+      "officialCheckedAt": "2026-09-19T16:43:35.285Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:46.024Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:36.587Z",
       "latency": {
         "http": null,
-        "https": 495,
-        "dns": 4,
-        "tcp": 120,
+        "https": 412,
+        "dns": 5,
+        "tcp": 91,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -25079,6 +27544,91 @@
         },
         {
           "checkedAt": "2026-09-19T08:40:56.619Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:58.492Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:41:01.685Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:11:15.762Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:41:21.894Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:11:45.355Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:41:48.234Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:43:31.756Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:44:09.047Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:14:45.473Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:45:00.897Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:15:32.059Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:45:40.811Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:16:00.270Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:46:39.841Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:16:42.764Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:51:42.246Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:21:47.644Z",
           "status": "OPERATIONAL",
           "latencyMs": null
         }
@@ -25170,16 +27720,16 @@
       "officialStatusRaw": null,
       "officialSourceKind": "official-page",
       "officialSourceUrl": "https://www.ubisoft.com/en-us/help/status",
-      "officialCheckedAt": "2026-09-19T09:09:21.044Z",
+      "officialCheckedAt": "2026-09-19T16:43:45.261Z",
       "officialConfidence": "low",
       "officialErrorMessage": null,
       "connectivityStatus": "DEGRADED",
-      "connectivityCheckedAt": "2026-09-19T09:09:22.794Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:47.026Z",
       "latency": {
         "http": null,
-        "https": 818,
-        "dns": 4,
-        "tcp": 107,
+        "https": 830,
+        "dns": 5,
+        "tcp": 94,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -25240,6 +27790,81 @@
           "checkedAt": "2026-09-19T08:40:03.744Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:06.133Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:09.134Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:21.911Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:44.621Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:57.508Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:41:00.425Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:11:37.365Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:39.887Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:12:23.259Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:42:50.988Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:13:32.929Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:43:50.758Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:13:53.405Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:44:40.324Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:14:53.292Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -25257,16 +27882,16 @@
       "officialStatusRaw": "All Systems Operational",
       "officialSourceKind": "statuspage",
       "officialSourceUrl": "https://www.vercel-status.com/",
-      "officialCheckedAt": "2026-09-19T09:08:41.043Z",
+      "officialCheckedAt": "2026-09-19T16:43:30.584Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
       "connectivityStatus": "DEGRADED",
-      "connectivityCheckedAt": "2026-09-19T09:08:45.437Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:34.514Z",
       "latency": {
         "http": null,
-        "https": 2144,
-        "dns": 26,
-        "tcp": 63,
+        "https": 1917,
+        "dns": 7,
+        "tcp": 59,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -26244,6 +28869,101 @@
           "checkedAt": "2026-09-19T08:40:53.237Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:55.574Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:41:07.758Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:11:20.771Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:00.067Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:52:44.312Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:23:28.950Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:45:23.797Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:58:14.881Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:28:23.696Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:53:26.778Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:06:26.579Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:36:29.231Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:06:48.880Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:36:49.564Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:06:52.523Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:36:55.917Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:38:45.724Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:51:54.793Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:22:27.785Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "All Systems Operational",
@@ -26261,16 +28981,16 @@
       "officialStatusRaw": null,
       "officialSourceKind": "official-page",
       "officialSourceUrl": "https://metastatus.com/",
-      "officialCheckedAt": "2026-09-19T09:08:41.427Z",
+      "officialCheckedAt": "2026-09-19T16:43:31.734Z",
       "officialConfidence": "low",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:43.126Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:33.080Z",
       "latency": {
         "http": null,
-        "https": 752,
-        "dns": 98,
-        "tcp": 97,
+        "https": 603,
+        "dns": 4,
+        "tcp": 124,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -26331,6 +29051,86 @@
           "checkedAt": "2026-09-19T08:40:08.202Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:10.017Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:13.522Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:26.895Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:30.261Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:44.282Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:45.602Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:56.225Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:09.476Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:42.571Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:41:46.438Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:11:49.681Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:42:24.054Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:12:27.183Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:42:56.076Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:13:26.967Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:43:31.734Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -26348,16 +29148,16 @@
       "officialStatusRaw": null,
       "officialSourceKind": "none",
       "officialSourceUrl": null,
-      "officialCheckedAt": "2026-09-19T09:08:42.518Z",
+      "officialCheckedAt": "2026-09-19T16:43:33.129Z",
       "officialConfidence": "medium",
       "officialErrorMessage": null,
       "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:08:43.456Z",
+      "connectivityCheckedAt": "2026-09-19T16:43:34.240Z",
       "latency": {
         "http": null,
-        "https": 449,
+        "https": 487,
         "dns": 5,
-        "tcp": 30,
+        "tcp": 120,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -26418,6 +29218,86 @@
           "checkedAt": "2026-09-19T08:40:09.669Z",
           "status": "UNKNOWN",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:10:11.457Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:40:14.856Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:10:28.705Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:40:31.665Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:10:45.715Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:40:47.583Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:10:57.521Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:41:10.899Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:11:44.097Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:41:47.632Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:12:04.635Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:42:25.392Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:12:29.014Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:42:58.273Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:13:29.004Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:43:33.129Z",
+          "status": "UNKNOWN",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": null,
@@ -26435,16 +29315,16 @@
       "officialStatusRaw": "None",
       "officialSourceKind": "official-api",
       "officialSourceUrl": "https://support.xbox.com/en-US/xbox-live-status",
-      "officialCheckedAt": "2026-09-19T09:09:20.019Z",
+      "officialCheckedAt": "2026-09-19T16:43:43.898Z",
       "officialConfidence": "high",
       "officialErrorMessage": null,
-      "connectivityStatus": "OPERATIONAL",
-      "connectivityCheckedAt": "2026-09-19T09:09:21.235Z",
+      "connectivityStatus": "DEGRADED",
+      "connectivityCheckedAt": "2026-09-19T16:43:45.750Z",
       "latency": {
         "http": null,
-        "https": 550,
-        "dns": 6,
-        "tcp": 105,
+        "https": 834,
+        "dns": 11,
+        "tcp": 164,
         "icmp": null
       },
       "activeIncidents": 0,
@@ -26611,6 +29491,81 @@
           "checkedAt": "2026-09-19T09:06:19.818Z",
           "status": "OPERATIONAL",
           "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T09:36:22.478Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:06:34.979Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T10:36:52.742Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:07:10.446Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T11:37:13.181Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:07:50.800Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T12:38:03.448Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:08:36.184Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T13:38:38.879Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:09:01.844Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T14:39:04.561Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:09:07.519Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T15:40:03.644Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:10:21.045Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
+        },
+        {
+          "checkedAt": "2026-09-19T16:40:43.714Z",
+          "status": "OPERATIONAL",
+          "latencyMs": null
         }
       ],
       "officialStatusDescription": "None",
@@ -26729,36 +29684,340 @@
   },
   "events": [
     {
+      "service_slug": "facebook",
+      "type": "status_changed:connectivity",
+      "from_status": "OPERATIONAL",
+      "to_status": "DEGRADED",
+      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
+      "created_at": "2026-09-19T16:43:34.424Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:43:30.356Z"
+    },
+    {
       "service_slug": "hugging-face",
       "type": "incidents_active",
       "from_status": null,
       "to_status": null,
       "message": "8 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:09:23.522Z"
+      "created_at": "2026-09-19T16:43:28.736Z"
     },
     {
-      "service_slug": "steam",
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:42:45.339Z"
+    },
+    {
+      "service_slug": "hugging-face",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "8 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:42:43.684Z"
+    },
+    {
+      "service_slug": "aws",
       "type": "status_changed:connectivity",
       "from_status": "DEGRADED",
       "to_status": "OPERATIONAL",
       "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:09:21.106Z"
+      "created_at": "2026-09-19T16:42:01.758Z"
     },
     {
-      "service_slug": "playstation-network",
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:42:00.314Z"
+    },
+    {
+      "service_slug": "hugging-face",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "8 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:41:58.652Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:41:15.209Z"
+    },
+    {
+      "service_slug": "hugging-face",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "8 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:41:13.528Z"
+    },
+    {
+      "service_slug": "tiktok",
       "type": "status_changed:connectivity",
       "from_status": "DEGRADED",
       "to_status": "OPERATIONAL",
       "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:09:21.042Z"
+      "created_at": "2026-09-19T16:40:34.691Z"
     },
     {
-      "service_slug": "nuvio",
-      "type": "status_changed:official",
+      "service_slug": "aws",
+      "type": "status_changed:connectivity",
+      "from_status": "OPERATIONAL",
+      "to_status": "DEGRADED",
+      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
+      "created_at": "2026-09-19T16:40:32.344Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:40:30.272Z"
+    },
+    {
+      "service_slug": "hugging-face",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "8 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:40:28.693Z"
+    },
+    {
+      "service_slug": "simkl",
+      "type": "status_changed:connectivity",
       "from_status": "DEGRADED",
       "to_status": "OPERATIONAL",
-      "message": "official status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:08:45.232Z"
+      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
+      "created_at": "2026-09-19T16:39:52.729Z"
+    },
+    {
+      "service_slug": "telegram",
+      "type": "status_changed:connectivity",
+      "from_status": "DEGRADED",
+      "to_status": "OPERATIONAL",
+      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
+      "created_at": "2026-09-19T16:39:50.694Z"
+    },
+    {
+      "service_slug": "tiktok",
+      "type": "status_changed:connectivity",
+      "from_status": "OPERATIONAL",
+      "to_status": "DEGRADED",
+      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
+      "created_at": "2026-09-19T16:39:50.524Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:39:45.142Z"
+    },
+    {
+      "service_slug": "hugging-face",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "8 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:39:43.435Z"
+    },
+    {
+      "service_slug": "simkl",
+      "type": "status_changed:connectivity",
+      "from_status": "OPERATIONAL",
+      "to_status": "DEGRADED",
+      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
+      "created_at": "2026-09-19T16:39:07.809Z"
+    },
+    {
+      "service_slug": "telegram",
+      "type": "status_changed:connectivity",
+      "from_status": "OPERATIONAL",
+      "to_status": "DEGRADED",
+      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
+      "created_at": "2026-09-19T16:39:07.213Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "status_changed:connectivity",
+      "from_status": "DEGRADED",
+      "to_status": "OPERATIONAL",
+      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
+      "created_at": "2026-09-19T16:39:01.511Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:39:00.168Z"
+    },
+    {
+      "service_slug": "hugging-face",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "8 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:38:58.443Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:38:15.003Z"
+    },
+    {
+      "service_slug": "hugging-face",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "8 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:38:13.360Z"
+    },
+    {
+      "service_slug": "facebook",
+      "type": "status_changed:connectivity",
+      "from_status": "DEGRADED",
+      "to_status": "OPERATIONAL",
+      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
+      "created_at": "2026-09-19T16:37:34.209Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "status_changed:connectivity",
+      "from_status": "OPERATIONAL",
+      "to_status": "DEGRADED",
+      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
+      "created_at": "2026-09-19T16:37:32.038Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:37:29.922Z"
+    },
+    {
+      "service_slug": "hugging-face",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "8 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:37:28.216Z"
+    },
+    {
+      "service_slug": "facebook",
+      "type": "status_changed:connectivity",
+      "from_status": "OPERATIONAL",
+      "to_status": "DEGRADED",
+      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
+      "created_at": "2026-09-19T16:36:48.939Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "status_changed:connectivity",
+      "from_status": "DEGRADED",
+      "to_status": "OPERATIONAL",
+      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
+      "created_at": "2026-09-19T16:36:46.143Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:36:44.850Z"
+    },
+    {
+      "service_slug": "hugging-face",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "8 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:36:43.148Z"
+    },
+    {
+      "service_slug": "tiktok",
+      "type": "status_changed:connectivity",
+      "from_status": "DEGRADED",
+      "to_status": "OPERATIONAL",
+      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
+      "created_at": "2026-09-19T16:36:04.641Z"
+    },
+    {
+      "service_slug": "facebook",
+      "type": "status_changed:connectivity",
+      "from_status": "DEGRADED",
+      "to_status": "OPERATIONAL",
+      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
+      "created_at": "2026-09-19T16:36:04.052Z"
+    },
+    {
+      "service_slug": "instagram",
+      "type": "status_changed:connectivity",
+      "from_status": "DEGRADED",
+      "to_status": "OPERATIONAL",
+      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
+      "created_at": "2026-09-19T16:36:02.953Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:35:59.839Z"
+    },
+    {
+      "service_slug": "hugging-face",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "8 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:35:58.115Z"
+    },
+    {
+      "service_slug": "telegram",
+      "type": "status_changed:connectivity",
+      "from_status": "DEGRADED",
+      "to_status": "OPERATIONAL",
+      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
+      "created_at": "2026-09-19T16:35:20.819Z"
+    },
+    {
+      "service_slug": "tiktok",
+      "type": "status_changed:connectivity",
+      "from_status": "OPERATIONAL",
+      "to_status": "DEGRADED",
+      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
+      "created_at": "2026-09-19T16:35:20.723Z"
+    },
+    {
+      "service_slug": "facebook",
+      "type": "status_changed:connectivity",
+      "from_status": "OPERATIONAL",
+      "to_status": "DEGRADED",
+      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
+      "created_at": "2026-09-19T16:35:19.595Z"
     },
     {
       "service_slug": "instagram",
@@ -26766,15 +30025,39 @@
       "from_status": "OPERATIONAL",
       "to_status": "DEGRADED",
       "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:08:44.086Z"
+      "created_at": "2026-09-19T16:35:18.529Z"
     },
     {
-      "service_slug": "tiktok",
+      "service_slug": "aws",
       "type": "status_changed:connectivity",
-      "from_status": "DEGRADED",
-      "to_status": "OPERATIONAL",
-      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:08:44.062Z"
+      "from_status": "OPERATIONAL",
+      "to_status": "DEGRADED",
+      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
+      "created_at": "2026-09-19T16:35:16.984Z"
+    },
+    {
+      "service_slug": "aws",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "2 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:35:14.889Z"
+    },
+    {
+      "service_slug": "hugging-face",
+      "type": "incidents_active",
+      "from_status": null,
+      "to_status": null,
+      "message": "8 active incident(s) reported by the source",
+      "created_at": "2026-09-19T16:35:13.185Z"
+    },
+    {
+      "service_slug": "telegram",
+      "type": "status_changed:connectivity",
+      "from_status": "OPERATIONAL",
+      "to_status": "DEGRADED",
+      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
+      "created_at": "2026-09-19T16:34:36.190Z"
     },
     {
       "service_slug": "x",
@@ -26782,23 +30065,7 @@
       "from_status": "DEGRADED",
       "to_status": "OPERATIONAL",
       "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:08:43.457Z"
-    },
-    {
-      "service_slug": "microsoft-azure",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:08:42.517Z"
-    },
-    {
-      "service_slug": "deepseek",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:08:42.420Z"
+      "created_at": "2026-09-19T16:34:34.209Z"
     },
     {
       "service_slug": "aws",
@@ -26806,7 +30073,7 @@
       "from_status": null,
       "to_status": null,
       "message": "2 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:08:40.364Z"
+      "created_at": "2026-09-19T16:34:29.764Z"
     },
     {
       "service_slug": "hugging-face",
@@ -26814,319 +30081,7 @@
       "from_status": null,
       "to_status": null,
       "message": "8 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:08:39.468Z"
-    },
-    {
-      "service_slug": "discord",
-      "type": "status_changed:connectivity",
-      "from_status": "DEGRADED",
-      "to_status": "OPERATIONAL",
-      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:08:39.005Z"
-    },
-    {
-      "service_slug": "steam",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:08:36.412Z"
-    },
-    {
-      "service_slug": "playstation-network",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:08:36.356Z"
-    },
-    {
-      "service_slug": "x",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:07:59.085Z"
-    },
-    {
-      "service_slug": "tiktok",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:07:58.424Z"
-    },
-    {
-      "service_slug": "nuvio",
-      "type": "status_changed:official",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "official status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:07:57.447Z"
-    },
-    {
-      "service_slug": "microsoft-azure",
-      "type": "status_changed:connectivity",
-      "from_status": "DEGRADED",
-      "to_status": "OPERATIONAL",
-      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:07:56.811Z"
-    },
-    {
-      "service_slug": "aws",
-      "type": "status_changed:connectivity",
-      "from_status": "DEGRADED",
-      "to_status": "OPERATIONAL",
-      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:07:56.547Z"
-    },
-    {
-      "service_slug": "aws",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "2 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:07:55.296Z"
-    },
-    {
-      "service_slug": "discord",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:07:55.090Z"
-    },
-    {
-      "service_slug": "hugging-face",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "8 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:07:54.201Z"
-    },
-    {
-      "service_slug": "battle-net",
-      "type": "status_changed:connectivity",
-      "from_status": "DEGRADED",
-      "to_status": "OPERATIONAL",
-      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:07:52.536Z"
-    },
-    {
-      "service_slug": "microsoft-azure",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:07:11.850Z"
-    },
-    {
-      "service_slug": "aws",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "2 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:07:10.296Z"
-    },
-    {
-      "service_slug": "hugging-face",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "8 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:07:09.923Z"
-    },
-    {
-      "service_slug": "battle-net",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:07:09.594Z"
-    },
-    {
-      "service_slug": "tiktok",
-      "type": "status_changed:connectivity",
-      "from_status": "DEGRADED",
-      "to_status": "OPERATIONAL",
-      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:06:27.993Z"
-    },
-    {
-      "service_slug": "aws",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:06:27.524Z"
-    },
-    {
-      "service_slug": "aws",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "2 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:06:25.398Z"
-    },
-    {
-      "service_slug": "hugging-face",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "8 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:06:24.282Z"
-    },
-    {
-      "service_slug": "playstation-network",
-      "type": "status_changed:connectivity",
-      "from_status": "DEGRADED",
-      "to_status": "OPERATIONAL",
-      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:06:20.973Z"
-    },
-    {
-      "service_slug": "tiktok",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:05:43.562Z"
-    },
-    {
-      "service_slug": "aws",
-      "type": "status_changed:connectivity",
-      "from_status": "DEGRADED",
-      "to_status": "OPERATIONAL",
-      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:05:42.216Z"
-    },
-    {
-      "service_slug": "aws",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "2 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:05:40.185Z"
-    },
-    {
-      "service_slug": "hugging-face",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "8 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:05:39.357Z"
-    },
-    {
-      "service_slug": "microsoft-azure",
-      "type": "status_changed:connectivity",
-      "from_status": "DEGRADED",
-      "to_status": "OPERATIONAL",
-      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:04:56.385Z"
-    },
-    {
-      "service_slug": "aws",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "2 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:04:54.689Z"
-    },
-    {
-      "service_slug": "hugging-face",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "8 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:04:53.687Z"
-    },
-    {
-      "service_slug": "whatsapp",
-      "type": "status_changed:connectivity",
-      "from_status": "DEGRADED",
-      "to_status": "OPERATIONAL",
-      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:04:11.331Z"
-    },
-    {
-      "service_slug": "aws",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "2 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:04:09.546Z"
-    },
-    {
-      "service_slug": "hugging-face",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "8 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:04:09.044Z"
-    },
-    {
-      "service_slug": "playstation-network",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:04:07.389Z"
-    },
-    {
-      "service_slug": "steam",
-      "type": "status_changed:connectivity",
-      "from_status": "DEGRADED",
-      "to_status": "OPERATIONAL",
-      "message": "connectivity status changed from DEGRADED to OPERATIONAL",
-      "created_at": "2026-09-19T09:04:06.091Z"
-    },
-    {
-      "service_slug": "aws",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:03:26.657Z"
-    },
-    {
-      "service_slug": "whatsapp",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:03:26.602Z"
-    },
-    {
-      "service_slug": "aws",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "2 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:03:24.549Z"
-    },
-    {
-      "service_slug": "hugging-face",
-      "type": "incidents_active",
-      "from_status": null,
-      "to_status": null,
-      "message": "8 active incident(s) reported by the source",
-      "created_at": "2026-09-19T09:03:23.979Z"
-    },
-    {
-      "service_slug": "steam",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:03:22.046Z"
-    },
-    {
-      "service_slug": "nintendo-network",
-      "type": "status_changed:connectivity",
-      "from_status": "OPERATIONAL",
-      "to_status": "DEGRADED",
-      "message": "connectivity status changed from OPERATIONAL to DEGRADED",
-      "created_at": "2026-09-19T09:03:21.061Z"
+      "created_at": "2026-09-19T16:34:28.071Z"
     }
   ]
 }

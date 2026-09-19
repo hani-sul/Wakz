@@ -8,7 +8,6 @@ import { StatusPill } from './StatusPill.tsx';
 export function ServiceCard({
   service,
   onOpen,
-  onPinChanged,
 }: {
   service: ServiceCardType;
   onOpen: (slug: string) => void;
@@ -16,7 +15,7 @@ export function ServiceCard({
 }): React.JSX.Element {
   const i18n = useI18n();
   const { pinned, toggle } = usePins();
-  const [hint, setHint] = useState<string | null>(null);
+  const [, setTick] = useState(0);
 
   if (service.comingSoon) {
     return (
@@ -38,24 +37,35 @@ export function ServiceCard({
   const limitation = i18n.locale === 'ar' ? (service.limitationAr ?? service.limitation) : service.limitation;
   const isPinned = pinned(service.slug);
 
-  const handlePin = (): void => {
-    const result = toggle(service.slug);
-    if (!result.ok && result.reason === 'limit') {
-      setHint(i18n.t('pin.full'));
-      setTimeout(() => setHint(null), 2500);
-    } else {
-      setHint(null);
-      onPinChanged?.();
-    }
+  const handlePin = (event: React.MouseEvent): void => {
+    event.stopPropagation();
+    toggle(service.slug);
+    setTick((value) => value + 1);
+  };
+
+  /** Tapping anywhere on the card opens the service page (except the pin button). */
+  const openCard = (event: React.MouseEvent | React.KeyboardEvent): void => {
+    const target = event.target as HTMLElement;
+    if (target.closest('.pin-button') || target.closest('a')) return;
+    onOpen(service.slug);
   };
 
   return (
-    <article className={`service-card${isPinned ? ' pinned' : ''}`}>
+    <article
+      className={`service-card${isPinned ? ' pinned' : ''}`}
+      role="link"
+      tabIndex={0}
+      onClick={openCard}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openCard(event);
+        }
+      }}
+    >
       <header>
         <span className="service-emoji" aria-hidden="true">{statusEmoji(service.status)}</span>
-        <button type="button" className="card-title" onClick={() => onOpen(service.slug)}>
-          {displayName(i18n, service.name, service.nameAr)}
-        </button>
+        <span className="card-title">{displayName(i18n, service.name, service.nameAr)}</span>
         <button
           type="button"
           className={`pin-button${isPinned ? ' active' : ''}`}
@@ -104,7 +114,6 @@ export function ServiceCard({
         <span className="checked">{relativeTime(i18n, service.officialCheckedAt ?? service.connectivityCheckedAt)}</span>
       </footer>
 
-      {hint && <p className="card-hint">{hint}</p>}
       {limitation && <p className="limitation" title={limitation}>{limitation}</p>}
     </article>
   );

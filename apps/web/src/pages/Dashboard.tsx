@@ -1,23 +1,23 @@
 import { useEffect, useMemo, useState } from 'react';
-import type { CategorySnapshot, UnifiedStatus } from '../api.ts';
+import type { CategorySnapshot, ServiceCard as ServiceCardType, UnifiedStatus } from '../api.ts';
 import { data } from '../data.ts';
-import { ServiceCard } from '../components/ServiceCard.tsx';
 import { FilterBar } from '../components/FilterBar.tsx';
+import { ServiceCard } from '../components/ServiceCard.tsx';
 import { useI18n } from '../lib/locale.tsx';
 import type { Tab } from '../App.tsx';
 
 export function Dashboard({
   tab,
+  refreshToken,
   pinnedSlugs,
   onOpenService,
   onSelectTab,
-  onChanged,
 }: {
   tab: Tab;
+  refreshToken: number;
   pinnedSlugs: string[];
   onOpenService: (slug: string) => void;
   onSelectTab: (tab: Tab) => void;
-  onChanged: () => void;
 }): React.JSX.Element {
   const i18n = useI18n();
   const [categories, setCategories] = useState<CategorySnapshot[]>([]);
@@ -41,23 +41,22 @@ export function Dashboard({
       }
     };
     void load();
-    const timer = setInterval(() => void load(), 30_000);
     return () => {
       cancelled = true;
-      clearInterval(timer);
     };
-  }, [onChanged]);
+  }, [refreshToken]);
 
   const allServices = useMemo(() => categories.flatMap((category) => category.services), [categories]);
+  const isLocalTab = tab.kind === 'category' && tab.slug === 'local';
 
   const visible = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    const base = tab.kind === 'pinned'
-      ? allServices.filter((service) => pinnedSlugs.includes(service.slug))
-      : tab.kind === 'category'
-        ? allServices.filter((service) => service.category === tab.slug)
-        : allServices;
-    return base.filter((service) => {
+    const base = (tab.kind === 'category'
+      ? allServices.filter((service) => service.category === tab.slug)
+      : allServices)
+      // The "coming soon" tile belongs to the local services category only.
+      .filter((service) => isLocalTab || !service.comingSoon);
+    const filtered = base.filter((service) => {
       if (filter !== 'all' && service.status !== filter && service.officialStatus !== filter && service.connectivityStatus !== filter) {
         return false;
       }
@@ -67,9 +66,15 @@ export function Dashboard({
         || service.category.toLowerCase().includes(needle)
         || service.slug.includes(needle);
     });
-  }, [allServices, filter, query, tab, pinnedSlugs]);
-
-  const localNote = tab.kind === 'category' && tab.slug === 'local';
+    if (tab.kind !== 'all') return filtered;
+    // Pinned services always come first on Home.
+    return [...filtered].sort((left, right) => {
+      const leftPinned = pinnedSlugs.includes(left.slug) ? 0 : 1;
+      const rightPinned = pinnedSlugs.includes(right.slug) ? 0 : 1;
+      if (leftPinned !== rightPinned) return leftPinned - rightPinned;
+      return 0;
+    });
+  }, [allServices, filter, query, tab, pinnedSlugs, isLocalTab]);
 
   return (
     <div className="page">
@@ -82,17 +87,6 @@ export function Dashboard({
           onClick={() => onSelectTab({ kind: 'all' })}
         >
           {i18n.t('tabs.all')}
-          <span className="tab-count">{allServices.length}</span>
-        </button>
-        <button
-          type="button"
-          role="tab"
-          aria-selected={tab.kind === 'pinned'}
-          className={tab.kind === 'pinned' ? 'active' : ''}
-          onClick={() => onSelectTab({ kind: 'pinned' })}
-        >
-          {i18n.t('tabs.pinned')}
-          <span className="tab-count">{pinnedSlugs.length}</span>
         </button>
         {categories.map((category) => (
           <button
@@ -121,22 +115,21 @@ export function Dashboard({
         <FilterBar active={filter} onChange={setFilter} />
       </section>
 
-      {localNote && <p className="note inline-note">{i18n.t('local.note')}</p>}
+      {isLocalTab && <p className="note inline-note">{i18n.t('local.note')}</p>}
       {error && <p className="error-banner">{i18n.t('dashboard.errorLoading', { error })}</p>}
 
       <section className="service-grid">
         {visible.map((service) => (
           <ServiceCard
             key={service.slug}
-            service={service}
+            service={service as ServiceCardType}
             onOpen={onOpenService}
-            onPinChanged={onChanged}
           />
         ))}
       </section>
 
       {!loading && visible.length === 0 && !error && (
-        <p className="empty-state">{tab.kind === 'pinned' ? i18n.t('pin.empty') : i18n.t('dashboard.noMatch')}</p>
+        <p className="empty-state">{i18n.t('dashboard.noMatch')}</p>
       )}
 
       <section className="legend">

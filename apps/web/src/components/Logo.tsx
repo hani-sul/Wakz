@@ -1,30 +1,38 @@
 /**
- * Wakz mark: a rounded tile with a pulse line that reads as a "W" — the same shape is used by
- * the Android launcher icon so the identity matches everywhere.
+ * Wakz mark — a bold "W" monogram cut out of a gradient tile.
+ *
+ * Clean geometry (two joined V strokes with rounded joins) so it stays readable at 16 px in the
+ * status bar, in the app header and as the Android launcher icon. The same paths are used by the
+ * Android vector drawable, so the identity matches everywhere.
  */
 export function Logo({ size = 34, withWordmark = false }: { size?: number; withWordmark?: boolean }): React.JSX.Element {
   return (
     <span className="logo" aria-hidden="true">
       <svg width={size} height={size} viewBox="0 0 48 48" role="img">
         <defs>
-          <linearGradient id="wakzGradient" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#6d7cff" />
-            <stop offset="55%" stopColor="#4aa8ff" />
-            <stop offset="100%" stopColor="#3ddc97" />
+          <linearGradient id="wakzTile" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#7C8CFF" />
+            <stop offset="48%" stopColor="#4AA8FF" />
+            <stop offset="100%" stopColor="#2FD79B" />
           </linearGradient>
+          <radialGradient id="wakzGlow" cx="0.28" cy="0.2" r="0.85">
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+          </radialGradient>
         </defs>
-        <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#wakzGradient)" />
+        <rect x="2.5" y="2.5" width="43" height="43" rx="13.5" fill="url(#wakzTile)" />
+        <rect x="2.5" y="2.5" width="43" height="43" rx="13.5" fill="url(#wakzGlow)" />
         <path
-          d="M11 30.5 L17 18 L23.5 28.5 L30 18 L36.5 30.5"
+          d="M13 16.5 L19.5 33 L24 21.5 L28.5 33 L35 16.5"
           fill="none"
-          stroke="#07080d"
+          stroke="#080A12"
           strokeWidth="3.6"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        <circle cx="23.5" cy="28.5" r="2.1" fill="#07080d" />
+        <circle cx="24" cy="21.5" r="1.7" fill="#2FD79B" />
       </svg>
-      {withWordmark && <span className="logo-wordmark">Wakz</span>}
+      {withWordmark && <span className="logo-wordmark">وكز - Wakz</span>}
     </span>
   );
 }

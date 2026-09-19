@@ -64,7 +64,7 @@ export function ServiceDetail({ slug, onChanged }: { slug: string; onChanged?: (
     return (
       <div className="page">
         <section className="panel">
-          <a className="back-link" href="#/category/local">{i18n.t('category.back')}</a>
+          <button type="button" className="back-link" onClick={() => window.history.back()}>{i18n.t('category.back')}</button>
           <h1 className="coming-soon-title">{i18n.t('comingSoon.title')}</h1>
           <p className="hero-sub">{i18n.locale === 'ar' ? (detail.limitationAr ?? i18n.t('comingSoon.body')) : (detail.limitation ?? i18n.t('comingSoon.body'))}</p>
         </section>
@@ -92,7 +92,7 @@ export function ServiceDetail({ slug, onChanged }: { slug: string; onChanged?: (
   return (
     <div className="page">
       <section className="service-head">
-        <a className="back-link" href="#/">{i18n.t('service.back')}</a>
+        <button type="button" className="back-link" onClick={() => window.history.back()}>{i18n.t('service.back')}</button>
         <div className="service-head-row">
           <h1>{displayName(i18n, detail.name, detail.nameAr)}</h1>
           <StatusPill status={detail.status} />
