@@ -1,0 +1,185 @@
+{
+  "components": [
+    {
+      "id": "01K6Y7AE9BFXCCZGAP08KRFX0C",
+      "name": "openai/gpt-oss-20b",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 0,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9B4D28CW023BVEHRWC",
+      "name": "meta-llama/llama-guard-4-12b",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 1,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9BV96KK16JNHQC6H09",
+      "name": "groq/compound-mini",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 2,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01KD6DG59NFJREPYMMSF9A48GJ",
+      "name": "Canopy Labs Orpheus Arabic Saudi",
+      "status": "operational",
+      "created_at": "2025-12-23T20:13:08Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 3,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9BXTFV76A9WK0AFGM3",
+      "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 4,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9B0EC9MMK29ZBRS5YR",
+      "name": "meta-llama/llama-prompt-guard-2-86m",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 5,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9B02E51XN6DK0BQWJK",
+      "name": "moonshotai/kimi-k2-instruct-0905",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 6,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K8R45PBNMKVK1GM18WXJ6F54",
+      "name": "openai/gpt-oss-safeguard-20b",
+      "status": "operational",
+      "created_at": "2025-10-29T13:57:58Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 7,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9BT3JCHWXKKB98GD0N",
+      "name": "qwen/qwen3-32b",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 8,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K053E2FAFPVT8SKR4T23WHQK",
+      "name": "Website",
+      "status": "operational",
+      "created_at": "2025-07-14T18:33:55Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 9,
+      "description": "groq.com and console.groq.com",
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9BDH78Q7P0GAVJ7PX1",
+      "name": "llama-3.1-8b-instant",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 10,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K053E2FAKWKEYHXEV7WAHJBM",
+      "name": "API",
+      "status": "operational",
+      "created_at": "2025-07-14T18:33:55Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 11,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01KD6DE2KKE9AZKYPBN7E8BKT6",
+      "name": "Canopy Labs Orpheus English",
+      "status": "operational",
+      "created_at": "2025-12-23T20:12:00Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 12,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9BWQMK2RSC6SX46019",
+      "name": "meta-llama/llama-prompt-guard-2-22m",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 13,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9BVFH7CWEXN74MND4V",
+      "name": "whisper-large-v3",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 14,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9B8GNTTX2MQFCAS3MX",
+      "name": "groq/compound",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 15,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9BZFN4QCY3TNQXFBHC",
+      "name": "whisper-large-v3-turbo",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 16,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9BBBKD92266DJ23AGX",
+      "name": "openai/gpt-oss-120b",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 17,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9BSWJ2SGHJT92HG53X",
+      "name": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 18,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    },
+    {
+      "id": "01K6Y7AE9BWXJATX45RHX9SQEV",
+      "name": "llama-3.3-70b-versatile",
+      "status": "operational",
+      "created_at": "2025-10-07T02:17:03Z",
+      "updated_at": "2026-01-01T17:30:35Z",
+      "position": 19,
+      "page_id": "01K053E2FA7DSQPVGWM7A75WHX"
+    }
+  ]
+}

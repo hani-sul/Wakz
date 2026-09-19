@@ -1,0 +1,6 @@
+{
+  "status": {
+    "message": "Cannot process request apikey or authorization header is empty",
+    "status_code": 401
+  }
+}

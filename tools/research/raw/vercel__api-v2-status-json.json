@@ -1,0 +1,13 @@
+{
+  "page": {
+    "id": "lvglq8h0mdyh",
+    "name": "Vercel",
+    "url": "https://www.vercel-status.com",
+    "time_zone": "Etc/UTC",
+    "updated_at": "2026-09-19T03:38:55.278Z"
+  },
+  "status": {
+    "indicator": "none",
+    "description": "All Systems Operational"
+  }
+}

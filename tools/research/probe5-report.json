@@ -1,0 +1,274 @@
+{
+  "generatedAt": "2026-09-19T03:47:21.754Z",
+  "probes": [
+    {
+      "service": "Xbox Network",
+      "url": "https://xnotify.xboxlive.com/servicestatusv6",
+      "status": 404,
+      "type": "",
+      "bytes": 0,
+      "keys": null,
+      "error": null,
+      "sample": ""
+    },
+    {
+      "service": "Xbox Network",
+      "url": "https://xnotify.xboxlive.com/servicestatusv5",
+      "status": 404,
+      "type": "",
+      "bytes": 0,
+      "keys": null,
+      "error": null,
+      "sample": ""
+    },
+    {
+      "service": "Xbox Network",
+      "url": "https://notifications.support.xboxlive.com/incidents",
+      "status": 404,
+      "type": "application/json; charset=utf-8",
+      "bytes": 162,
+      "keys": [
+        "type",
+        "title",
+        "status",
+        "traceId"
+      ],
+      "error": null,
+      "sample": "{\"type\":\"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\"title\":\"Not Found\",\"status\":404,\"traceId\":\"00-dcfc127ba96e3fa58e8372273875d91a-df9250dfaf710211-01\"}"
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/us.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "keys": "unparsed",
+      "error": null,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/na.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "keys": "unparsed",
+      "error": null,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/eu.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "keys": "unparsed",
+      "error": null,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/jp.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "keys": "unparsed",
+      "error": null,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/config/app.json",
+      "status": 200,
+      "type": "application/json; charset=utf8",
+      "bytes": 39541,
+      "keys": [
+        "line",
+        "geo_header_name",
+        "status_base_url",
+        "status_base_url_suffix",
+        "page_title",
+        "isCustomerFacing",
+        "enable_status_refresh",
+        "status_refresh_interval",
+        "enable_loading_image",
+        "playstation_link",
+        "unified_footer_url",
+        "ps_help_url",
+        "gensen",
+        "enable_subheader",
+        "dateformat",
+        "text_align",
+        "overrides"
+      ],
+      "error": null,
+      "sample": "{ \"line\": \"p1-np\", \"geo_header_name\": \"X-User-Geo-Country\", \"status_base_url\": \"https://status.playstation.com/data/\", \"status_base_url_suffix\": \".json\", \"page_title\": \"PlayStation Network\", \"isCustomerFacing\": true, \"enable_status_refresh\": true, \"status_refresh_interval\": 300000, \"enable_loading_image\": false, \"playstation_link\": \"https://www.playstation.com/\", \"unified_footer_url\": \"https://www"
+    },
+    {
+      "service": "Riot Games",
+      "url": "https://status.riotgames.com/api/v2/na",
+      "status": 404,
+      "type": "text/html",
+      "bytes": 2464,
+      "keys": null,
+      "error": null,
+      "sample": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"/><meta http-equiv=\"Pragma\" content=\"no-cache\"/><meta http-equiv=\"Expires\" content=\"0\"/><link rel=\"shortcut icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#000000\"/><script src=\"https://cmp.osano.com/16BZ95S4qp9Kl2gUA/c84de61e-21d7-4a4a-9591-3d3a28fb5b1d/osano"
+    },
+    {
+      "service": "Riot Games",
+      "url": "https://status.riotgames.com/api/v2/league-of-legends",
+      "status": 404,
+      "type": "text/html",
+      "bytes": 2464,
+      "keys": null,
+      "error": null,
+      "sample": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"/><meta http-equiv=\"Pragma\" content=\"no-cache\"/><meta http-equiv=\"Expires\" content=\"0\"/><link rel=\"shortcut icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#000000\"/><script src=\"https://cmp.osano.com/16BZ95S4qp9Kl2gUA/c84de61e-21d7-4a4a-9591-3d3a28fb5b1d/osano"
+    },
+    {
+      "service": "Riot Games",
+      "url": "https://status.riotgames.com/api/v2/valorant",
+      "status": 404,
+      "type": "text/html",
+      "bytes": 2464,
+      "keys": null,
+      "error": null,
+      "sample": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"/><meta http-equiv=\"Pragma\" content=\"no-cache\"/><meta http-equiv=\"Expires\" content=\"0\"/><link rel=\"shortcut icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#000000\"/><script src=\"https://cmp.osano.com/16BZ95S4qp9Kl2gUA/c84de61e-21d7-4a4a-9591-3d3a28fb5b1d/osano"
+    },
+    {
+      "service": "Meta",
+      "url": "https://metastatus.com/metrics/metrics/metrics.json",
+      "status": 200,
+      "type": "text/html",
+      "bytes": 1401,
+      "keys": null,
+      "error": null,
+      "sample": "<!doctype html> <html lang=\"en\"> <head> <!-- Open Graph Tags --> <meta property=\"og:title\" content=\"Check Status and Outages of Meta Business Products\" /> <meta property=\"og:description\" content=\"See the status and check for outages for Meta business products including Ads Manager, Meta Business Suite, WhatsApp Business API and more.\" /> <meta property=\"og:type\" content=\"website\" /> <meta property"
+    },
+    {
+      "service": "Roblox",
+      "url": "https://api.status.io/1.0/status/3bfgx408Mgfc",
+      "status": 200,
+      "type": "application/json",
+      "bytes": 33,
+      "keys": [
+        "error"
+      ],
+      "error": null,
+      "sample": "{\"error\":\"status page not found\"}"
+    },
+    {
+      "service": "Roblox",
+      "url": "https://status.roblox.com/1.0/status",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "bytes": 427,
+      "keys": null,
+      "error": null,
+      "sample": "<html><head><title>Error</title></head><body><style>body { background-color: #272822; font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; font-size: 55px; font-style: normal; font-variant: normal; color: rgb(255, 255, 255); text-align: center; opacity: 0.7; }</style><p style=\"margin-top:200px; opacity: 0.7; font-size: 75px;\">404</p><p style=\"margin-top:5px; font-size: 20px;\">Page "
+    },
+    {
+      "service": "Nintendo Network",
+      "url": "https://support.nintendo.com/status",
+      "status": 200,
+      "type": "text/html;charset=utf-8",
+      "bytes": 88593,
+      "keys": null,
+      "error": null,
+      "sample": " <!DOCTYPE html> <html lang=\"en-US\" class=\"region scroll-smooth\"> <head> <meta charset=\"utf-8\" /> <title>Nintendo Customer Support Region Selector - Official Site</title> <!-- favicon --> <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"https://csassets.nintendo.com/image/upload/v1739900333/apple-touch-icon.png\"/> <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"https://csassets.nintendo.co"
+    },
+    {
+      "service": "Battle.net",
+      "url": "https://account.battle.net/status",
+      "status": 200,
+      "type": "text/html;charset=UTF-8",
+      "bytes": 4776,
+      "keys": null,
+      "error": null,
+      "sample": "<!doctype html><html><head><script>var AccountSettingsProperties = {cookieConsentEnabled: true,arkosePublicKey: \"9C3260E3-AD4C-6719-E0A9-56D21BFB0BCD\",arkoseLabsEnabled: true,region: \"EU\"};</script><script>var BlzCookieConsent = {host: 'battle.net', allowlistedCookies: ['[]']};</script><script src=\"https://bnetaccount.akamaized.net/static/js/cookie-consent-filter.js\"></script><script>(function(w,d"
+    }
+  ],
+  "jsGreps": [
+    {
+      "label": "riot-chunk",
+      "url": "https://status.riotgames.com/static/js/2.51e5f21c.chunk.js",
+      "status": 200,
+      "matches": [
+        "Be={logs:\"logs\",rum:\"rum\",sessionReplay:\"replay\"}"
+      ],
+      "error": null
+    },
+    {
+      "label": "metastatus-index",
+      "url": "https://metastatus.com/_next/static/chunks/pages/index-CGjuBb2H.js",
+      "status": 200,
+      "matches": [],
+      "error": null
+    }
+  ],
+  "rawGreps": [
+    {
+      "file": "roblox__root.html",
+      "matches": [
+        "5eb09caadc0a1404b674dc5f",
+        "59db9be600da402f522f8fa4",
+        "5f31ce906e9c9104c05543d1",
+        "5f31ce906e9c9104c05543d1",
+        "5f31ce906e9c9104c05543d1",
+        "5f31ce906e9c9104c05543d1",
+        "5f31ce906e9c9104c05543d1",
+        "5f31ce9f6f386704befc1f81",
+        "statuspage_id: \"59db90dbcdeb2f04dadcf16d\"",
+        "statuspage_id: \"59db90dbcdeb2f04dadcf16d\"",
+        "statuspage_id: \"59db90dbcdeb2f04dadcf16d\"",
+        "statuspage_id: \"59db90dbcdeb2f04dadcf16d\"",
+        "statuspage_id: \"59db90dbcdeb2f04dadcf16d\"",
+        "statuspage_id: \"59db90dbcdeb2f04dadcf16d\"",
+        "statuspage_id: \"59db90dbcdeb2f04dadcf16d\"",
+        "statuspage_id: \"59db90dbcdeb2f04dadcf16d\""
+      ]
+    },
+    {
+      "file": "nintendo-network__status.html",
+      "matches": [
+        "data-region=\"americas\"",
+        "data-region=\"asia-pacific\"",
+        "data-region=\"Europe, Middle East, & Africa\"",
+        "data-multi-expand=\"true\"",
+        "data-allow-all-closed=\"true\"",
+        "data-region=\"americas\"",
+        "data-region=\"asia-pacific\"",
+        "data-region=\"Europe, Middle East, & Africa\""
+      ]
+    },
+    {
+      "file": "ea__service-updates.html",
+      "matches": [
+        "window.nds.componentUrlPrefix = '//pl.ea.com/release/4.69.8/elements/ea-elements.min.js'",
+        "window.nds.contentfulUrl = 'https://contentful-proxy.juno.ea.com/graphql'",
+        "window.nds.salUrl = 'https://service-aggregation-layer.juno.ea.com/graphql'",
+        "window.nds.salClientId = 'eacom-fe'",
+        "window.nds.xGameDistMethod = 'eacom'",
+        "window.nds.lockboxGameId = 'eacom_quantum'",
+        "window.nds.lockboxInvoiceSource = 'EACOM-STORE-WEB-%countryCode%'",
+        "window.nds.lockboxExternalPaymentPath = '/lockbox-external-payment'"
+      ]
+    },
+    {
+      "file": "xbox-network__en-us-xbox-live-status.html",
+      "matches": [
+        "script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js\" integrity=\"sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==\" cross",
+        "script",
+        "script type=\"module\" crossorigin src=\"/assets/index-D9Yl0qQ7.js\"",
+        "script",
+        "script",
+        "Script to run this app.</noscript",
+        "script src=\"/telemetry-config.js\"",
+        "script"
+      ]
+    },
+    {
+      "file": "playstation-network__en-us.html",
+      "matches": []
+    }
+  ]
+}

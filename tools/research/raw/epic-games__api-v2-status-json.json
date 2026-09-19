@@ -1,0 +1,13 @@
+{
+  "page": {
+    "id": "ft308v428dv3",
+    "name": "Epic Games Public",
+    "url": "https://status.epicgames.com",
+    "time_zone": "Etc/UTC",
+    "updated_at": "2026-09-19T03:38:44.221Z"
+  },
+  "status": {
+    "indicator": "none",
+    "description": "All Systems Operational"
+  }
+}

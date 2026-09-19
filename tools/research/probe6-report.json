@@ -1,0 +1,210 @@
+{
+  "generatedAt": "2026-09-19T03:48:11.184Z",
+  "probes": [
+    {
+      "service": "Roblox",
+      "url": "https://api.status.io/1.0/status/59db90dbcdeb2f04dadcf16d",
+      "status": 200,
+      "type": "application/json",
+      "bytes": 5603,
+      "keys": [
+        "result"
+      ],
+      "error": null,
+      "sample": "{ \"result\": { \"status_overall\": { \"updated\": \"2026-08-07T04:48:28.252Z\", \"status\": \"Operational\", \"status_code\": 100 }, \"status\": [ { \"id\": \"5f31ce906e9c9104c05543d1\", \"name\": \"User\", \"status\": \"Operational\", \"status_code\": 100, \"containers\": [ { \"id\": \"5f31cdef5f2c7c04bbdc4fbf\", \"name\": \"Website\", \"updated\": \"2026-06-29T20:14:35.650Z\", \"status\": \"Operational\", \"status_code\": 100 }, { \"id\": \"5f31c"
+    },
+    {
+      "service": "Roblox",
+      "url": "https://api.status.io/1.0/summary/59db90dbcdeb2f04dadcf16d",
+      "status": 403,
+      "type": "application/json",
+      "bytes": 42,
+      "keys": [
+        "message"
+      ],
+      "error": null,
+      "sample": "{\"message\":\"Missing Authentication Token\"}"
+    },
+    {
+      "service": "Xbox Network",
+      "url": "https://xnotify.xboxlive.com/servicestatusv6/US/en-US",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "bytes": 91076,
+      "keys": null,
+      "error": null,
+      "sample": "<?xml version=\"1.0\" encoding=\"utf-8\"?><ServiceStatus xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Status><Overall><State>None</State><Id>1</Id><LastUpdated>2026-09-19T03:48:06.7521679+00:00</LastUpdated></Overall><SelectedScenarios><State>None</State><Id>1</Id><LastUpdated>2026-09-19T03:48:06.7521679+00:00</LastUpdated></SelectedScenarios></St"
+    },
+    {
+      "service": "Xbox Network",
+      "url": "https://xnotify.xboxlive.com/servicestatusv6/us/en-us",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "bytes": 91076,
+      "keys": null,
+      "error": null,
+      "sample": "<?xml version=\"1.0\" encoding=\"utf-8\"?><ServiceStatus xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Status><Overall><State>None</State><Id>1</Id><LastUpdated>2026-09-19T03:48:06.7521679+00:00</LastUpdated></Overall><SelectedScenarios><State>None</State><Id>1</Id><LastUpdated>2026-09-19T03:48:06.7521679+00:00</LastUpdated></SelectedScenarios></St"
+    },
+    {
+      "service": "Xbox Network",
+      "url": "https://xnotify.xboxlive.com/servicestatusv5/US/en-US",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "bytes": 1753,
+      "keys": null,
+      "error": null,
+      "sample": "<?xml version=\"1.0\" encoding=\"utf-8\"?><ServiceStatus xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Status><Overall><State>None</State><Id>1</Id><LastUpdated>2026-09-19T03:48:07.8055090+00:00</LastUpdated></Overall><SelectedScenarios><State>None</State><Id>1</Id><LastUpdated>2026-09-19T03:48:07.8055090+00:00</LastUpdated></SelectedScenarios></St"
+    },
+    {
+      "service": "Xbox Network",
+      "url": "https://xnotify.xboxlive.com/servicestatusv4/US/en-US",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "bytes": 1606,
+      "keys": null,
+      "error": null,
+      "sample": "<?xml version=\"1.0\" encoding=\"utf-8\"?><ServiceStatus xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Status><State>None</State><Id>1</Id><LastUpdated>2026-09-19T03:48:07.8055090+00:00</LastUpdated></Status><CoreServices><Category><Id>2</Id><Name>Xbox Live Core Services</Name><Status><Name>None</Name><Id>1</Id></Status><Scenarios /></Category><Cat"
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/americas.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "keys": "unparsed",
+      "error": null,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/en-us.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "keys": "unparsed",
+      "error": null,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/US.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "keys": "unparsed",
+      "error": null,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/us.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "keys": "unparsed",
+      "error": null,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/all.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "keys": "unparsed",
+      "error": null,
+      "sample": "Not found "
+    },
+    {
+      "service": "Meta",
+      "url": "https://metastatus.com/",
+      "status": 200,
+      "type": "text/html",
+      "bytes": 1401,
+      "keys": null,
+      "error": null,
+      "sample": "<!doctype html> <html lang=\"en\"> <head> <!-- Open Graph Tags --> <meta property=\"og:title\" content=\"Check Status and Outages of Meta Business Products\" /> <meta property=\"og:description\" content=\"See the status and check for outages for Meta business products including Ads Manager, Meta Business Suite, WhatsApp Business API and more.\" /> <meta property=\"og:type\" content=\"website\" /> <meta property",
+      "buildId": null
+    },
+    {
+      "service": "Nintendo Network",
+      "url": "https://www.nintendo.com/us/support/network-status/",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "bytes": 217819,
+      "keys": null,
+      "error": null,
+      "sample": "<!DOCTYPE html><html lang=\"en-US\"><head><meta charSet=\"utf-8\" data-next-head=\"\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=yes\" data-next-head=\"\"/><title data-next-head=\"\">Whoops! - Nintendo Official Site</title><link rel=\"canonical\" href=\"https://www.nintendo.com/us/404/\" data-next-head=\"\"/><meta http-equiv=\"Accept-CH\" content=\"DPR, Width\" data-next-head=\"\""
+    },
+    {
+      "service": "Nintendo Network",
+      "url": "https://www.nintendo.co.jp/netinfo/ja_JP/index.html",
+      "status": 200,
+      "type": "text/html",
+      "bytes": 14258,
+      "keys": null,
+      "error": null,
+      "sample": " <!DOCTYPE html> <html class=\"no-js is-no-local-nav\"> <head prefix=\"og: http://ogp.me/ns#\"> <meta charset=\"utf-8\"> <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1\"> <meta name=\"keywords\" content=\"サポート,ネットワーク,メンテナンス,障害,Nintendo,任天堂,ニンテンドー\"> <meta name=\"description\" content=\"任天堂の各ネットワークサービスの現在の"
+    },
+    {
+      "service": "Nintendo Network",
+      "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/26154",
+      "status": 406,
+      "type": "",
+      "bytes": 0,
+      "keys": null,
+      "error": null,
+      "sample": ""
+    },
+    {
+      "service": "Battle.net",
+      "url": "https://account.battle.net/api/status",
+      "status": 401,
+      "type": "text/html;charset=UTF-8",
+      "bytes": 4776,
+      "keys": null,
+      "error": null,
+      "sample": "<!doctype html><html><head><script>var AccountSettingsProperties = {cookieConsentEnabled: true,arkosePublicKey: \"9C3260E3-AD4C-6719-E0A9-56D21BFB0BCD\",arkoseLabsEnabled: true,region: \"EU\"};</script><script>var BlzCookieConsent = {host: 'battle.net', allowlistedCookies: ['[]']};</script><script src=\"https://bnetaccount.akamaized.net/static/js/cookie-consent-filter.js\"></script><script>(function(w,d"
+    },
+    {
+      "service": "Battle.net",
+      "url": "https://status.battle.net/",
+      "status": 0,
+      "type": "",
+      "bytes": 0,
+      "keys": null,
+      "error": "ENOTFOUND",
+      "sample": ""
+    },
+    {
+      "service": "Ubisoft",
+      "url": "https://www.ubisoft.com/en-us/help/status",
+      "status": 200,
+      "type": "text/html",
+      "bytes": 53422,
+      "keys": null,
+      "error": null,
+      "sample": "<!DOCTYPE html><html lang='en-us'> <head> <title data-rh=\"true\"></title> <!-- Make the page mobile compatible --> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"mobile-web-app-capable\" content=\"yes\"> <meta charset=\"utf-8\"> <meta name=\"google-site-verification\" content=\"ZCMr9NC6ETg15R_XxItt9dgbpvcQjmbQPa1t_57FcTA\" /> <style> body > #app { visibility: hidden; /* Wil"
+    },
+    {
+      "service": "Ubisoft",
+      "url": "https://ubi.li/status",
+      "status": 404,
+      "type": "text/html; charset=UTF-8",
+      "bytes": 1981,
+      "keys": null,
+      "error": null,
+      "sample": "<!DOCTYPE html> <html> <head> <title>404</title> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <link rel=\"stylesheet\" href=\"https://ubistatic-a.akamaihd.net/0136/css/style.min.css\"/> <link rel=\"icon\" href=\"https://ubistatic-a.akamaihd.net/0136/image/favicon.ico\"/> <link rel=\"shortcut icon\" href=\"https://ubistatic-a.akamaihd.net/0136/image/favicon.ico\"/> <link rel=\"icon\" type"
+    }
+  ],
+  "posts": [
+    {
+      "service": "EA",
+      "url": "https://service-aggregation-layer.juno.ea.com/graphql",
+      "status": 200,
+      "error": null,
+      "sample": "{\"data\":{\"__typename\":\"Query\"}}"
+    }
+  ],
+  "followUps": []
+}

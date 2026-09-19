@@ -1,0 +1,510 @@
+{
+  "generatedAt": "2026-09-19T03:42:55.298Z",
+  "pages": [
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/en-us/",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "/js/75.96864c3950053dcc773d.js",
+        "/js/main.69ef9e72dc6d366df42a.js"
+      ],
+      "endpoints": [
+        "https://status.playstation.com/${e.locale}/",
+        "https://status.playstation.com/config/app.json",
+        "https://status.playstation.com/i18n/$%7Be%7D.json"
+      ],
+      "notes": []
+    },
+    {
+      "service": "Riot Games",
+      "url": "https://status.riotgames.com/",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "https://cmp.osano.com/16BZ95S4qp9Kl2gUA/c84de61e-21d7-4a4a-9591-3d3a28fb5b1d/osano.js",
+        "/mtiFontTrackingCode.js",
+        "/static/js/2.51e5f21c.chunk.js",
+        "/static/js/main.31cad1d9.chunk.js"
+      ],
+      "endpoints": [
+        "https://status.riotgames.com/api/v2/",
+        "https://status.riotgames.com/locales/%7B%7Blng%7D%7D/%7B%7Bns%7D%7D.json",
+        "https://status.riotgames.com/riotbar/latest/riotstatus."
+      ],
+      "notes": []
+    },
+    {
+      "service": "Roblox",
+      "url": "https://status.roblox.com/",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "//static.status.io/public/statuspage/js/ie10-viewport-bug-workaround.min.js",
+        "https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&amp;render=explicit",
+        "//static.status.io/public/statuspage/js/jquery.min.js",
+        "//static.status.io/public/statuspage/js/bootstrap.min.js",
+        "//static.status.io/public/statuspage/js/Autolinker.min.js",
+        "//static.status.io/public/statuspage/plugins/timeliner/timeliner.min.js"
+      ],
+      "endpoints": [
+        "https://static.status.io/public/statuspage/js/ie10-viewport-bug-workaround.min.js",
+        "https://static.status.io/public/statuspage/js/jquery.min.js",
+        "https://static.status.io/public/statuspage/js/bootstrap.min.js",
+        "https://static.status.io/public/statuspage/js/Autolinker.min.js",
+        "https://static.status.io/public/statuspage/plugins/timeliner/timeliner.min.js",
+        "https://static.status.io/public/statuspage/js/lodash.js",
+        "https://static.status.io/public/statuspage/js/d3.js",
+        "https://status.roblox.com/pages/incident/"
+      ],
+      "notes": [
+        "statuspage",
+        "status.io"
+      ]
+    },
+    {
+      "service": "DeepSeek",
+      "url": "https://status.deepseek.com/",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "https://static.flashcat.cloud/status-page/_next/static/chunks/5581d2cf-9af79f2a39fb02e8.js",
+        "https://static.flashcat.cloud/status-page/_next/static/chunks/6554-31da87dba459a5c5.js",
+        "https://static.flashcat.cloud/status-page/_next/static/chunks/main-app-471571c2debb129e.js",
+        "https://static.flashcat.cloud/status-page/_next/static/chunks/app/layout-de7015c91af3431e.js",
+        "https://static.flashcat.cloud/status-page/_next/static/chunks/polyfills-42372ed130431b0a.js",
+        "https://static.flashcat.cloud/status-page/_next/static/chunks/webpack-8b89ec3a9d90ddeb.js"
+      ],
+      "endpoints": [
+        "https://status.deepseek.com/feed.rss",
+        "https://static.flashcat.cloud/statuspage/long-term/statuspage/image/5758820581287/6410630422455/logo_01KRD68AFGR1B4MXN1C7KMFDBM.png\\",
+        "https://static.flashcat.cloud/statuspage/long-term/statuspage/image/5758820581287/6410630422455/logo_01KRD68K0AD6FZBCGZMPY0XK96.png\\",
+        "https://static.flashcat.cloud/statuspage/long-term/statuspage/image/5758820581287/6410630422455/favicon_01KRD6DQEG6PHXDSA3J66PFMWV.png\\"
+      ],
+      "notes": [
+        "statuspage"
+      ]
+    },
+    {
+      "service": "Hugging Face",
+      "url": "https://status.huggingface.co/",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=AW-10805602682"
+      ],
+      "endpoints": [
+        "https://status.huggingface.co/",
+        "https://uptime.betterstack.com/assets/components/status_pages/StatusPageMetadataFields-4f2f073b.js",
+        "https://status.huggingface.co/index.json",
+        "https://status.huggingface.co/overview",
+        "https://status.huggingface.co/scheduled-maintenances",
+        "https://status.huggingface.co/sections",
+        "https://status.huggingface.co/updates",
+        "https://status.huggingface.co/incidents",
+        "https://status.huggingface.co/feed.rss",
+        "https://status.huggingface.co/feed.atom",
+        "https://status.huggingface.co/incident/965809",
+        "https://status.huggingface.co/incident/1042883",
+        "https://status.huggingface.co/incident/1063027",
+        "https://status.huggingface.co/incident/961899",
+        "https://status.huggingface.co/incident/982437",
+        "https://status.huggingface.co/incident/1009673",
+        "https://status.huggingface.co/incident/939240",
+        "https://status.huggingface.co/incident/1004901",
+        "https://status.huggingface.co/incident/946090"
+      ],
+      "notes": [
+        "statuspage"
+      ]
+    },
+    {
+      "service": "Meta (WhatsApp/Instagram/Facebook)",
+      "url": "https://metastatus.com/",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "/assets/index-CGjuBb2H.js"
+      ],
+      "endpoints": [
+        "https://metastatus.com",
+        "https://metastatus.com/metrics/$%7Bt%7D/$%7Bi%7D.json"
+      ],
+      "notes": []
+    },
+    {
+      "service": "TMDB",
+      "url": "https://status.themoviedb.org/",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "//js-wc.site24x7static.com/site24x7/client/14509051/statuspage/js/../../../fpsp/statuspage/cns-1b22bfe391.js",
+        "//js-wc.site24x7static.com/site24x7/client/14509051/statuspage/statusiq/dist/public-app/../../../../../fpsp/statuspage/public-app/runtime.eaf24ef3fcedf439.js",
+        "//js-wc.site24x7static.com/site24x7/client/14509051/statuspage/statusiq/dist/public-app/../../../../../fpsp/statuspage/public-app/polyfills.110934b309e8eb82.js",
+        "//js-wc.site24x7static.com/site24x7/client/14509051/statuspage/statusiq/dist/public-app/../../../../../fpsp/statuspage/public-app/main.b1aac59d051ca302.js",
+        "//js-wc.site24x7static.com/site24x7/client/14509051/statuspage/js/../../../fpsp/statuspage/s47perf-640ee7fce9.js"
+      ],
+      "endpoints": [
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/public-app/",
+        "https://cdn-us.statusiq.com/sp/api/public/statuspages/favicon/CV8aDz4Xn5ikJZrRQr_JNAaezCCS6a2bPfyHLNH2z9w=?default=1",
+        "https://status.themoviedb.org/sp/client/resources/statuspage",
+        "https://img-wc.site24x7static.com/site24x7/client/14509051/statuspage/images",
+        "https://status.themoviedb.org/sp/client/resources/statuspage/modules",
+        "https://css-wc.site24x7static.com/site24x7/client/14509051/statuspage/fonts",
+        "https://css-wc.site24x7static.com/site24x7/client/14509051/statuspage/css",
+        "https://js-wc.site24x7static.com/site24x7/client/14509051/statuspage/js",
+        "https://js-wc.site24x7static.com/site24x7/client/14509051/statuspage/languages",
+        "https://cdn-us.statusiq.com/sp/api/public/statuspages/logo/CV8aDz4Xn5ikJZrRQr_JNAaezCCS6a2bPfyHLNH2z9w=?default=1",
+        "https://status.themoviedb.org",
+        "https://status.themoviedb.org/rss",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_fr-2ceee3cab3.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_de-98a176c45c.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_pt-bfe000ece3.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_es-c28d3c611c.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_id-78260afe80.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_th-c26322b940.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_zh-54bafb9067.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_ja-140d4f4d38.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_en-5e2f8fb439.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_tr-8918702f91.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_ar-d7f076538f.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_fa-1bab829f20.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_he-85fdff7dc7.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_ru-1f66909862.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_ur-67597a9467.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_br-7464c3a51c.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_da-effe802c11.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_hu-a4b6d2c7cd.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_ro-6c8782261c.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_es-mx-fd090c4eae.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_fi-bde2109246.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_ca-1d371d001e.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_hr-7748b99e39.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_cs-fa1ef59de3.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_et-2b9a6503ae.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_fil-c60ccf9d07.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_my-f71929d555.js",
+        "https://js-wc.site24x7static.com/site24x7/client/fpsp/statuspage/languages/i18np_el-188a229bcf.js"
+      ],
+      "notes": [
+        "statuspage"
+      ]
+    },
+    {
+      "service": "Trakt",
+      "url": "https://status.trakt.tv/",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "/assets/js/lib/jquery-3.7.1.min.js",
+        "/assets/js/lib/uikit.min.js",
+        "/assets/js/lib/favico.min.js",
+        "https://status.trakt.tv/build/assets/common-06tky9EV.js",
+        "https://status.trakt.tv/build/assets/home-C4-D5T7j.js",
+        "/vendor/cookie-consent/js/cookie-consent.js"
+      ],
+      "endpoints": [
+        "https://status.trakt.tv/",
+        "https://status.trakt.tv/unsubscribe",
+        "https://status.trakt.tv/api/getMonitorList/wVLWNFLGN9",
+        "https://status.trakt.tv/api/getEventFeed/wVLWNFLGN9",
+        "https://status.trakt.tv/build/assets/common-06tky9EV.js",
+        "https://status.trakt.tv/build/assets/purify.es-DAl6zSZw.js",
+        "https://status.trakt.tv/build/assets/home-C4-D5T7j.js"
+      ],
+      "notes": []
+    },
+    {
+      "service": "Simkl",
+      "url": "https://status.simkl.com/",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "/assets/js/lib/jquery-3.7.1.min.js",
+        "/assets/js/lib/uikit.min.js",
+        "/assets/js/lib/favico.min.js",
+        "https://status.simkl.com/build/assets/common-06tky9EV.js",
+        "https://status.simkl.com/build/assets/home-C4-D5T7j.js"
+      ],
+      "endpoints": [
+        "https://status.simkl.com/",
+        "https://status.simkl.com/unsubscribe",
+        "https://status.simkl.com/api/getMonitorList/Nx8xTN71j",
+        "https://status.simkl.com/api/getEventFeed/Nx8xTN71j",
+        "https://status.simkl.com/build/assets/common-06tky9EV.js",
+        "https://status.simkl.com/build/assets/purify.es-DAl6zSZw.js",
+        "https://status.simkl.com/build/assets/home-C4-D5T7j.js"
+      ],
+      "notes": []
+    },
+    {
+      "service": "Xbox Network",
+      "url": "https://support.xbox.com/en-US/xbox-live-status",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+        "/assets/index-D9Yl0qQ7.js",
+        "/telemetry-config.js"
+      ],
+      "endpoints": [
+        "https://support.xbox.com/manifest.json",
+        "https://support.xbox.com/config/search.json",
+        "https://support.xbox.com/xbox-live-status",
+        "https://support.xbox.com/Help/Flows/SubscriptionStatus",
+        "https://support.xbox.com/Help/XnotifyServiceStatus/SmsCountryCodes",
+        "https://support.xbox.com/$%7BH%7D/xbox-live-status"
+      ],
+      "notes": []
+    },
+    {
+      "service": "Nintendo Network",
+      "url": "https://support.nintendo.com/status",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.2.8/js/tooltipster.bundle.min.js",
+        "/euf/assets/js/googleAnalytics.js",
+        "/euf/assets/vite-prod/js/tailwind_foundation.min.js",
+        "/euf/core/3.11/js/2.326/min/RightNow.js",
+        "/euf/generated/optimized/1788278927/templates/region.313738383237383932372e332e31312e372e726567696f6e2e6a73.js"
+      ],
+      "endpoints": [],
+      "notes": []
+    },
+    {
+      "service": "EA",
+      "url": "https://www.ea.com/service-updates",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "https://www.ea.com/resources/d4661f9a18ffaf213a14e68c9aaa1748061679de37282",
+        "/newrelic.js",
+        "//unpkg.com/@webcomponents/webcomponentsjs@2.2.7/webcomponents-loader.js",
+        "//cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js",
+        "//w.soundcloud.com/player/api.js",
+        "//pl.ea.com/release/4.69.8/elements/ea-elements.min.js"
+      ],
+      "endpoints": [],
+      "notes": [
+        "graphql"
+      ]
+    },
+    {
+      "service": "TikTok",
+      "url": "https://www.tiktok.com/status",
+      "status": 200,
+      "error": null,
+      "scripts": [],
+      "endpoints": [],
+      "notes": []
+    },
+    {
+      "service": "Nuvio",
+      "url": "https://status.nuvio.tv/",
+      "status": 200,
+      "error": null,
+      "scripts": [
+        "/assets/index-D10upd0k.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ],
+      "endpoints": [
+        "https://status.nuvio.tv/api/status"
+      ],
+      "notes": [
+        "js-error:https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495:ENOENT"
+      ]
+    }
+  ],
+  "extra": [
+    {
+      "url": "https://status.openai.com/api/v2/summary.json",
+      "status": 200,
+      "type": "application/json",
+      "bytes": 6678,
+      "error": null,
+      "sample": "{\"page\":{\"id\":\"01JMDK9XYNY6RXSED6SDWW50WY\",\"name\":\"OpenAI\",\"url\":\"https://status.openai.com/\",\"updated_at\":\"2026-09-19T01:08:42Z\"},\"status\":{\"description\":\"All Systems Operational\",\"indicator\":\"none\"},\"components\":[{\"id\":\"01KTQBYVARFJ5KMCSE"
+    },
+    {
+      "url": "https://status.deepseek.com/api/status",
+      "status": 404,
+      "type": "application/json; charset=utf-8",
+      "bytes": 72,
+      "error": null,
+      "sample": "{\"code\":\"RouteNotFound\",\"message\":\"The route you request is not found.\"}"
+    },
+    {
+      "url": "https://status.deepseek.com/summary",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 203980,
+      "error": null,
+      "sample": "<!DOCTYPE html><html lang=\"en\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"https://static.flashcat.cloud/status-page/_next/static/css/a8bb8a3115d6800a.css\" c"
+    },
+    {
+      "url": "https://status.deepseek.com/index.json",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 23978,
+      "error": null,
+      "sample": "<!DOCTYPE html><html lang=\"en\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"https://static.flashcat.cloud/status-page/_next/static/css/a8bb8a3115d6800a.css\" c"
+    },
+    {
+      "url": "https://metastatus.com/api/v1/status",
+      "status": 200,
+      "type": "text/html",
+      "bytes": 1401,
+      "error": null,
+      "sample": "<!doctype html> <html lang=\"en\"> <head> <!-- Open Graph Tags --> <meta property=\"og:title\" content=\"Check Status and Outages of Meta Business Products\" /> <meta property=\"og:description\" content=\"See the status and check for outages for Met"
+    },
+    {
+      "url": "https://metastatus.com/status.json",
+      "status": 200,
+      "type": "text/html",
+      "bytes": 1401,
+      "error": null,
+      "sample": "<!doctype html> <html lang=\"en\"> <head> <!-- Open Graph Tags --> <meta property=\"og:title\" content=\"Check Status and Outages of Meta Business Products\" /> <meta property=\"og:description\" content=\"See the status and check for outages for Met"
+    },
+    {
+      "url": "https://metastatus.com/data.json",
+      "status": 200,
+      "type": "text/html",
+      "bytes": 1401,
+      "error": null,
+      "sample": "<!doctype html> <html lang=\"en\"> <head> <!-- Open Graph Tags --> <meta property=\"og:title\" content=\"Check Status and Outages of Meta Business Products\" /> <meta property=\"og:description\" content=\"See the status and check for outages for Met"
+    },
+    {
+      "url": "https://status.roblox.com/api/v1/status",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "bytes": 427,
+      "error": null,
+      "sample": "<html><head><title>Error</title></head><body><style>body { background-color: #272822; font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; font-size: 55px; font-style: normal; font-variant: normal; color: rgb(255, 255, 255);"
+    },
+    {
+      "url": "https://status.roblox.com/status.json",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "bytes": 427,
+      "error": null,
+      "sample": "<html><head><title>Error</title></head><body><style>body { background-color: #272822; font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; font-size: 55px; font-style: normal; font-variant: normal; color: rgb(255, 255, 255);"
+    },
+    {
+      "url": "https://status.playstation.com/data/statuses/psn.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "error": null,
+      "sample": "Not found "
+    },
+    {
+      "url": "https://status.playstation.com/api/status",
+      "status": 503,
+      "type": "text/html",
+      "bytes": 373,
+      "error": null,
+      "sample": "<HTML><HEAD> <TITLE>Service Unavailable</TITLE> </HEAD><BODY> <H1>Service Unavailable - DNS failure</H1> The server is temporarily unable to service your request. Please try again later.<P> Reference&#32;&#35;11&#46;48b62417&#46;1789789420&"
+    },
+    {
+      "url": "https://status.riotgames.com/api/v1/status/na",
+      "status": 404,
+      "type": "text/html",
+      "bytes": 2464,
+      "error": null,
+      "sample": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"/><meta http-equiv=\"Pragma\" content=\"no-cache\"/><meta http-equiv=\"Expires\" content=\"0\"/><link rel=\"shortcut icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-wid"
+    },
+    {
+      "url": "https://www.minecraft.net/en-us/status",
+      "status": 404,
+      "type": "text/html;charset=utf-8",
+      "bytes": 380127,
+      "error": null,
+      "sample": " <!DOCTYPE HTML> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"/> <title>404 | Minecraft</title> <meta name=\"template\" content=\"generic-page\"/> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/> <meta name=\"robots\" cont"
+    },
+    {
+      "url": "https://api.mojang.com/",
+      "status": 404,
+      "type": "application/json",
+      "bytes": 75,
+      "error": null,
+      "sample": "{ \"path\" : \"/\", \"error\" : \"NOT_FOUND\", \"errorMessage\" : \"Not Found\" }"
+    },
+    {
+      "url": "https://status.battle.net/",
+      "status": 0,
+      "type": "",
+      "bytes": 0,
+      "error": "ENOTFOUND",
+      "sample": ""
+    },
+    {
+      "url": "https://www.blizzard.com/en-us/support/status/",
+      "status": 500,
+      "type": "text/html; charset=utf-8",
+      "bytes": 6201,
+      "error": null,
+      "sample": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Blizzard Entertainment - undefined</title><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=2\"><meta property=\"og:type\" content=\"website\"><meta name=\"description\" "
+    },
+    {
+      "url": "https://status.huggingface.co/api/status",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 747806,
+      "error": null,
+      "sample": "<!DOCTYPE html> <html class='h-full light' lang='en' prefix='og: https://ogp.me/ns#'> <head> <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'> <meta charset='utf-8'> <meta content='width=device-width, initial-scale=1, maxi"
+    },
+    {
+      "url": "https://status.trakt.tv/api/status",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "bytes": 7880,
+      "error": null,
+      "sample": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"Content-Type\" content=\"text/html\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <"
+    },
+    {
+      "url": "https://status.simkl.com/api/status",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "bytes": 2658,
+      "error": null,
+      "sample": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"Content-Type\" content=\"text/html\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <"
+    },
+    {
+      "url": "https://status.themoviedb.org/api/status",
+      "status": 404,
+      "type": "text/html;charset=ISO-8859-1",
+      "bytes": 1352,
+      "error": null,
+      "sample": "<head><title>StatusIQ</title> <link rel=\"icon\" href=\"//img-wc.site24x7static.com/site24x7/client/14509051/statuspage/images/favicon.ico\" type=\"image/ico\" > <style> @font-face { font-family:\"Lato-Regular\"; font-weight:400; font-style:normal;"
+    },
+    {
+      "url": "https://api.twitterstat.us/api/v2/status.json",
+      "status": 401,
+      "type": "application/json; charset=utf-8",
+      "bytes": 73,
+      "error": null,
+      "sample": "Your page is inactive. Please include an API key to access this resource."
+    },
+    {
+      "url": "https://steamstat.us/api",
+      "status": 403,
+      "type": "text/html; charset=UTF-8",
+      "bytes": 5689,
+      "error": null,
+      "sample": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><m"
+    }
+  ],
+  "aws": {
+    "status": 200,
+    "bytes": 231276,
+    "decoded": "[{\"date\":\"1772369485\",\"arn\":\"arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5\",\"region_name\":\"UAE\",\"status\":\"3\",\"service\":\"multipleservices-me-central-1\",\"service_name\":\"Multiple services\",\"summary\":\"Region Availability\",\"event_log\":[{\"summary\":\"Increased Error Rates\",\"message\":\"We are investigati",
+    "topLevelKeys": [
+      "0",
+      "1"
+    ],
+    "sample": "[\n  {\n    \"date\": \"1772369485\",\n    \"arn\": \"arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5\",\n    \"region_name\": \"UAE\",\n    \"status\": \"3\",\n    \"service\": \"multipleservices-me-central-1\",\n    \"service_name\": \"Multiple services\",\n    \"summary\": \"Region Availability\",\n    \"event_log\": [\n      {\n        \"summary\": \"Increased Error Rates\",\n        \"message\": \"We are investigating issues with AWS services in the ME-CENTRAL-1 Region.\",\n        \"status\": 1,\n        \"timestamp\": 1772369485\n      },\n      {\n        \"summary\": \"Increased Error Rates\",\n        \"message\": \"We are investigating connectivity and power issues affecting APIs and instances in a single Availability Zone (mec1-az2) in the ME-CENTRAL-1 Region due to a localized power issue. Existing instances in this zone will also be affected. Other AWS Services may also be experiencing increased errors and latencies for their workflows, and we are working to route requests away from this affected Availability Zone. We recommend customers make use of other Availability Zones at this time. Targeting new launches using RunInstances in the remaining AZs should succeed. Existing instances in the other AZs are not affected.\",\n        \"status\": 1,\n        \"timestamp\": 1772371152\n      },\n      {\n        \"summary\": \"Increased Error Rates\",\n        \"message\": \"We can confirm that a localized power issue has affected a single Availabili"
+  },
+  "azureFeed": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<rss xmlns:a10=\"http://www.w3.org/2005/Atom\"\r\n  version=\"2.0\">\r\n  <channel xmlns:slash=\"http://purl.org/rss/1.0/modules/slash/\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:wfw=\"http://wellformedweb.org/CommentAPI/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\">\r\n    <title>Azure Status</title>\r\n    <link>https://azure.status.microsoft/en-us/status/</link>\r\n    <description>Azure Status</description>\r\n    <language>en-us</language>\r\n    <lastBuildDate>Sat, 19 Sep 2026 03:43:00 Z</lastBuildDate>\r\n  </channel>\r\n</rss>"
+}

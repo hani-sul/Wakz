@@ -1,0 +1,36 @@
+{
+  "name": "techpulse",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TechPulse — real status of the services you depend on, aggregated from official sources.",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "api": "node apps/api/src/index.ts",
+    "collector": "node apps/collector/src/index.ts",
+    "collector:once": "node apps/collector/src/index.ts --once",
+    "seed": "node apps/collector/src/index.ts --seed-only",
+    "web:dev": "vite --config apps/web/vite.config.ts",
+    "web:build": "vite build --config apps/web/vite.config.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "build": "npm run typecheck && npm run web:build",
+    "test": "node --test --test-concurrency=4 \"packages/core/test/*.test.ts\" \"packages/db/test/*.test.ts\" \"packages/connectors/test/*.test.ts\" \"apps/api/test/*.test.ts\" \"apps/collector/test/*.test.ts\"",
+    "research:probe": "node tools/research/probe.mjs",
+    "verify": "npm run typecheck && npm test && npm run web:build"
+  },
+  "dependencies": {
+    "fastify": "^5.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "page": {
+    "id": "2kbc0d48tv3j",
+    "name": "Reddit",
+    "url": "https://www.redditstatus.com",
+    "time_zone": "America/Los_Angeles",
+    "updated_at": "2026-09-18T20:38:54.044-07:00"
+  },
+  "status": {
+    "indicator": "none",
+    "description": "All Systems Operational"
+  }
+}

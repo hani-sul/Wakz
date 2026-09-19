@@ -1,0 +1,159 @@
+{
+  "generatedAt": "2026-09-19T03:48:51.671Z",
+  "probes": [
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/config/app.json",
+      "status": 200,
+      "type": "application/json; charset=utf8",
+      "error": null,
+      "sample": "{ \"line\": \"p1-np\", \"geo_header_name\": \"X-User-Geo-Country\", \"status_base_url\": \"https://status.playstation.com/data/\", \"status_base_url_suffix\": \".json\", \"page_title\": \"PlayStation Network\", \"isCustomerFacing\": true, \"enable_status_refresh\": true, \"status_refresh_interval\": 300000, \"enable_loading_image\": false, \"playstation_link\": \"https://www.playstation.com/\", \"unified_footer_url\": \"https://www.playstationnetwork.com/unifiedfooter/unifiedfooter.js\", \"ps_help_url\": \"https://www.playstation.com/repairs\", \"gensen\": \"en-gb\", \"enable_subheader\": false, \"dateformat\": \"locale\", \"text_align\": \"left\", \"overrides\": [ { \"criteria\": { \"locale\": \"en-US\" }, \"playstation_link\": \"https://www.playstation.com/en-us/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.en-us.js\", \"gensen\": \"en\" }, { \"criteria\": { \"locale\": \"en-GB\" }, \"playstation_link\": \"https://www.playstation.com/en-gb/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.en-gb.js\" }, { \"criteria\": { \"locale\": \"en-AE\" }, \"playstation_link\": \"https://www.playstation.com/en-ae/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.en-ae.js\", \"dateformat\": \"en-gb\" }, { \"criteria\": { \"locale\": \"ar-AE\" }, \"playstation_link\": \"https://www.playstation.com/en-ae/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.en-ae.js\", \"gensen\": \"ar_ae\", \"text_align\": \"right\" }, { \"criteria\": { \"locale\": \"es-AR\" }, \"playstation_link\": \"https://www.playstation.com/es-ar/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.es-ar.js\", \"gensen\": \"es-419\", \"dateformat\": \"es-419\" }, { \"criteria\": { \"locale\": \"de-AT\" }, \"playstation_link\": \"https://www.playstation.com/de-at/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.de-at.js\", \"gensen\": \"de\" }, { \"criteria\": { \"locale\": \"en-AU\" }, \"playstation_link\": \"https://www.playstation.com/en-au/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.en-au.js\", \"dateformat\": \"en-gb\" }, { \"criteria\": { \"locale\": \"fr-BE\" }, \"playstation_link\": \"https://www.playstation.com/fr-be/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.fr-be.js\", \"gensen\": \"fr\" }, { \"criteria\": { \"locale\": \"nl-BE\" }, \"playstation_link\": \"https://www.playstation.com/nl-be/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.nl-be.js\", \"gensen\": \"nl_be\" }, { \"criteria\": { \"locale\": \"en-BH\" }, \"playstation_link\": \"https://www.playstation.com/en-ae/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.en-bh.js\", \"dateformat\": \"en-gb\" }, { \"criteria\": { \"locale\": \"ar-BH\" }, \"playstation_link\": \"https://www.playstation.com/en-ae/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.ar-bh.js\", \"gensen\": \"ar_bh\", \"text_align\": \"right\" }, { \"criteria\": { \"locale\": \"en-BG\" }, \"playstation_link\": \"https://www.playstation.com/bg-bg/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.en-bg.js\", \"dateformat\": \"en-gb\" }, { \"criteria\": { \"locale\": \"pt-BR\" }, \"playstation_link\": \"https://www.playstation.com/pt-br/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.pt-br.js\", \"gensen\": \"pt-br\" }, { \"criteria\": { \"locale\": \"es-BO\" }, \"playstation_link\": \"https://www.playstation.com/es-bo/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.es-bo.js\", \"gensen\": \"es_bo\", \"dateformat\": \"es-419\" }, { \"criteria\": { \"locale\": \"en-CA\" }, \"playstation_link\": \"https://www.playstation.com/en-ca/\", \"unified_footer_url\": \"https://secure.cdn.us.playstation.com/unifiedfooter/js/unifiedfooter.en-ca.js\", \"gensen\": \"en-ca\" }, { \"criteria\": ",
+      "keys": [
+        "line",
+        "geo_header_name",
+        "status_base_url",
+        "status_base_url_suffix",
+        "page_title",
+        "isCustomerFacing",
+        "enable_status_refresh",
+        "status_refresh_interval",
+        "enable_loading_image",
+        "playstation_link",
+        "unified_footer_url",
+        "ps_help_url",
+        "gensen",
+        "enable_subheader",
+        "dateformat",
+        "text_align",
+        "overrides"
+      ]
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/config/regions.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "error": null,
+      "sample": "Not found ",
+      "keys": "unparsed"
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/config/status.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "error": null,
+      "sample": "Not found ",
+      "keys": "unparsed"
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/us.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "error": null,
+      "sample": "Not found ",
+      "keys": "unparsed"
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/US.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "error": null,
+      "sample": "Not found ",
+      "keys": "unparsed"
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/americas.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "error": null,
+      "sample": "Not found ",
+      "keys": "unparsed"
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses/region/1.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "error": null,
+      "sample": "Not found ",
+      "keys": "unparsed"
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "error": null,
+      "sample": "Not found ",
+      "keys": "unparsed"
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/status.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "error": null,
+      "sample": "Not found ",
+      "keys": "unparsed"
+    },
+    {
+      "service": "Ubisoft",
+      "url": "https://www.ubisoft.com/en-us/help/status",
+      "status": 200,
+      "type": "text/html",
+      "error": null,
+      "sample": "<!DOCTYPE html><html lang='en-us'> <head> <title data-rh=\"true\"></title> <!-- Make the page mobile compatible --> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"mobile-web-app-capable\" content=\"yes\"> <meta charset=\"utf-8\"> <meta name=\"google-site-verification\" content=\"ZCMr9NC6ETg15R_XxItt9dgbpvcQjmbQPa1t_57FcTA\" /> <style> body > #app { visibility: hidden; /* Wil",
+      "keys": null
+    },
+    {
+      "service": "Nintendo Network",
+      "url": "https://www.nintendo.co.jp/netinfo/ja_JP/index.html",
+      "status": 200,
+      "type": "text/html",
+      "error": null,
+      "sample": "<!DOCTYPE html> <html class=\"no-js is-no-local-nav\"> <head prefix=\"og: http://ogp.me/ns#\"> <meta charset=\"utf-8\"> <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1\"> <meta name=\"keywords\" content=\"サポート,ネットワーク,メンテナンス,障害,Nintendo,任天堂,ニンテンドー\"> <meta name=\"description\" content=\"任天堂の各ネットワークサービスの現在の障",
+      "keys": null
+    }
+  ],
+  "ea": {
+    "status": 200,
+    "fieldCount": 0,
+    "names": [],
+    "raw": "{\"data\":null,\"errors\":[{\"message\":\"Graphql validation error\"}]}"
+  },
+  "ubisoft": {
+    "endpoints": [
+      "https://formatjs.github.io/docs/react-intl/api",
+      "https://cms-cache.ubisoft.com/GraphQL/",
+      "https://public-ubiservices.ubi.com/v1/users/me/global/cshelp/cases/api/completeVerifyEmail",
+      "https://${t}/v1/applications/global/cshelp/cases/api/case-categories",
+      "https://${t}/v1/profiles/me/global/cshelp/cases/api/cases/?offset=0&limit=9999",
+      "https://${t}/v1/applications/global/cshelp/cases/api/installments",
+      "https://${t}/v1/applications/global/cshelp/cases/api/case-templates?name=${r}&locale=${Yi.lF",
+      "https://${n}/v1/profiles/me/global/cshelp/cases/api/recently-played-games",
+      "https://${t}/v1/applications/global/cshelp/cases/api/popular-games",
+      "https://${t}/v2/applications/global/cshelp/cases/api/contact-rules?language=${r}",
+      "https://${n}/v1/profiles/me/global/cshelp/cases/api/case/${e}/comment",
+      "https://${n}/v1/applications/global/cshelp/cases/api/${Yi.zP",
+      "https://${t}/v1/applications/global/cshelp/cases/api/account-recovery-reasons",
+      "https://${o}/v1/profiles/me/global/cshelp/cases/api/support-id",
+      "https://${r}/v1/applications/global/cshelp/cases/api/close-case-by-email",
+      "https://${n}/v1/profiles/me/global/cshelp/cases/api/case/${s.info.caseNumber}/attachment/${e.id}/download?token=${e.downloadToken}&guid=${e.downloadGuid}",
+      "https://${r}/v1/profiles/me/global/cshelp/cases/api/case/${e}",
+      "https://${r}/v1/profiles/me/global/cshelp/cases/api/case/${e}/interactions/?offset=0&limit=9999",
+      "https://${e}/v1/applications/global/cshelp/cases/api/portal-settings",
+      "https://${a}/v1/profiles/me/global/cshelp/cases/api/case/${e}/attachment/${t}/preview",
+      "https://${n}/v1/profiles/me/global/cshelp/cases/api/case/${e}/attachments"
+    ],
+    "notes": []
+  },
+  "nintendoMaintenance": {
+    "url": "https://www.nintendo.co.jp/netinfo/ja_JP/index.html",
+    "snippet": "<!DOCTYPE html> <html class=\"no-js is-no-local-nav\"> <head prefix=\"og: http://ogp.me/ns#\"> <meta charset=\"utf-8\"> <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1\"> <meta name=\"keywords\" content=\"サポート,ネットワーク,メンテナンス,障害,Nintendo,任天堂,ニンテンドー\"> <meta name=\"description\" content=\"任天堂の各ネットワークサービスの現在の障",
+    "entryCount": 0
+  }
+}

@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+
+# build output
+apps/web/dist/
+dist/
+
+# runtime data (SQLite database, cache)
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/cache/
+
+# secrets — never commit real values
+.env
+.env.*
+!.env.example
+.secrets/
+*.pem
+*.key
+
+# logs
+logs/
+*.log
+
+# research scratch
+tools/research/raw/*.html
+
+# editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,326 @@
+{
+  "generatedAt": "2026-09-19T03:45:23.862Z",
+  "bundles": [
+    {
+      "service": "Riot Games",
+      "url": "https://status.riotgames.com/",
+      "status": 200,
+      "error": null,
+      "endpoints": [
+        "https://consent.api.osano.com",
+        "https://disclosure.api.osano.com",
+        "https://tattle.api.osano.com",
+        "https://lookups.api.osano.com",
+        "/api/v2/",
+        "/riotbar/latest/riotstatus."
+      ],
+      "keywordHits": {
+        "2.51e5f21c.chunk.js:api/": [
+          "um:\"rum\",sessionReplay:\"replay\"};function ze(t,e,n){var r=function(t,e){var n=\"/api/v2/\".concat(Be[e]),r=t.proxy,i=t.proxyUrl;if(r){var o=Oe(r);return function(t){r"
+        ]
+      }
+    },
+    {
+      "service": "Roblox",
+      "url": "https://status.roblox.com/",
+      "status": 200,
+      "error": null,
+      "endpoints": [
+        "https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&amp",
+        "https://www.google.com/recaptcha/api.js?onload=DynamicCaptchaCallback&render=explicit",
+        "//static.status.io/public/statuspage/css/bootstrap.min.css",
+        "//static.status.io/public/statuspage/plugins/timeliner/screen.min.css",
+        "//static.status.io/public/statuspage/plugins/timeliner/responsive.min.css",
+        "//static.status.io/public/statuspage/fonts/font-awesome/css/font-awesome.min.css",
+        "//static.status.io/public/statuspage/js/ie10-viewport-bug-workaround.min.js",
+        "//static.status.io/public/statuspage/js/jquery.min.js",
+        "//static.status.io/public/statuspage/js/bootstrap.min.js",
+        "//static.status.io/public/statuspage/js/Autolinker.min.js",
+        "//image.status.io/3bfgx408Mgfc.png",
+        "//static.status.io/public/statuspage/plugins/timeliner/timeliner.min.js",
+        "//static.status.io/public/statuspage/js/lodash.js",
+        "//static.status.io/public/statuspage/js/d3.js",
+        "/pages/incident/",
+        "https://www.google.com/recaptcha/api2/"
+      ],
+      "keywordHits": {
+        "html:status.io": [
+          "tle>Roblox Status</title><!-- Bootstrap--><link rel=\"stylesheet\" href=\"//static.status.io/public/statuspage/css/bootstrap.min.css\"><!-- TimeLine--><link rel=\"stylesheet\"",
+          " href=\"//static.status.io/public/statuspage/plugins/timeliner/screen.min.css\"><link rel=\"stylesheet\" href",
+          "=\"//static.status.io/public/statuspage/plugins/timeliner/responsive.min.css\"><!-- Fonts--><link href"
+        ],
+        "html:statuspage": [
+          "</title><!-- Bootstrap--><link rel=\"stylesheet\" href=\"//static.status.io/public/statuspage/css/bootstrap.min.css\"><!-- TimeLine--><link rel=\"stylesheet\" href=\"//static.st",
+          "atus.io/public/statuspage/plugins/timeliner/screen.min.css\"><link rel=\"stylesheet\" href=\"//static.status.",
+          "io/public/statuspage/plugins/timeliner/responsive.min.css\"><!-- Fonts--><link href=\"//static.status."
+        ]
+      }
+    },
+    {
+      "service": "Meta",
+      "url": "https://metastatus.com/",
+      "status": 200,
+      "error": null,
+      "endpoints": [
+        "https://metastatus.com",
+        "https://developers.facebook.com/docs/whatsapp/support-api-status-page"
+      ],
+      "keywordHits": {
+        "index-CGjuBb2H.js:metrics/": [
+          "es not exist.`))})}static async getS3MetricsData(t,i){return this.getResponse(`/metrics/${t}/${i}.json`).catch(s=>(console.warn(s.message),[]))}}var Dt=(e=>(e.OPERATION"
+        ]
+      }
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/en-us/",
+      "status": 200,
+      "error": null,
+      "endpoints": [
+        "https://status.playstation.com/${e.locale}/"
+      ],
+      "keywordHits": {
+        "main.69ef9e72dc6d366df42a.js:servicestatus": [
+          "ceName||e.name||e.serviceId||\"\",e.i18n,i),f=`accordion-panel-${e.serviceId}`,m=`serviceStatus-${e.serviceId}`,g=(e.status?.length??0)>0,p=a.createElement(a.Fragment,null,a.c",
+          "me:\"display\"},g?a.createElement(\"div\",{id:m,role:\"button\",tabIndex:0,className:\"serviceStatus\",\"aria-expanded\":r,\"aria-controls\":f,\"aria-label\":`Expand/Collapse details for ",
+          "!==e.key||(e.preventDefault(),n(t))}},p):a.createElement(\"div\",{id:m,className:\"serviceStatus\"},p))}))},J=e=>{let{psHelpLinkText:t,closeButtonLabel:s,helpIconLabel:n,psHelpS"
+        ],
+        "main.69ef9e72dc6d366df42a.js:status_base_url": [
+          "le_loading_image&&e({type:\"STATUS_LOADING\",payload:{showOverlay:!0}});const F=i.status_base_url,V=d?`${F}statuses/region/${i.region}error`:`${F}statuses/region/${i.region}${i.",
+          "status_base_url_suffix}`,z=i.isLATAM?\"es-419\":A||f||w();C(z,i);const P=async()=>{try{const t=aw"
+        ]
+      }
+    },
+    {
+      "service": "Xbox Network",
+      "url": "https://support.xbox.com/en-US/xbox-live-status",
+      "status": 200,
+      "error": null,
+      "endpoints": [
+        "https://support.xbox.com/config/search.json",
+        "https://modalityservice-services-prod-chgegretaxhkfta2.b02.azurefd.net/modality/api/v1/scmodality/getlist/",
+        "https://enforcement.xboxsafety.microsoft.com/api/v1/appeal",
+        "https://enforcement.xboxsafety.microsoft.com/api/v1/enforcement",
+        "https://testing-library.com/docs/dom-testing-library/api-queries",
+        "https://notifications.support.xboxlive.com/incidents",
+        "https://xnotify.xboxlive.com/servicestatusv6",
+        "https://xnotify.xboxlive.com/servicestatusv5",
+        "https://supportchannels.services.microsoft.com/api/chatcontext/set",
+        "https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API",
+        "/xbox-live-status",
+        "/Help/Flows/SubscriptionStatus",
+        "/Help/XnotifyServiceStatus/SmsCountryCodes",
+        "/${H}/xbox-live-status"
+      ],
+      "keywordHits": {
+        "index-D9Yl0qQ7.js:xnotify": [
+          "sMessageProviderErrorCode=r.EnumTypeGuardFactory.create(s);var l;(function(I){I.Xnotify=\"Xnotify\",I.Compass=\"Compass\"})(l||(e.MessageProviderType=l={})),e.isMessagePro",
+          "romise.resolve())}),_=()=>{var S;const C=(0,n.useSelector)(U=>{var H;return(H=U.xnotifyV6.serviceStatus)===null||H===void 0?void 0:H.categories}),T=(0,n.useSelector)(U",
+          "=>U.xnotifyV6.state),E=(0,n.useSelector)(U=>U.localization.cultureInfo.country),R=(0,n.useS"
+        ],
+        "index-D9Yl0qQ7.js:api/": [
+          "https://modalityservice-services-prod-chgegretaxhkfta2.b02.azurefd.net/modality/api/v1/scmodality/getlist/\",s=\"ModalityProvider\",l=()=>{const c=(0,t.useSelector)(v=",
+          ",t=yr,r=TP(),n=\"AppealProvider\",o=\"https://enforcement.xboxsafety.microsoft.com/api/v1/appeal\",i=()=>{const a=(0,t.useSelector)(v=>v.enforcement.appeal),s=(0,t.useS",
+          ",n=\"EnforcementHistoryProvider\",o=\"https://enforcement.xboxsafety.microsoft.com/api/v1/enforcement\",i=(s,l,c,u)=>{s(l).then(f=>{if(c(r.EnforcementHistoryActions.rec"
+        ],
+        "index-D9Yl0qQ7.js:servicestatus": [
+          "olve())}),_=()=>{var S;const C=(0,n.useSelector)(U=>{var H;return(H=U.xnotifyV6.serviceStatus)===null||H===void 0?void 0:H.categories}),T=(0,n.useSelector)(U=>U.xnotifyV6.st",
+          "ntImpactLevel=Sr.IncidentImpactLevel=Sr.isIncidentStatus=Sr.IncidentStatus=Sr.isServiceStatusId=Sr.ServiceStatusId=Sr.isServiceStatusDeviceId=Sr.ServiceStatusDeviceId=Sr.isS",
+          "erviceStatusCategoryName=Sr.ServiceStatusCategoryName=Sr.isServiceStatusCategoryId=Sr.ServiceStatusCategoryId=Sr.initialXnotifyState=void 0;const e=We()"
+        ],
+        "index-D9Yl0qQ7.js:service-status": [
+          "e\":\"Url\",Url:\"/\"}},{\"#Name\":\"Xbox status\",Id:\"\",Text:\"XBOX status\",ElementName:\"service-status\",RightAligned:\"false\",ShowCTA:\"true\",MultiColumn:\"false\",Destination:{\"#Type\":\""
+        ]
+      }
+    },
+    {
+      "service": "Nintendo Network",
+      "url": "https://support.nintendo.com/status",
+      "status": 200,
+      "error": null,
+      "endpoints": [
+        "https://www.rnengage.com/api/e/ca82849/e.js",
+        "//www.rnengage.com/api/1/javascript/acs.js"
+      ],
+      "keywordHits": {
+        "html:api/": [
+          "ument.head.appendChild(e)}for(;r.length;)e(r.pop())}([\"https://www.rnengage.com/api/e/ca82849/e.js\",\"//www.rnengage.com/api/1/javascript/acs.js\"]);"
+        ],
+        "googleAnalytics.js:api/": [
+          "ument.head.appendChild(e)}for(;r.length;)e(r.pop())}([\"https://www.rnengage.com/api/e/ca82849/e.js\",\"//www.rnengage.com/api/1/javascript/acs.js\"]);"
+        ],
+        "tailwind_foundation.min.js:api/": [
+          "ument.head.appendChild(e)}for(;r.length;)e(r.pop())}([\"https://www.rnengage.com/api/e/ca82849/e.js\",\"//www.rnengage.com/api/1/javascript/acs.js\"]);"
+        ],
+        "RightNow.js:api/": [
+          "ument.head.appendChild(e)}for(;r.length;)e(r.pop())}([\"https://www.rnengage.com/api/e/ca82849/e.js\",\"//www.rnengage.com/api/1/javascript/acs.js\"]);"
+        ],
+        "region.313738383237383932372e332e31312e372e726567696f6e2e6a73.js:api/": [
+          "ument.head.appendChild(e)}for(;r.length;)e(r.pop())}([\"https://www.rnengage.com/api/e/ca82849/e.js\",\"//www.rnengage.com/api/1/javascript/acs.js\"]);"
+        ],
+        "autoload.js:api/": [
+          "ument.head.appendChild(e)}for(;r.length;)e(r.pop())}([\"https://www.rnengage.com/api/e/ca82849/e.js\",\"//www.rnengage.com/api/1/javascript/acs.js\"]);"
+        ]
+      }
+    },
+    {
+      "service": "EA",
+      "url": "https://www.ea.com/service-updates",
+      "status": 200,
+      "error": null,
+      "endpoints": [
+        "https://contentful-proxy.juno.ea.com/graphql",
+        "https://service-aggregation-layer.juno.ea.com/graphql",
+        "https://media.contentapi.ea.com/content/dam/eacom/common/ea-impact-report-2025.pdf",
+        "//w.soundcloud.com/player/api.js"
+      ],
+      "keywordHits": {
+        "html:/graphql": [
+          " window.nds.contentfulUrl = 'https://contentful-proxy.juno.ea.com/graphql';",
+          " window.nds.salUrl = 'https://service-aggregation-layer.juno.ea.com/graphql';"
+        ],
+        "html:graphql": [
+          " window.nds.contentfulUrl = 'https://contentful-proxy.juno.ea.com/graphql';",
+          " window.nds.salUrl = 'https://service-aggregation-layer.juno.ea.com/graphql';"
+        ]
+      }
+    },
+    {
+      "service": "Battle.net",
+      "url": "https://account.battle.net/status",
+      "status": 200,
+      "error": null,
+      "endpoints": [
+        "/api/error-report",
+        "https://navbar.blizzard.com/base-api/v1",
+        "https://navbar.blizzard.com/base-api/v1/${r.toLocaleLowerCase",
+        "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+        "/api/"
+      ],
+      "keywordHits": {
+        "html:api/": [
+          " var o = \"/api/error-report\";"
+        ],
+        "nav-battlenet.js:api/": [
+          " window&&(window.blz=window.blz||{});const qn=\"https://navbar.blizzard.com/base-api/v1\",Vn=(\"undefined\"!=typeof document&&document.documentElement.lang||\"undefined\""
+        ],
+        "footer.js:api/": [
+          "eMapUrl:a,cookiesUrl:l,lang:r,entry:s}=this,c=`https://navbar.blizzard.com/base-api/v1/${r.toLocaleLowerCase()}/navfooter?`+(d={titleId:t,subtitleId:e,userCountry:o"
+        ],
+        "app.8d90857a1e58cee713ce.js:api/": [
+          " const url = `${this.apiHost}/api/v1/flow`;",
+          " this.apiPath = '/api/';",
+          " options The Fetch API init object https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"
+        ]
+      }
+    }
+  ],
+  "probes": [
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/us.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/all.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/statuses.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/index.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "sample": "Not found "
+    },
+    {
+      "service": "PlayStation Network",
+      "url": "https://status.playstation.com/data/sa.json",
+      "status": 404,
+      "type": "application/json; charset=utf8",
+      "bytes": 10,
+      "sample": "Not found "
+    },
+    {
+      "service": "Roblox",
+      "url": "https://status.roblox.com/10/status",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "bytes": 427,
+      "sample": "<html><head><title>Error</title></head><body><style>body { background-color: #272822; font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; font-size: 55px; font-style: normal; font-variant: normal; color:"
+    },
+    {
+      "service": "Roblox",
+      "url": "https://status.roblox.com/pages/incident/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 434,
+      "sample": "<html><head><title>Error</title></head><body><style>body { background-color: #272822; font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; font-size: 55px; font-style: normal; font-variant: normal; color:"
+    },
+    {
+      "service": "Roblox",
+      "url": "https://status.roblox.com/api/1.0/status",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "bytes": 427,
+      "sample": "<html><head><title>Error</title></head><body><style>body { background-color: #272822; font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; font-size: 55px; font-style: normal; font-variant: normal; color:"
+    },
+    {
+      "service": "TikTok",
+      "url": "https://ads.tiktok.com/status",
+      "status": 0,
+      "type": "",
+      "bytes": 0,
+      "error": "ENOENT",
+      "sample": ""
+    },
+    {
+      "service": "TikTok",
+      "url": "https://status.tiktok.com/en/",
+      "status": 0,
+      "type": "",
+      "bytes": 0,
+      "error": "ENOTFOUND",
+      "sample": ""
+    },
+    {
+      "service": "Battle.net",
+      "url": "https://account.battle.net/status/api",
+      "status": 200,
+      "type": "text/html;charset=UTF-8",
+      "bytes": 4776,
+      "sample": "<!doctype html><html><head><script>var AccountSettingsProperties = {cookieConsentEnabled: true,arkosePublicKey: \"9C3260E3-AD4C-6719-E0A9-56D21BFB0BCD\",arkoseLabsEnabled: true,region: \"EU\"};</script><script>var BlzCookieC"
+    },
+    {
+      "service": "Minecraft",
+      "url": "https://api.minecraftservices.com/status",
+      "status": 404,
+      "type": "application/json",
+      "bytes": 24,
+      "sample": "{ \"path\" : \"/status\" }"
+    },
+    {
+      "service": "Steam",
+      "url": "https://api.steampowered.com/ISteamWebAPIUtil/GetServerInfo/v1/?format=json",
+      "status": 200,
+      "type": "application/json; charset=UTF-8",
+      "bytes": 71,
+      "sample": "{\"servertime\":1789789609,\"servertimestring\":\"Fri Sep 18 20:46:49 2026\"}"
+    }
+  ]
+}
