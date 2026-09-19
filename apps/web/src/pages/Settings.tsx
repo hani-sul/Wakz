@@ -111,14 +111,12 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
 
       <section className="panel">
         <h2>{i18n.t('settings.geoTitle')}</h2>
-        {inside ? (
+        <p className="geo-notice">{i18n.t('settings.geoNotice')}</p>
+        {inside && (
           <p className="geo-state">
             <span className="geo-badge inside">{i18n.t('settings.geoInside')}</span>
           </p>
-        ) : (
-          <p className="note">{i18n.t('settings.geoUnavailable')}</p>
         )}
-        <p className="note">{i18n.t('local.note')}</p>
       </section>
 
       <section className="panel">

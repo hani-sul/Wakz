@@ -89,7 +89,7 @@ export async function collectService(db: DatabaseSync, service: ServiceDefinitio
     saveChecks(db, service.slug, checks);
 
     const previousConnectivity = (getConnectivityMap(db).get(service.slug)?.status ?? null) as UnifiedStatus | null;
-    const assessment = assessHealth(checks, config.thresholds, previousConnectivity ?? 'UNKNOWN');
+    const assessment = assessHealth(checks, config.thresholds, previousConnectivity ?? 'UNKNOWN', { officialStatus });
     connectivityStatus = assessment.status;
     latency = latencySummary(checks);
     saveConnectivity(

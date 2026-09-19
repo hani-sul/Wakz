@@ -24,7 +24,12 @@ export type HealthAssessment = {
  *  - `downAfterFailures` failures  -> MAJOR_OUTAGE
  *  - high latency on healthy probes-> DEGRADED
  */
-export function assessHealth(checks: CheckResult[], thresholds: HealthThresholds, previousStatus: UnifiedStatus = 'UNKNOWN'): HealthAssessment {
+export function assessHealth(
+  checks: CheckResult[],
+  thresholds: HealthThresholds,
+  previousStatus: UnifiedStatus = 'UNKNOWN',
+  context: { officialStatus?: UnifiedStatus | null } = {},
+): HealthAssessment {
   const reasons: string[] = [];
   const relevant = checks.filter((check) => check.kind !== 'icmp' || check.error !== 'icmp-unavailable');
   if (relevant.length === 0) {
@@ -53,6 +58,18 @@ export function assessHealth(checks: CheckResult[], thresholds: HealthThresholds
   const primaryFailures = primary.length - primarySuccess;
   const latencySource = primary.filter((check) => check.ok && check.latencyMs !== null);
   const worstLatency = latencySource.reduce((max, check) => Math.max(max, check.latencyMs ?? 0), 0);
+
+  /**
+   * When the vendor's official source reports normal operation and every one of our checks
+   * answered, our own verdict stays "operational" as well: latency alone (which depends on the
+   * user's network and region) must not contradict a healthy official status.
+   * Degraded, maintenance and unknown official states keep the measured behaviour.
+   */
+  const officialHealthy = context.officialStatus === 'OPERATIONAL';
+  if (officialHealthy && primary.length > 0 && primaryFailures === 0) {
+    reasons.push('official status is operational and all checks answered');
+    return { status: 'OPERATIONAL', consecutiveFailures, successRate, checksRun: relevant.length, reasons };
+  }
 
   if (primary.length > 0 && primaryFailures === primary.length && primaryFailures >= thresholds.downAfterFailures) {
     reasons.push(`${primaryFailures} consecutive failures across HTTP/HTTPS/TCP/DNS`);

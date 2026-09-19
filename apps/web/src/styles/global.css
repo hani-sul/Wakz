@@ -85,16 +85,22 @@ code {
   top: 0;
   z-index: 20;
   display: flex;
-  align-items: center;
-  gap: 20px;
-  /* Keep the brand and the navigation on a single line: the refresh button stays next to the
-     language switch and settings. */
-  flex-wrap: nowrap;
+  /* The brand sits on its own row and the toolbar (measurements, settings, language, refresh)
+     is a separate row underneath it. */
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
   /* Keeps the brand mark clear of the Android status bar / notch. */
   padding: calc(14px + env(safe-area-inset-top, 0px)) 28px 14px;
   background: rgba(7, 8, 13, 0.82);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
+}
+
+.topbar-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .brand {
@@ -217,12 +223,13 @@ code {
   color: var(--text-dim);
   font-size: 14px;
   align-items: center;
-  margin-inline-start: auto;
+  margin-inline-start: 0;
   flex-wrap: nowrap;
   white-space: nowrap;
   overflow-x: auto;
   scrollbar-width: none;
   max-width: 100%;
+  justify-content: flex-end;
 }
 
 .topnav::-webkit-scrollbar {
@@ -915,6 +922,16 @@ main {
   flex-wrap: wrap;
 }
 
+.geo-notice {
+  margin: 0;
+  padding: 11px 13px;
+  border-radius: var(--radius-sm);
+  background: rgba(124, 140, 255, 0.1);
+  border: 1px solid rgba(124, 140, 255, 0.3);
+  color: #c9d0ff;
+  font-size: 13px;
+}
+
 .geo-country {
   color: var(--text-faint);
   font-size: 12.5px;
@@ -1551,13 +1568,12 @@ button.mini {
 
 @media (max-width: 860px) {
   .topbar {
-    flex-wrap: nowrap;
     gap: 10px;
     padding: calc(12px + env(safe-area-inset-top, 0px)) 16px 12px;
   }
 
   .topnav {
-    margin-inline-start: auto;
+    margin-inline-start: 0;
     flex-wrap: nowrap;
     gap: 8px;
     justify-content: flex-end;

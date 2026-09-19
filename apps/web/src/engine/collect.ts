@@ -130,7 +130,7 @@ export async function collectServiceLocally(service: ServiceDefinition, timeoutM
   try {
     const checks = await latencyChecks(service, timeoutMs);
     if (checks.length > 0) {
-      const assessment = assessHealth(checks, LOCAL_THRESHOLDS, 'UNKNOWN');
+      const assessment = assessHealth(checks, LOCAL_THRESHOLDS, 'UNKNOWN', { officialStatus: payload.officialStatus as UnifiedStatus });
       payload.connectivityStatus = assessment.status;
       const summary = latencySummary(checks);
       payload.latency = { ...payload.latency, http: summary.http, https: summary.https };

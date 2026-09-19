@@ -50,6 +50,35 @@ test('latency above the threshold degrades the status without any failure', () =
   assert.ok(assessment.reasons.some((reason) => reason.includes('latency')));
 });
 
+test('a healthy official status keeps our check operational even with high latency', () => {
+  const assessment = assessHealth(
+    [check('https', true, 2600), check('dns', true, 40)],
+    thresholds,
+    'UNKNOWN',
+    { officialStatus: 'OPERATIONAL' },
+  );
+  assert.equal(assessment.status, 'OPERATIONAL');
+  assert.ok(assessment.reasons.some((reason) => reason.includes('official status is operational')));
+});
+
+test('the official-status rule does not apply to degraded or unknown sources', () => {
+  const degraded = assessHealth(
+    [check('https', true, 2600), check('dns', true, 40)],
+    thresholds,
+    'UNKNOWN',
+    { officialStatus: 'DEGRADED' },
+  );
+  assert.equal(degraded.status, 'DEGRADED');
+
+  const unknown = assessHealth(
+    [check('https', true, 2600), check('dns', true, 40)],
+    thresholds,
+    'UNKNOWN',
+    { officialStatus: 'UNKNOWN' },
+  );
+  assert.equal(unknown.status, 'DEGRADED');
+});
+
 test('unknown stays unknown when nothing was checked', () => {
   const assessment = assessHealth([], thresholds, 'UNKNOWN');
   assert.equal(assessment.status, 'UNKNOWN');

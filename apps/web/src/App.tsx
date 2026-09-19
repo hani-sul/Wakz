@@ -191,13 +191,15 @@ export function App(): React.JSX.Element {
   return (
     <div className="shell">
       <header className="topbar">
-        <a className="brand" href="#/">
-          <Logo size={34} />
-          <span className="brand-text">
-            <strong>{i18n.t('app.brand')}</strong>
-            <small>{i18n.t('app.tagline')}</small>
-          </span>
-        </a>
+        <div className="topbar-brand-row">
+          <a className="brand" href="#/">
+            <Logo size={34} />
+            <span className="brand-text">
+              <strong>{i18n.t('app.brand')}</strong>
+              <small>{i18n.t('app.tagline')}</small>
+            </span>
+          </a>
+        </div>
 
         <nav className="topnav">
           <a className={`nav-link${route.name === 'dns' ? ' active' : ''}`} href="#/dns">{i18n.t('nav.dns')}</a>
