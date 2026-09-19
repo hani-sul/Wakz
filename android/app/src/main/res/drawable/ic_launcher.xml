@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Wakz launcher mark: the same gradient tile and "W" monogram as the web interface. -->
+<!--
+  Wakz launcher mark.
+  Geometry is the in-app SVG (48x48) multiplied by 2.25 so the launcher icon, the header mark and
+  the notification icon are visually identical.
+-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <path android:pathData="M5.6,5.6h96.8v96.8h-96.8z" android:fillColor="#00000000" />
-    <path android:pathData="M30,14 L78,14 A16,16 0 0 1 94,30 L94,78 A16,16 0 0 1 78,94 L30,94 A16,16 0 0 1 14,78 L14,30 A16,16 0 0 1 30,14 Z">
+    <path android:pathData="M36,5.625 L72,5.625 A30.375,30.375 0 0 1 102.375,36 L102.375,72 A30.375,30.375 0 0 1 72,102.375 L36,102.375 A30.375,30.375 0 0 1 5.625,72 L5.625,36 A30.375,30.375 0 0 1 36,5.625 Z">
         <aapt:attr name="android:fillColor">
             <gradient
-                android:startX="14"
-                android:startY="14"
-                android:endX="94"
-                android:endY="94"
+                android:startX="5.625"
+                android:startY="5.625"
+                android:endX="102.375"
+                android:endY="102.375"
                 android:type="linear">
                 <item android:offset="0" android:color="#7C8CFF" />
                 <item android:offset="0.48" android:color="#4AA8FF" />
@@ -21,14 +24,26 @@
             </gradient>
         </aapt:attr>
     </path>
+    <path android:pathData="M36,5.625 L72,5.625 A30.375,30.375 0 0 1 102.375,36 L102.375,72 A30.375,30.375 0 0 1 72,102.375 L36,102.375 A30.375,30.375 0 0 1 5.625,72 L5.625,36 A30.375,30.375 0 0 1 36,5.625 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="27"
+                android:centerY="19"
+                android:gradientRadius="92">
+                <item android:offset="0" android:color="#59FFFFFF" />
+                <item android:offset="1" android:color="#00FFFFFF" />
+            </gradient>
+        </aapt:attr>
+    </path>
     <path
-        android:pathData="M29,37 L44,74 L54,48 L64,74 L79,37"
+        android:pathData="M29.25,37.125 L43.875,74.25 L54,48.375 L64.125,74.25 L78.75,37.125"
         android:strokeColor="#080A12"
-        android:strokeWidth="8"
+        android:strokeWidth="8.1"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
         android:fillColor="#00000000" />
     <path
-        android:pathData="M54,48m-3.8,0a3.8,3.8 0,1 1,7.6 0a3.8,3.8 0,1 1,-7.6 0"
+        android:pathData="M54,48.375m-3.825,0a3.825,3.825 0,1 1,7.65 0a3.825,3.825 0,1 1,-7.65 0"
         android:fillColor="#2FD79B" />
 </vector>

@@ -6,14 +6,18 @@ import { clockTime } from './lib/format.ts';
 import { useI18n } from './lib/locale.tsx';
 import { usePins } from './lib/pins.ts';
 import { Dashboard } from './pages/Dashboard.tsx';
+import { DnsTool } from './pages/DnsTool.tsx';
+import { PingTool } from './pages/PingTool.tsx';
 import { ServiceDetail } from './pages/ServiceDetail.tsx';
 import { Settings } from './pages/Settings.tsx';
 
-export type Tab = { kind: 'all' } | { kind: 'category'; slug: string };
+export type Tab = { kind: 'all' } | { kind: 'favorites' } | { kind: 'category'; slug: string };
 
 type Route =
   | { name: 'home'; tab: Tab }
   | { name: 'service'; slug: string }
+  | { name: 'dns' }
+  | { name: 'ping' }
   | { name: 'settings' };
 
 function parseRoute(hash: string): Route {
@@ -22,6 +26,9 @@ function parseRoute(hash: string): Route {
   if (segment === 'service' && value) return { name: 'service', slug: value };
   if (segment === 'settings') return { name: 'settings' };
   if (segment === 'admin') return { name: 'settings' };
+  if (segment === 'dns') return { name: 'dns' };
+  if (segment === 'ping') return { name: 'ping' };
+  if (segment === 'favorites') return { name: 'home', tab: { kind: 'favorites' } };
   if (segment === 'category' && value) return { name: 'home', tab: { kind: 'category', slug: value } };
   return { name: 'home', tab: { kind: 'all' } };
 }
@@ -35,6 +42,9 @@ export function App(): React.JSX.Element {
   const [cooldown, setCooldown] = useState(0);
   const [notice, setNotice] = useState<string | null>(null);
   const [refreshToken, setRefreshToken] = useState(0);
+  // Search text and status filter live here so they survive opening a service and coming back.
+  const [query, setQuery] = useState('');
+  const [statusFilter, setStatusFilter] = useState<'all' | string>('all');
   const scrollMemory = useRef(0);
 
   useEffect(() => {
@@ -130,21 +140,34 @@ export function App(): React.JSX.Element {
             }}
           />
         );
+      case 'dns':
+        return <DnsTool />;
+      case 'ping':
+        return <PingTool />;
       default:
         return (
           <Dashboard
             refreshToken={refreshToken}
             tab={route.tab}
             pinnedSlugs={pins}
+            query={query}
+            onQueryChange={setQuery}
+            statusFilter={statusFilter as never}
+            onStatusFilterChange={setStatusFilter as never}
             onOpenService={(slug) => navigate(`#/service/${slug}`)}
             onSelectTab={(tab) => {
               if (tab.kind === 'all') navigate('#/');
+              else if (tab.kind === 'favorites') navigate('#/favorites');
               else navigate(`#/category/${tab.slug}`);
+            }}
+            onRefreshFavorites={async () => {
+              await data.refresh({ force: true, slugs: pins, reason: 'manual' });
+              setRefreshToken((value) => value + 1);
             }}
           />
         );
     }
-  }, [route, refreshToken, pins]);
+  }, [route, refreshToken, pins, query, statusFilter]);
 
   return (
     <div className="shell">
@@ -158,6 +181,8 @@ export function App(): React.JSX.Element {
         </a>
 
         <nav className="topnav">
+          <a className={`nav-link${route.name === 'dns' ? ' active' : ''}`} href="#/dns">{i18n.t('nav.dns')}</a>
+          <a className={`nav-link${route.name === 'ping' ? ' active' : ''}`} href="#/ping">{i18n.t('nav.ping')}</a>
           <button
             type="button"
             className="refresh-button"

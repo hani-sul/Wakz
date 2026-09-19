@@ -10,21 +10,30 @@ export function Dashboard({
   tab,
   refreshToken,
   pinnedSlugs,
+  query,
+  onQueryChange,
+  statusFilter,
+  onStatusFilterChange,
   onOpenService,
   onSelectTab,
+  onRefreshFavorites,
 }: {
   tab: Tab;
   refreshToken: number;
   pinnedSlugs: string[];
+  query: string;
+  onQueryChange: (value: string) => void;
+  statusFilter: 'all' | UnifiedStatus;
+  onStatusFilterChange: (value: 'all' | UnifiedStatus) => void;
   onOpenService: (slug: string) => void;
   onSelectTab: (tab: Tab) => void;
+  onRefreshFavorites: () => Promise<void>;
 }): React.JSX.Element {
   const i18n = useI18n();
   const [categories, setCategories] = useState<CategorySnapshot[]>([]);
-  const [filter, setFilter] = useState<'all' | UnifiedStatus>('all');
-  const [query, setQuery] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [refreshingFavorites, setRefreshingFavorites] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -53,11 +62,13 @@ export function Dashboard({
     const needle = query.trim().toLowerCase();
     const base = (tab.kind === 'category'
       ? allServices.filter((service) => service.category === tab.slug)
-      : allServices)
+      : tab.kind === 'favorites'
+        ? allServices.filter((service) => pinnedSlugs.includes(service.slug))
+        : allServices)
       // The "coming soon" tile belongs to the local services category only.
       .filter((service) => isLocalTab || !service.comingSoon);
     const filtered = base.filter((service) => {
-      if (filter !== 'all' && service.status !== filter && service.officialStatus !== filter && service.connectivityStatus !== filter) {
+      if (statusFilter !== 'all' && service.status !== statusFilter && service.officialStatus !== statusFilter && service.connectivityStatus !== statusFilter) {
         return false;
       }
       if (!needle) return true;
@@ -74,11 +85,21 @@ export function Dashboard({
       if (leftPinned !== rightPinned) return leftPinned - rightPinned;
       return 0;
     });
-  }, [allServices, filter, query, tab, pinnedSlugs, isLocalTab]);
+  }, [allServices, statusFilter, query, tab, pinnedSlugs, isLocalTab]);
 
   return (
     <div className="page">
       <nav className="tabs" role="tablist" aria-label={i18n.t('nav.tabs')}>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={tab.kind === 'favorites'}
+          className={tab.kind === 'favorites' ? 'active' : ''}
+          onClick={() => onSelectTab({ kind: 'favorites' })}
+        >
+          {i18n.t('tabs.favorites')}
+          <span className="tab-count">{pinnedSlugs.length}</span>
+        </button>
         <button
           type="button"
           role="tab"
@@ -109,11 +130,35 @@ export function Dashboard({
           type="search"
           placeholder={i18n.t('search.servicesPlaceholder')}
           value={query}
-          onChange={(event) => setQuery(event.target.value)}
+          enterKeyHint="search"
+          onChange={(event) => onQueryChange(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter') {
+              // Dismiss the on-screen keyboard on mobile and keep the filtered result.
+              event.currentTarget.blur();
+            }
+          }}
           aria-label={i18n.t('search.servicesPlaceholder')}
         />
-        <FilterBar active={filter} onChange={setFilter} />
+        <FilterBar active={statusFilter} onChange={onStatusFilterChange} />
       </section>
+
+      {tab.kind === 'favorites' && (
+        <div className="controls">
+          <button
+            type="button"
+            className="primary-button"
+            disabled={refreshingFavorites || pinnedSlugs.length === 0}
+            onClick={async () => {
+              setRefreshingFavorites(true);
+              await onRefreshFavorites();
+              setRefreshingFavorites(false);
+            }}
+          >
+            {refreshingFavorites ? i18n.t('tools.measuring') : i18n.t('favorites.refresh')}
+          </button>
+        </div>
+      )}
 
       {isLocalTab && <p className="note inline-note">{i18n.t('local.note')}</p>}
       {error && <p className="error-banner">{i18n.t('dashboard.errorLoading', { error })}</p>}
@@ -129,7 +174,7 @@ export function Dashboard({
       </section>
 
       {!loading && visible.length === 0 && !error && (
-        <p className="empty-state">{i18n.t('dashboard.noMatch')}</p>
+        <p className="empty-state">{tab.kind === 'favorites' ? i18n.t('favorites.empty') : i18n.t('dashboard.noMatch')}</p>
       )}
 
       <section className="legend">
