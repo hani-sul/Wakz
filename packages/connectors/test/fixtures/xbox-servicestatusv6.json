@@ -1,0 +1,6044 @@
+{
+  "Status": {
+    "Overall": {
+      "State": "None",
+      "Id": 1,
+      "LastUpdated": "2026-09-19T04:08:01.2710164+00:00"
+    },
+    "SelectedScenarios": {
+      "State": "None",
+      "Id": 1,
+      "LastUpdated": "2026-09-19T04:08:01.2710164+00:00"
+    }
+  },
+  "CoreServices": [
+    {
+      "Id": 23,
+      "Name": "Account & profile",
+      "Status": {
+        "Name": "None",
+        "Id": 1
+      },
+      "Scenarios": [
+        {
+          "Id": 35048,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Sign-in",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to sign-in to your XBOX profile, may be disconnected while signed in, or have other related problems. Features that require sign-in like most games, apps and social activity won't be available."
+        },
+        {
+          "Id": 35053,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Signing in to multiple devices",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to sign in to XBOX on multiple devices (including PCs and mobile apps) at the same time."
+        },
+        {
+          "Id": 35036,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Creating profiles",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble creating a new XBOX profile right now."
+        },
+        {
+          "Id": 35045,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Updating profiles",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may experience problems updating your Microsoft account or XBOX profile, such as adding a new gamerpic or changing your account details."
+        },
+        {
+          "Id": 35046,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Account migration",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "After signing in to a new device, you may experience a delay in accessing some parts of your XBOX profile such as Friends, Achievements or your library of games and apps."
+        },
+        {
+          "Id": 35043,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Account settings",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to find or update some settings."
+        },
+        {
+          "Id": 35038,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Privacy settings",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might not be able to change privacy settings such as online presence or content sharing."
+        },
+        {
+          "Id": 35040,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Gamerpics",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble trying to create or update your gamerpic."
+        },
+        {
+          "Id": 35044,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Gamertag management",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to access the option to change your gamertag, or changes to your gamertag might not save."
+        },
+        {
+          "Id": 35047,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Home XBOX",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might have trouble changing your Home XBOX settings."
+        },
+        {
+          "Id": 35042,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Avatars",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might have problems changing or updating your avatar, or not be able to save changes you've made."
+        },
+        {
+          "Id": 35037,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Microsoft Rewards",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "Redeeming Microsoft Rewards may not be available."
+        }
+      ]
+    },
+    {
+      "Id": 13,
+      "Name": "Online safety & family",
+      "Status": {
+        "Name": "None",
+        "Id": 1
+      },
+      "Scenarios": [
+        {
+          "Id": 35061,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Changing family settings",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may experience problems updating family settings, such as content restrictions."
+        },
+        {
+          "Id": 35062,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Changing family members",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to change the members of your Microsoft family, such as adding or updating child accounts."
+        }
+      ]
+    },
+    {
+      "Id": 22,
+      "Name": "Store & subscriptions",
+      "Status": {
+        "Name": "None",
+        "Id": 1
+      },
+      "Scenarios": [
+        {
+          "Id": 35211,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Buying games",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to buy games to own right now."
+        },
+        {
+          "Id": 35212,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Buying Game Pass games",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to buy Game Pass games right now."
+        },
+        {
+          "Id": 35134,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Buying backward compatible games",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to buy backward compatible games right now."
+        },
+        {
+          "Id": 35218,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Buying subscriptions",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to buy subscriptions right now."
+        },
+        {
+          "Id": 35243,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Buying XBOX consoles and accessories",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to buy accessories in the Store right now."
+        },
+        {
+          "Id": 35233,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Buying with a credit card",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems using a credit card to make purchases right now."
+        },
+        {
+          "Id": 35234,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Using gift cards",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems using a gift card to make purchases right now."
+        },
+        {
+          "Id": 35235,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Buying with account balance",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems using your existing account balance to make purchases."
+        },
+        {
+          "Id": 35224,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Redeeming codes",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to redeem prepaid codes right now."
+        },
+        {
+          "Id": 35231,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Making in-game purchases",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to make in-game purchases right now."
+        },
+        {
+          "Id": 35232,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Buying DLC or add-ons",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to buy DLC or add-ons right now."
+        },
+        {
+          "Id": 35238,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Gifting games or apps",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems gifting a game or app to someone right now."
+        },
+        {
+          "Id": 37889,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Wish list",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 20,
+              "Name": "Smart TV"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems accessing or updating your wish list."
+        },
+        {
+          "Id": 35236,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Pre-ordering content",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to pre-order content or view pre-ordered items in your account right now."
+        },
+        {
+          "Id": 35227,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Managing subscriptions",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems managing or canceling subscriptions right now."
+        },
+        {
+          "Id": 35220,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Buying XBOX Game Pass",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to buy an XBOX Game Pass subscription right now."
+        },
+        {
+          "Id": 35221,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Buying XBOX Game Pass Core",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to buy an XBOX Game Pass Core subscription right now."
+        },
+        {
+          "Id": 35223,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Using trial subscriptions",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to use your trial subscription right now."
+        },
+        {
+          "Id": 35216,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Download & install",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may get an error when trying to download or install a game."
+        },
+        {
+          "Id": 35217,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Viewing games you want to install",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might not see your owned games in your Ready to install list."
+        },
+        {
+          "Id": 35206,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Managing payments",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to add, change, or remove payment options right now."
+        },
+        {
+          "Id": 35195,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Completing Game Pass quests",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems completing Game Pass quests right now."
+        },
+        {
+          "Id": 35197,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Redeeming XBOX Game Pass perks",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems redeeming your Game Pass perks right now."
+        },
+        {
+          "Id": 35199,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Viewing Game Pass games",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might not see all the games available in Game Pass right now, or certain details might be missing."
+        },
+        {
+          "Id": 35200,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Launching and managing EA Play games",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might have trouble installing and playing EA Play games through XBOX. While we work to fix this, you may be able to play these games via other game launchers instead."
+        },
+        {
+          "Id": 38441,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Launching and managing EA SPORTS MVP+ Membership",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 20,
+              "Name": "Smart TV"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might have trouble installing and playing EA SPORTS MVP+ Membership games through XBOX."
+        },
+        {
+          "Id": 37911,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Launching and managing Riot games",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 20,
+              "Name": "Smart TV"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might have trouble installing and playing Riot games through XBOX. While we work to fix this, you may be able to play these games via other game launchers instead."
+        },
+        {
+          "Id": 37912,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Launching Ubisoft games and managing with Ubisoft+ or Game Pass",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 20,
+              "Name": "Smart TV"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might have trouble installing and playing Ubisoft games through XBOX. While we work to fix this, you may be able to play these games via other game launchers instead."
+        },
+        {
+          "Id": 35202,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Game Pass recommendations",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may notice problems with recommendations in Game Pass."
+        },
+        {
+          "Id": 35203,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Game Pass Spotlight",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may notice problems with Game Pass Spotlight."
+        },
+        {
+          "Id": 35239,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Viewing games",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might not see a game you're looking for in the Store right now."
+        },
+        {
+          "Id": 35240,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Incorrect pricing",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might see pricing or sales that appear incorrect in the Store."
+        }
+      ]
+    },
+    {
+      "Id": 24,
+      "Name": "Friends & social activity",
+      "Status": {
+        "Name": "None",
+        "Id": 1
+      },
+      "Scenarios": [
+        {
+          "Id": 35090,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Friend management",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble adding or removing friends, or changing details about them."
+        },
+        {
+          "Id": 35080,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Friends list",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "Your friends list may be unavailable, or the online status of friends may be not display correctly."
+        },
+        {
+          "Id": 35085,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Friend suggestions",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "Friend suggestions may be not be displaying or may be displaying incorrectly."
+        },
+        {
+          "Id": 35084,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Friend profiles",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "Friend profiles may be not be displaying or may be displaying incorrectly."
+        },
+        {
+          "Id": 35086,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Recent players",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "Recent players may be not be displaying or may be displaying incorrectly."
+        },
+        {
+          "Id": 35076,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Viewing clubs",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems viewing your clubs."
+        },
+        {
+          "Id": 35077,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Joining clubs",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems joining a club."
+        },
+        {
+          "Id": 35078,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Managing clubs",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems managing your club."
+        },
+        {
+          "Id": 35106,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Creating parties",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems trying to create a party."
+        },
+        {
+          "Id": 35110,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Joining parties",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble joining parties, receiving party invites, or remaining in a party after joining."
+        },
+        {
+          "Id": 35118,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Party management",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble managing your active party, including player management"
+        },
+        {
+          "Id": 35113,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Party chat audio",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble hearing audio chat or being heard in a party."
+        },
+        {
+          "Id": 35121,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Party chat text",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might have trouble sending or receiving text chat in a party."
+        },
+        {
+          "Id": 35096,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Viewing messages",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble receiving or viewing messages."
+        },
+        {
+          "Id": 35097,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Sending messages",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble sending messages to other players right now."
+        },
+        {
+          "Id": 35100,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Notifications",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble receiving, viewing or managing notifications"
+        },
+        {
+          "Id": 35071,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Activity feed",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems viewing or posting content in your activity feed."
+        }
+      ]
+    },
+    {
+      "Id": 21,
+      "Name": "Sharing & broadcasting",
+      "Status": {
+        "Name": "None",
+        "Id": 1
+      },
+      "Scenarios": [
+        {
+          "Id": 35178,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Recording game clips",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems recording game clips, or clips may be shorter than expected."
+        },
+        {
+          "Id": 35182,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Uploading game clips",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble uploading and sharing game clips."
+        },
+        {
+          "Id": 35180,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Taking screenshots",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to take, upload or share screenshots right now."
+        },
+        {
+          "Id": 35185,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Managing captures",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems editing or deleting game clips and screenshots."
+        }
+      ]
+    },
+    {
+      "Id": 20,
+      "Name": "Devices & networking",
+      "Status": {
+        "Name": "None",
+        "Id": 1
+      },
+      "Scenarios": [
+        {
+          "Id": 35168,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Console setup",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems setting up your console. Visit xbox.com/setup for help."
+        },
+        {
+          "Id": 35175,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Console updates",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems installing console updates. If you have an error code, visit the support.xbox.com home page and enter it in the search box."
+        },
+        {
+          "Id": 35049,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Connection reliability",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may be disconnected from XBOX while using your console or other devices. You can attempt to reconnect, but may be disconnected again until this problem is resolved."
+        },
+        {
+          "Id": 35166,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Wireless networking",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems connecting your console to a wireless network. Restart your router or modem then try connecting again."
+        },
+        {
+          "Id": 35167,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Wired networking",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems connecting your console to a wired network. Check to make sure the ethernet cable is firmly plugged into your console and router, or try restarting your router."
+        },
+        {
+          "Id": 35158,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Console startup",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may see a blank screen after turning on your console. Pressing the XBOX button on your controller, restarting your console or reconnecting your HDMI cord may resolve it."
+        },
+        {
+          "Id": 35160,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Quick Resume",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "Your console may have problems with Quick Resume. Restarting it might do the trick."
+        },
+        {
+          "Id": 35156,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Console home screen",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems with content appearing on your XBOX's home screen or be unable to customize your home screen."
+        },
+        {
+          "Id": 35154,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Voice commands",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to control your XBOX with voice commands. Please use a controller until this problem is resolved."
+        }
+      ]
+    },
+    {
+      "Id": 25,
+      "Name": "Multiplayer gaming",
+      "Status": {
+        "Name": "None",
+        "Id": 1
+      },
+      "Scenarios": [
+        {
+          "Id": 35186,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Matchmaking",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems joining multiplayer games, or finding other players."
+        },
+        {
+          "Id": 35187,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Sending game invites",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble sending game invites right now."
+        },
+        {
+          "Id": 35188,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Receiving game invites",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble receiving game invites, or may not be joined to a game after accepting."
+        },
+        {
+          "Id": 35190,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Creating Looking for Group",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble creating LFG posts right now."
+        },
+        {
+          "Id": 35194,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Joining Looking for Group",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems joining LFG posts right now."
+        }
+      ]
+    },
+    {
+      "Id": 14,
+      "Name": "Cloud gaming & remote play",
+      "Status": {
+        "Name": "None",
+        "Id": 1
+      },
+      "Scenarios": [
+        {
+          "Id": 35060,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Launching cloud games",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble starting cloud games or be unexpectedly disconnected from a game after it begins."
+        },
+        {
+          "Id": 35059,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Wait times",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may experience longer than normal wait times when starting a cloud gaming session."
+        },
+        {
+          "Id": 37710,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Remote play",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble playing console games on another device via remote play. You can still play directly on your console until this issue is fixed."
+        }
+      ]
+    },
+    {
+      "Id": 26,
+      "Name": "Support & services",
+      "Status": {
+        "Name": "None",
+        "Id": 1
+      },
+      "Scenarios": [
+        {
+          "Id": 35247,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "XBOX websites",
+          "Devices": [
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might have problems reaching xbox.com or other XBOX websites."
+        },
+        {
+          "Id": 35249,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "XBOX Support website",
+          "Devices": [
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems using the XBOX Support website. If you need help, try XBOX Support on your console or reach out to @XBOXSupport on Twitter."
+        },
+        {
+          "Id": 35248,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "XBOX Support",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "The XBOX Support app on your console may not open. If you need help visit https://support.xbox.com or reach out to @XBOXSupport on Twitter."
+        },
+        {
+          "Id": 35251,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "XBOX Support chat",
+          "Devices": [
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems starting a chat with XBOX Support, or be unexpectedly disconnected from a chat. If you need help, try XBOX Support on your console or reach out to @XBOXSupport on Twitter."
+        },
+        {
+          "Id": 35252,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Request a call",
+          "Devices": [
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble requesting a call, or not receive a callback at the expected time.  If you need immediate help, try XBOX Support on your console or reach out to @XBOXSupport on Twitter."
+        },
+        {
+          "Id": 35225,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Requesting refunds",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble requesting a refund or experience a delay in processing."
+        },
+        {
+          "Id": 35245,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Wait times",
+          "Devices": [
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "We’re experiencing heavy volumes at the moment. Wait times for refund requests, contacting us, and other support services may be longer than usual. If you need immediate help, try XBOX Support on your console or reach out to @XBOXSupport on Twitter."
+        }
+      ]
+    }
+  ],
+  "Titles": [
+    {
+      "Id": 16,
+      "Name": "Games & gaming",
+      "Status": {
+        "Name": "None",
+        "Id": 1
+      },
+      "Scenarios": [
+        {
+          "Id": 35150,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Scheduled maintenance",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "This title is unavailable due to scheduled maintenance."
+        },
+        {
+          "Id": 35143,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Game saves",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems syncing game saves to the cloud."
+        },
+        {
+          "Id": 35139,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Game management",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems updating, uninstalling or managing add-ons for your games."
+        },
+        {
+          "Id": 35140,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Game performance",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems with game performance, such as freezing, lag or crashes."
+        },
+        {
+          "Id": 35136,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Downloaded games",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems playing your digital games right now."
+        },
+        {
+          "Id": 35135,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Disc-based games",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems playing disc-based games right now."
+        },
+        {
+          "Id": 35213,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Backward compatibility",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems playing backward compatible games right now."
+        },
+        {
+          "Id": 35128,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Achievements & gamerscore",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have a delay in unlocking achievements, or updating progress or gamerscore. Your progress has not been lost."
+        },
+        {
+          "Id": 35123,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Stats & leaderboards",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble viewing your game stats and leaderboards, or they may display incorrect information"
+        },
+        {
+          "Id": 37444,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Limited gameplay",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "A recent update to this game may result in a limited experience until the issue is fixed."
+        }
+      ]
+    },
+    {
+      "Id": 15,
+      "Name": "Apps & mobile",
+      "Status": {
+        "Name": "None",
+        "Id": 1
+      },
+      "Scenarios": [
+        {
+          "Id": 35165,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "DVD & Blu-ray",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems playing a DVD or Blu-ray disc. Restarting your console might do the trick."
+        },
+        {
+          "Id": 38429,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Streaming app content",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems playing media content like video and music in streaming apps."
+        },
+        {
+          "Id": 35056,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "OneGuide",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have trouble launching or browsing OneGuide on your XBOX. If possible, use your set-top box's guide to select content until this is resolved."
+        },
+        {
+          "Id": 35055,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Search",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may not be able to access search, or not receive results from searching."
+        },
+        {
+          "Id": 37850,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Launching apps",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems launching apps."
+        },
+        {
+          "Id": 35054,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Updating apps",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You may have problems updating apps."
+        },
+        {
+          "Id": 37893,
+          "Status": {
+            "Name": "None",
+            "Id": 1
+          },
+          "Name": "Discord",
+          "Devices": [
+            {
+              "Id": 13,
+              "Name": "XBOX Series X"
+            },
+            {
+              "Id": 14,
+              "Name": "XBOX Series S"
+            },
+            {
+              "Id": 15,
+              "Name": "XBOX One X"
+            },
+            {
+              "Id": 16,
+              "Name": "XBOX One S"
+            },
+            {
+              "Id": 17,
+              "Name": "Cloud gaming"
+            },
+            {
+              "Id": 20,
+              "Name": "Smart TV"
+            },
+            {
+              "Id": 19,
+              "Name": "Backward compatibility"
+            },
+            {
+              "Id": 12,
+              "Name": "Android devices"
+            },
+            {
+              "Id": 11,
+              "Name": "Apple devices"
+            },
+            {
+              "Id": 8,
+              "Name": "XBOX on Windows"
+            },
+            {
+              "Id": 1,
+              "Name": "XBOX One"
+            },
+            {
+              "Id": 0,
+              "Name": "Xbox 360"
+            },
+            {
+              "Id": 2,
+              "Name": "Web services"
+            }
+          ],
+          "Incidents": [],
+          "Description": "You might have trouble launching or using Discord."
+        }
+      ]
+    }
+  ]
+}

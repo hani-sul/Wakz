@@ -1,0 +1,2398 @@
+{
+  "status": "ok",
+  "data": [
+    {
+      "monitorId": 784479624,
+      "createdAt": "2020-03-09 23:16:24",
+      "statusClass": "success",
+      "name": "Trending API",
+      "url": null,
+      "type": "HTTP(s)",
+      "groupId": 2681,
+      "groupName": "API",
+      "dailyRatios": [
+        {
+          "date": "2026-06-22",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-23",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-24",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-25",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-26",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-27",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-28",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-29",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-30",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-01",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-02",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-03",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-04",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-05",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-06",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-07",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-08",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-09",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-10",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-11",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-12",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-13",
+          "ratio": "98.845",
+          "label": "good",
+          "color": "blue"
+        },
+        {
+          "date": "2026-07-14",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-15",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-16",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-17",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-18",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-19",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-20",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-21",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-22",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-23",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-24",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-25",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-26",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-27",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-28",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-29",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-30",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-31",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-01",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-02",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-03",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-04",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-05",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-06",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-07",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-08",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-09",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-10",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-11",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-12",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-13",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-14",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-15",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-16",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-17",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-18",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-19",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-20",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-21",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-22",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-23",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-24",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-25",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-26",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-27",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-28",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-29",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-30",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-31",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-01",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-02",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-03",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-04",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-05",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-06",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-07",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-08",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-09",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-10",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-11",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-12",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-13",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-14",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-15",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-16",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-17",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-18",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-19",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        }
+      ],
+      "30dRatio": {
+        "ratio": "100.000",
+        "label": "excellent",
+        "color": "green"
+      },
+      "90dRatio": {
+        "ratio": "99.987",
+        "label": "excellent",
+        "color": "green"
+      },
+      "ratio": {
+        "ratio": "100.000",
+        "label": "excellent",
+        "color": "green"
+      },
+      "hasIncidentComments": false,
+      "lastDowntime": {
+        "date": "2026-07-13 15:48:48",
+        "duration": 998,
+        "reason": "Incident detected"
+      }
+    },
+    {
+      "monitorId": 798645058,
+      "createdAt": "2025-02-25 02:19:35",
+      "statusClass": "success",
+      "name": "Web App",
+      "url": null,
+      "type": "HTTP(s)",
+      "groupId": 2684,
+      "groupName": "Apps",
+      "dailyRatios": [
+        {
+          "date": "2026-06-22",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-23",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-24",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-25",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-26",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-27",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-28",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-29",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-06-30",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-01",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-02",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-03",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-04",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-05",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-06",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-07",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-08",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-09",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-10",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-11",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-12",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-13",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-14",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-15",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-16",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-17",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-18",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-19",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-20",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-21",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-22",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-23",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-24",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-25",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-26",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-27",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-28",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-29",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-30",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-07-31",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-01",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-02",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-03",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-04",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-05",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-06",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-07",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-08",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-09",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-10",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-11",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-12",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-13",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-14",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-15",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-16",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-17",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-18",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-19",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-20",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-21",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-22",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-23",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-24",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-25",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-26",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-27",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-28",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-29",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-30",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-08-31",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-01",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-02",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-03",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-04",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-05",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-06",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-07",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-08",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-09",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-10",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-11",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-12",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-13",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-14",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-15",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-16",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-17",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-18",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        {
+          "date": "2026-09-19",
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        }
+      ],
+      "30dRatio": {
+        "ratio": "100.000",
+        "label": "excellent",
+        "color": "green"
+      },
+      "90dRatio": {
+        "ratio": "100.000",
+        "label": "excellent",
+        "color": "green"
+      },
+      "ratio": {
+        "ratio": "100.000",
+        "label": "excellent",
+        "color": "green"
+      },
+      "hasIncidentComments": false,
+      "lastDowntime": null
+    }
+  ],
+  "psp": {
+    "monitors": [
+      {
+        "monitorId": 784479624,
+        "createdAt": "2020-03-09 23:16:24",
+        "statusClass": "success",
+        "name": "Trending API",
+        "url": null,
+        "type": "HTTP(s)",
+        "groupId": 2681,
+        "groupName": "API",
+        "dailyRatios": [
+          {
+            "date": "2026-06-22",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-23",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-24",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-25",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-26",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-27",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-28",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-29",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-30",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-01",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-02",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-03",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-04",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-05",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-06",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-07",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-08",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-09",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-10",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-11",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-12",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-13",
+            "ratio": "98.845",
+            "label": "good",
+            "color": "blue"
+          },
+          {
+            "date": "2026-07-14",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-15",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-16",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-17",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-18",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-19",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-20",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-21",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-22",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-23",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-24",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-25",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-26",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-27",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-28",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-29",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-30",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-31",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-01",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-02",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-03",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-04",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-05",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-06",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-07",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-08",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-09",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-10",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-11",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-12",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-13",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-14",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-15",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-16",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-17",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-18",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-19",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-20",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-21",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-22",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-23",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-24",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-25",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-26",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-27",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-28",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-29",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-30",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-31",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-01",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-02",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-03",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-04",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-05",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-06",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-07",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-08",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-09",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-10",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-11",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-12",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-13",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-14",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-15",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-16",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-17",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-18",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-19",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          }
+        ],
+        "30dRatio": {
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        "90dRatio": {
+          "ratio": "99.987",
+          "label": "excellent",
+          "color": "green"
+        },
+        "ratio": {
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        "hasIncidentComments": false,
+        "lastDowntime": {
+          "date": "2026-07-13 15:48:48",
+          "duration": 998,
+          "reason": "Incident detected"
+        }
+      },
+      {
+        "monitorId": 798645058,
+        "createdAt": "2025-02-25 02:19:35",
+        "statusClass": "success",
+        "name": "Web App",
+        "url": null,
+        "type": "HTTP(s)",
+        "groupId": 2684,
+        "groupName": "Apps",
+        "dailyRatios": [
+          {
+            "date": "2026-06-22",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-23",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-24",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-25",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-26",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-27",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-28",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-29",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-06-30",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-01",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-02",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-03",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-04",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-05",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-06",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-07",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-08",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-09",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-10",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-11",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-12",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-13",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-14",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-15",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-16",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-17",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-18",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-19",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-20",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-21",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-22",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-23",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-24",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-25",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-26",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-27",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-28",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-29",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-30",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-07-31",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-01",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-02",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-03",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-04",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-05",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-06",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-07",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-08",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-09",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-10",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-11",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-12",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-13",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-14",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-15",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-16",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-17",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-18",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-19",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-20",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-21",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-22",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-23",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-24",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-25",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-26",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-27",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-28",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-29",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-30",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-08-31",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-01",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-02",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-03",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-04",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-05",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-06",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-07",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-08",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-09",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-10",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-11",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-12",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-13",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-14",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-15",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-16",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-17",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-18",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          },
+          {
+            "date": "2026-09-19",
+            "ratio": "100.000",
+            "label": "excellent",
+            "color": "green"
+          }
+        ],
+        "30dRatio": {
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        "90dRatio": {
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        "ratio": {
+          "ratio": "100.000",
+          "label": "excellent",
+          "color": "green"
+        },
+        "hasIncidentComments": false,
+        "lastDowntime": null
+      }
+    ],
+    "totalMonitors": 2,
+    "perPage": 30,
+    "timezone": "+00:00"
+  },
+  "statistics": {
+    "latest_downtime": null,
+    "counts": {
+      "up": 2,
+      "down": 0,
+      "paused": 0,
+      "total": 2
+    },
+    "count_result": "All Clear"
+  },
+  "days": [
+    "2026-06-22",
+    "2026-06-23",
+    "2026-06-24",
+    "2026-06-25",
+    "2026-06-26",
+    "2026-06-27",
+    "2026-06-28",
+    "2026-06-29",
+    "2026-06-30",
+    "2026-07-01",
+    "2026-07-02",
+    "2026-07-03",
+    "2026-07-04",
+    "2026-07-05",
+    "2026-07-06",
+    "2026-07-07",
+    "2026-07-08",
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-11",
+    "2026-07-12",
+    "2026-07-13",
+    "2026-07-14",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-18",
+    "2026-07-19",
+    "2026-07-20",
+    "2026-07-21",
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24",
+    "2026-07-25",
+    "2026-07-26",
+    "2026-07-27",
+    "2026-07-28",
+    "2026-07-29",
+    "2026-07-30",
+    "2026-07-31",
+    "2026-08-01",
+    "2026-08-02",
+    "2026-08-03",
+    "2026-08-04",
+    "2026-08-05",
+    "2026-08-06",
+    "2026-08-07",
+    "2026-08-08",
+    "2026-08-09",
+    "2026-08-10",
+    "2026-08-11",
+    "2026-08-12",
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-15",
+    "2026-08-16",
+    "2026-08-17",
+    "2026-08-18",
+    "2026-08-19",
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-22",
+    "2026-08-23",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26",
+    "2026-08-27",
+    "2026-08-28",
+    "2026-08-29",
+    "2026-08-30",
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-04",
+    "2026-09-05",
+    "2026-09-06",
+    "2026-09-07",
+    "2026-09-08",
+    "2026-09-09",
+    "2026-09-10",
+    "2026-09-11",
+    "2026-09-12",
+    "2026-09-13",
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-16",
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19"
+  ]
+}
