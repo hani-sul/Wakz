@@ -4,6 +4,9 @@ import { baseResult, failureResult, toIso } from './types.ts';
 
 const RESOLVED_PATTERN = /(resolved|completed|restored|recovered|已解决|已恢复)/i;
 const MAINTENANCE_PATTERN = /(maintenance|maintain|scheduled|维护)/i;
+/** A maintenance entry that has not started yet must not change the current status. */
+const PLANNED_PATTERN = /(scheduled|planned|upcoming|will (start|begin|take place)|not yet|المجدولة|المقررة|المخطط)/i;
+const RUNNING_PATTERN = /(in progress|ongoing|underway|under maintenance|is (currently )?started|currently performing|جارٍ|جاري|الآن)/i;
 
 function statusFromText(text: string): UnifiedStatus {
   const explicit = /status\s*:?\s*<?\/?[a-z]*>?\s*(resolved|monitoring|identified|investigating|in progress|scheduled|completed)/i.exec(text);
@@ -48,6 +51,9 @@ export const rssFeedConnector: Connector = {
       const resolved = RESOLVED_PATTERN.test(`${title} ${body}`);
       const maintenance = MAINTENANCE_PATTERN.test(`${title} ${body}`);
       const status = statusFromText(`${title} ${body}`);
+      const plannedMaintenance = maintenance && !resolved
+        && PLANNED_PATTERN.test(`${title} ${body}`)
+        && !RUNNING_PATTERN.test(`${title} ${body}`);
 
       if (isComponentReport) {
         const [namePart, statusPart] = title.split(/\s+-\s+/);
@@ -66,8 +72,12 @@ export const rssFeedConnector: Connector = {
         externalId: item.guid ?? item.link ?? `${index}`,
         kind: maintenance ? 'maintenance' : 'incident',
         title,
-        status: maintenance ? (resolved ? 'completed' : 'in progress') : (resolved ? 'resolved' : 'investigating'),
-        statusRaw: maintenance ? (resolved ? 'completed' : 'in_progress') : (resolved ? 'resolved' : 'investigating'),
+        status: maintenance
+          ? (resolved ? 'completed' : plannedMaintenance ? 'scheduled' : 'in progress')
+          : (resolved ? 'resolved' : 'investigating'),
+        statusRaw: maintenance
+          ? (resolved ? 'completed' : plannedMaintenance ? 'scheduled' : 'in_progress')
+          : (resolved ? 'resolved' : 'investigating'),
         impact: resolved ? 'OPERATIONAL' : status,
         startedAt: timestamp,
         updatedAt: timestamp,
@@ -79,7 +89,8 @@ export const rssFeedConnector: Connector = {
     });
 
     const activeIncidents = incidents.filter((incident) => incident.kind === 'incident' && incident.resolvedAt === null);
-    const activeMaintenance = incidents.filter((incident) => incident.kind === 'maintenance' && incident.resolvedAt === null);
+    // Only maintenance that is actually running counts; future windows stay informational.
+    const activeMaintenance = incidents.filter((incident) => incident.kind === 'maintenance' && incident.statusRaw === 'in_progress');
 
     let status: UnifiedStatus;
     if (components.length > 0) {
@@ -108,6 +119,7 @@ export const rssFeedConnector: Connector = {
         componentReports: components.length,
         activeIncidents: activeIncidents.length,
         activeMaintenance: activeMaintenance.length,
+        upcomingMaintenance: incidents.filter((incident) => incident.kind === 'maintenance' && incident.statusRaw === 'scheduled').length,
       },
       notes: ['provider=rss', `entries=${items.length}`],
     });

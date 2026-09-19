@@ -71,6 +71,27 @@ export const statuspageConnector: Connector = {
     const incidentsRaw = incidents.data?.incidents ?? [];
     const maintenancesRaw = maintenances.data?.scheduled_maintenances ?? [];
 
+    /**
+     * A maintenance window only affects the *current* status while it is actually running.
+     * Vendors publish their whole maintenance calendar, so a window scheduled for next week
+     * (or one that already finished) must never turn the service into "maintenance" today.
+     */
+    const nowMs = ctx.now().getTime();
+    const isMaintenanceRunning = (item: StatuspageMaintenance): boolean => {
+      const statusRaw = String(item.status).toLowerCase();
+      if (statusRaw === 'completed' || statusRaw === 'cancelled') return false;
+      if (statusRaw === 'in_progress' || statusRaw === 'verifying') return true;
+      if (statusRaw === 'scheduled') {
+        const from = item.scheduled_for ? Date.parse(item.scheduled_for) : Number.NaN;
+        const until = item.scheduled_until ? Date.parse(item.scheduled_until) : Number.NaN;
+        if (!Number.isFinite(from)) return false;
+        if (nowMs < from) return false;
+        return !Number.isFinite(until) || nowMs <= until;
+      }
+      return false;
+    };
+    const runningMaintenanceIds = new Set(maintenancesRaw.filter(isMaintenanceRunning).map((item) => item.id));
+
     const toRecord = (item: StatuspageIncident | StatuspageMaintenance, kind: 'incident' | 'maintenance'): IncidentRecord => {
       const detail = kind === 'incident'
         ? (item as StatuspageIncident).incident_updates?.[0]?.body ?? null
@@ -105,7 +126,7 @@ export const statuspageConnector: Connector = {
     const maintenanceRecords = maintenancesRaw.filter(componentFilterMatcher).slice(0, 30).map((item) => toRecord(item, 'maintenance'));
 
     const activeIncidents = incidentsRecords.filter((incident) => incident.resolvedAt === null && incident.statusRaw !== 'resolved');
-    const activeMaintenance = maintenanceRecords.filter((item) => item.statusRaw === 'in_progress' || item.statusRaw === 'scheduled');
+    const activeMaintenance = maintenanceRecords.filter((item) => runningMaintenanceIds.has(item.externalId));
 
     const indicatorStatus = mapStatuspageIndicator(status.data.status.indicator, status.data.status.description);
     const componentStatus = matchedComponents.length > 0 ? worstStatus(matchedComponents.map((component) => component.status)) : 'UNKNOWN';
@@ -126,17 +147,22 @@ export const statuspageConnector: Connector = {
       statusRaw: status.data.status.description,
       sourceUrl: ctx.service.statusPage ?? `${baseUrl}/`,
       components: matchedComponents,
-      incidents: incidentsRecords,
+      // Maintenance windows are returned alongside incidents (kind: 'maintenance') so the
+      // service page can list the calendar even when nothing is running right now.
+      incidents: [...incidentsRecords, ...maintenanceRecords],
       metadata: {
         indicator: status.data.status.indicator,
         componentCount: matchedComponents.length,
         activeIncidents: activeIncidents.length,
         scheduledMaintenances: maintenanceRecords.length,
+        maintenanceInProgress: activeMaintenance.length,
+        upcomingMaintenances: maintenanceRecords.filter((item) => item.statusRaw === 'scheduled').length,
         filterApplied: filter !== null,
       },
       notes: [
         `provider=statuspage`,
         `indicator=${status.data.status.indicator}`,
+        `maintenance: ${activeMaintenance.length} running, ${maintenanceRecords.filter((item) => item.statusRaw === 'scheduled').length} scheduled`,
         ...(components.ok ? [] : [`components unavailable: ${components.error}`]),
         ...(incidents.ok ? [] : [`incidents unavailable: ${incidents.error}`]),
       ],

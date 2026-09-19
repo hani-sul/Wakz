@@ -193,6 +193,54 @@ test('RSS connector treats an empty feed as no active incident (Azure)', async (
   }
 });
 
+test('RSS connector ignores maintenance that is only scheduled for the future', async () => {
+  const feed = `<?xml version="1.0"?><rss version="2.0"><channel>
+    <title>Example status</title>
+    <item><title>Scheduled maintenance on the API</title>
+      <link>https://status.example/incidents/1</link>
+      <pubDate>${new Date(Date.now() + 86_400_000).toUTCString()}</pubDate>
+      <description>The maintenance window is scheduled for next week and has not started yet.</description>
+      <guid>m-1</guid></item>
+    </channel></rss>`;
+
+  const restore = mockFetch({
+    'https://status.example/feed.rss': { body: feed, contentType: 'application/rss+xml' },
+  });
+  try {
+    const service = { ...(SERVICE_BY_SLUG.get('tmdb')!), connectorConfig: { feedUrl: 'https://status.example/feed.rss' } };
+    const result = await rssFeedConnector.fetch({ service, log: logger, timeoutMs: 5000, now: () => new Date(), secrets: { riotApiKey: null } });
+
+    assert.equal(result.status, 'OPERATIONAL', 'a planned window must not mark the service as in maintenance');
+    assert.equal(result.metadata.activeMaintenance, 0);
+    assert.equal(result.metadata.upcomingMaintenance, 1);
+    assert.equal(result.incidents[0]?.statusRaw, 'scheduled');
+  } finally {
+    restore();
+  }
+});
+
+test('RSS connector reports maintenance that is running now', async () => {
+  const feed = `<?xml version="1.0"?><rss version="2.0"><channel>
+    <item><title>Maintenance in progress on the API</title>
+      <link>https://status.example/incidents/2</link>
+      <pubDate>${new Date(Date.now() - 600_000).toUTCString()}</pubDate>
+      <description>The maintenance is currently in progress and the API is unavailable for some customers.</description>
+      <guid>m-2</guid></item>
+    </channel></rss>`;
+
+  const restore = mockFetch({
+    'https://status.example/feed.rss': { body: feed, contentType: 'application/rss+xml' },
+  });
+  try {
+    const service = { ...(SERVICE_BY_SLUG.get('tmdb')!), connectorConfig: { feedUrl: 'https://status.example/feed.rss' } };
+    const result = await rssFeedConnector.fetch({ service, log: logger, timeoutMs: 5000, now: () => new Date(), secrets: { riotApiKey: null } });
+    assert.equal(result.status, 'MAINTENANCE');
+    assert.equal(result.metadata.activeMaintenance, 1);
+  } finally {
+    restore();
+  }
+});
+
 test('TMDB RSS component reports become components', async () => {
   const restore = mockFetch({
     'https://status.themoviedb.org/rss': { body: await fixture('tmdb-feed.rss'), contentType: 'application/rss+xml' },
