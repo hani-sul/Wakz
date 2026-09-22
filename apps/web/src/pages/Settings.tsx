@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { loadSnapshot } from '../api.ts';
 import { data, dataMode, setDataMode, type DataMode } from '../data.ts';
 import { API_BASE_PLACEHOLDER, getApiBase, isAppShell, setApiBase } from '../lib/appConfig.ts';
+import { useAutoRefresh } from '../lib/autoRefresh.ts';
 import { discoverServer, type DiscoveryProgress } from '../lib/discovery.ts';
 import { clockTime } from '../lib/format.ts';
 import { useI18n } from '../lib/locale.tsx';
@@ -17,6 +18,7 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
   const [showDeveloper, setShowDeveloper] = useState(false);
   const [discovering, setDiscovering] = useState(false);
   const [discoveryNote, setDiscoveryNote] = useState<string | null>(null);
+  const { autoRefresh, setAutoRefresh } = useAutoRefresh();
 
   useEffect(() => {
     void (async () => {
@@ -139,6 +141,22 @@ export function Settings({ onChanged }: { onChanged: () => void }): React.JSX.El
           </>
         )}
         {message && <p className="note">{message}</p>}
+      </section>
+
+      <section className="panel">
+        <h2>{i18n.t('settings.autoRefreshTitle')}</h2>
+        <div className="mode-switch">
+          <label className={autoRefresh ? 'active' : ''}>
+            <input
+              type="checkbox"
+              role="switch"
+              checked={autoRefresh}
+              onChange={(event) => setAutoRefresh(event.target.checked)}
+            />
+            <span>{i18n.t('settings.autoRefresh')}</span>
+          </label>
+        </div>
+        <p className="note">{i18n.t('settings.autoRefreshHint')}</p>
       </section>
 
       <section className="panel">

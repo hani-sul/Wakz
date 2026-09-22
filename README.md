@@ -103,7 +103,7 @@ Service status and connectivity information based on available data sources.
 
 * المتطلبات: أندرويد **7.0 (API 24)** أو أحدث.
 * الاسم الظاهر: **وكز - Wakz** · معرّف الحزمة: `com.wakz.status`.
-* ثبّت ملف `Wakz-1.4.1-ar.apk` (اسم الملف يتغيّر مع الإصدار)، ثم افتح التطبيق.
+* ثبّت ملف `Wakz-1.4.2-ar.apk` (اسم الملف يتغيّر مع الإصدار)، ثم افتح التطبيق.
 * عند أول تشغيل يتم تحديث كل الخدمات، وبعدها يعمل الكاش 7 دقائق.
 * أداة القياس (DNS/Ping) تعمل من جهازك مباشرة.
 * **وضع الخادم اختياري**: إن أردت ربط التطبيق بخادم خاص، أدخل العنوان يدويًا في الإعدادات أو استخدم
@@ -288,7 +288,7 @@ official link when possible — that speeds up verifying whether a status source
 
 * Requires Android **7.0 (API 24)** or newer.
 * Display name: **وكز - Wakz** · package: `com.wakz.status`.
-* Install `Wakz-1.4.1-ar.apk` (the file name follows the release version) and open the app.
+* Install `Wakz-1.4.2-ar.apk` (the file name follows the release version) and open the app.
 * The first launch refreshes the whole catalog; afterwards a seven minute cache is used.
 * The measurement tools (DNS/PING) work directly from your device.
 * **Server mode is optional**: to point the app at your own server, type the address in the settings

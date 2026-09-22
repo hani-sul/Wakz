@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { data, type EngineState } from './data.ts';
 import { Logo, XLogo } from './components/Logo.tsx';
 import { useDataSource } from './lib/appConfig.ts';
+import { isAutoRefreshEnabled } from './lib/autoRefresh.ts';
 import { clockTime } from './lib/format.ts';
 import { useI18n } from './lib/locale.tsx';
 import { usePins } from './lib/pins.ts';
@@ -74,7 +75,7 @@ export function App(): React.JSX.Element {
       if (cancelled) return;
       setEngine(data.refreshState());
       setRefreshToken((value) => value + 1);
-      if (data.mode() === 'local') {
+      if (data.mode() === 'local' && isAutoRefreshEnabled()) {
         // On open the full catalog is refreshed; the seven minute cache handles the rest of the day.
         setBusy(true);
         await data.refresh({ reason: 'auto', force: true });
@@ -90,7 +91,7 @@ export function App(): React.JSX.Element {
       if (data.refreshState().running) setRefreshToken((value) => value + 1);
     }, 2500);
     const timer = setInterval(() => {
-      if (data.mode() === 'local' && !data.refreshState().running) {
+      if (data.mode() === 'local' && isAutoRefreshEnabled() && !data.refreshState().running) {
         void data.refresh({ reason: 'auto' }).then(() => {
           setEngine(data.refreshState());
           setRefreshToken((value) => value + 1);
